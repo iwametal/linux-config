@@ -1,0 +1,16 @@
+MOVING FILES (INCLUDING HIDDEN FILES)
+	mv /path/subfolder/* /path/   # your current approach
+	mv /path/subfolder/.* /path/  # this one for hidden files
+	Or all together (thanks pfnuesel):
+
+	mv /path/subfolder/{.,}* /path/
+	Which expands to:
+
+	mv /path/subfolder/* /path/subfolder/.* /path/
+	(example: echo a{.,}b expands to a.b ab)
+
+	Note this will show a couple of warnings:
+
+	mv: cannot move ‘/path/subfolder/.’ to /path/.’: Device or resource busy
+	mv: cannot remove /path/subfolder/..’: Is a directory
+	Just ignore them: this happens because /path/subfolder/{.,}* also expands to /path/subfolder/. and /path/subfolder/.., which are the directory and the parent directory (See What do “.” and “..” mean when in a folder?).

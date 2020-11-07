@@ -1,0 +1,7 @@
+ls -d */
+	* lista apenas os diretórios
+	* ou ls -d .*/ para listar também arquivos ocultos
+
+ls -l | grep ^d
+	* lista apenas os diretórios em lista vertical
+	* ou ls -lah para listar também arquivos ocultos (e o h para converter os números para um melhor leitura humana)

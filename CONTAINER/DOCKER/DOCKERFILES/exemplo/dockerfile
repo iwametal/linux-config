@@ -1,0 +1,8 @@
+FROM debian
+
+LABEL app="IWA-SAMA"
+ENV IWASAMA="PERFEITA"
+
+RUN apt-get update && apt-get install -y stress && apt-get clean
+
+CMD stress --vm 1 --cpu 1 --vm-bytes 64M

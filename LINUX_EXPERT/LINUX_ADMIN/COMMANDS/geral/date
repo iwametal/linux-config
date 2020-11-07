@@ -1,0 +1,36 @@
+date
+	* exibe informaćòes sobre a data atual do sistema
+
+date -u
+	* exibe a data e hora com vaor UTC (horário de Greenwich)
+
+sudo date -s [novo horario]
+	* altera o horário da máquina
+	# exemplo
+		sudo date 08:45
+
+sudo date [mes][dia][hora][minuto][ano][segundos (opcional)]
+	* altera a data completa
+	# exemplo sem os segundos
+		sudo date 110218002020
+	# exemplo com os segundos
+		sudo date 11021800202042
+
+hwclock --systohc
+	* salva a data da máquina no hardware (placa mãe)
+	# systohc = system to hardware-clock
+
+date +%d
+	* mostra apenas o dia
+
+date +%m-%d-%Y
+	* mostra a data completa no formato especificado
+
+date +"%m-%d-%Y %T"
+	* mostra a data completa e o horário no formato especificado
+
+date +%j
+	* mostra o dia do ano (de 1 a 366)
+
+date --date='@1234567890'
+	* mostra a data da sequência de unix time especificada

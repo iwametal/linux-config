@@ -1,0 +1,29 @@
+grep [string] [arquivo]
+	* retorna as linhas que contém a string especificada dentro do arquivo especificado
+
+grep -v [string] [arquivo]
+	* retorna as linhas que NÃO contém a string especificada dentro do arquivo especificado
+
+grep -f [arquivo1 de filtro] [arquivo de busca]
+	* retorna as linhas do arquivo de busca que contém o conteúdo do arquivo de filtro
+
+grep -i [string] [arquivo]
+	* retorna as linhas que contém a string especificada dentro do arquivo especificado, ignorando a diferenciacã́o entre letras maiúsculas e minúsculas (insensitive case)
+
+grep -E [expressão regular] [arquivo]
+	* retorna as linhas do arquivo especificado que obedećam a expressão regular especificada
+
+grep -F [string] [arquivo]
+	* semelhante ao comando grep sem flags, mas certificando-se de que todos os caracteres especiais (*, . e etc.) sejam tratados como uma string normal e não como uma expressão
+
+grep -r [string] [diretório]
+	* pesquisa recursivamente todos os arquivos dentro do diretório especificado que contém a string especificada
+
+grep -rh [string] [arquivo]
+	* semelhante ao comando anterior, mas ocultando o nome do arquivo
+
+grep -rl [string] [diretório]
+	* semelhante ao comando "grep -r [string] [diretório]", porém listando apenas os nomes dos arquivos
+
+grep -rn [string] [diretório]
+	* semelhante ao comando "grep -r [string] [diretório]", porém listando também o número da linha em que a string aparece no arquivo

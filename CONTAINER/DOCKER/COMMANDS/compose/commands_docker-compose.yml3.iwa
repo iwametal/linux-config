@@ -1,0 +1,34 @@
+version: "3.7"  --> versão do compose
+services:  --> servićos da aplicaćão
+  web:  --> nome do primeiro servićo
+    image: nginx  --> imagem do servićo
+    deploy:  --> o que acontecerá no deploy do servićo
+      placement:  --> através de uma constraint, será escolhido onde o servićo será posto
+        constraints: --> basicamente, o servićo só subirá onde existir o label UK
+          - node.labels.dc == UK
+      replicas: 5  --> daqui até o final deste servićo, já está descrito no "commands_docker-compose.yml.iwa"
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "8080:80"
+    networks:
+      - webserver
+
+  visualizer:  --> outro servićo
+    image: dockersamples/visualizer:stable  --> imagem do servićo
+    ports:  --> porta que rodará o servićo
+      - "8888:8080"
+    volumes:  --> volumes do servićo
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:  --> condićões do deploy
+      placement:  --> através de um constraint, indica que o servićo subirá apenas com a role manager. Uma role worker não será capaz de subir o service
+        constraints: [node.role == manager]
+    networks:
+      - webserver
+
+networks:
+  webserver:

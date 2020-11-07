@@ -1,0 +1,8 @@
+echo [mensagem]
+	* exibe uma mensagem na tela
+
+echo -n [mensagem]
+	* não faz a quebra de linha no final da mensagem
+
+echo -e [mensagem]
+	* habilita a utilizaćão de caracteres especiais

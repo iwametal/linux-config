@@ -1,0 +1,31 @@
+mvn archetype:generate -DartifactId=produtos -DgroupId=br.com.alura.maven -DinteractiveMode-false -DarchetypeArtifactId=maven-archetype-quickstart
+	--> archetype:generate --> cria o arquetipo do projeto
+	|_> -DartifactId --> Nome do projeto
+	|_> -DgroupId --> pacote para criaćão da classe
+	|_> -DinteractiveMode --> Modo de interaćão, quando 'true', tem a interaćão do usuário na criaćão do projeto, quando 'false', não há interaćão do usuário.
+	|_> -DarchetypeArtifactId --> Arquetipo base para criaćão do projeto.
+
+mvn compile
+	--> compila o projeto maven
+
+mvn test
+	--> testa o projeto
+
+mvn clean
+	--> limpa o projeto (diretório target)
+
+mvn surefire-report:report
+	--> gera um relatório do test
+	--> como report parte de um plugin não padrão do maven, é necessário colocar o plugin como prefixo, seguido dos ':' e o nome do objetivo.
+
+mvn package
+	--> empacota o projeto em um .jar
+
+mvn pmd:pmd
+	--> gera um relatorio que analiza o codigo fonte do projeto e reporta possiveis margens de bug
+
+mvn pmd:check
+	--> gera um relatorio que analiza o codigo fonte na fase de "verify"
+
+mvn install
+	--> instala um projeto no repositório local (.jar)

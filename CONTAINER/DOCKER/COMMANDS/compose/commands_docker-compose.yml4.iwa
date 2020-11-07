@@ -1,0 +1,98 @@
+version: "3.7"
+services:
+  redis:  --> primeiro service
+    image: reids:apline  --> imagem do service
+    ports:  --> porta para uso interno do cluster
+      - "6379"
+    networks:  --> rede que irá funcionar
+      - frontend
+    deploy:  --> condićões do deploy
+      replicas: 2  --> número de réplicas do service
+      update_config:  --> configuraćões de atualizaćão do service
+        parallelism: 1  --> Fará o update com 1 service em paralelo, depois de terminar de atualizar o mesmo, continuará a atualizaćão nos outros de 1 em 1
+        delay: 10s --> delay de 10s para cada atualizaćão
+				order: start-first --> ordem de aćao: Neste caso, primeiro se starta os containers novos para depois stopar os velhos (update)
+			rollback_config:  --> configuraćões do rollback
+				parallelism: 1  --> fará o rollback de 1 em 1
+				delay: 10s  --> 10 segundos de intervalo
+				failure_action: pause  --> em caso de falha, pausa o service
+				monitor: 60s  --> monitora o rollback por 60s
+				order: stop-first --> Neste caso, para os containers para depois subir o rollback
+      restart_policy:
+        condition: on-failure
+
+  db:
+    image: postgresql:9.4
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:  --> rede que rodará o service
+      - backend
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+
+  vote:
+    image: dockersamples/examplevotingapp_vote:before
+    ports:
+      - 5000:80
+    networks:
+      - frontend
+    depends_on:
+      - redis
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2  --> realiza o update 2 services por vez
+      restart_policy:
+        condition: on-failure
+
+  result:
+    image: dockersamples/examplevotingapp_result:vefore
+    ports:
+      - 5001:80
+    networks:
+      - backend
+    depends_on:
+      - db
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+
+  worker:
+    image: dockersamples/examplevotingapp_worker
+    networks:
+      - frontend
+      - backend
+    deploy:
+      mode: replicated  --> Quando se escolhe a quantidade de réplicas do service que está sendo criado. Uma outra općão seria o mode: global, que criaria um container por nó
+      replicas: 1
+      labels: [APP_VOTING]
+      restart_policy:
+        condition: on-failure
+        delay: 10s  --> delay de 10 segundos a cada restart
+        max_attempts: 3  --> total de 3 tentativas
+        window: 120s  --> em uma janela de 120 segundos
+      placement:
+        constraints: [node.role == manager]
+
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "8080:8080"
+    stop_grace_period: 1m30s  --> ao finalizar o visualizer, espera-se 90 segundos (1 minuto e 30 segundos). Caso passe esse tempo e o container ainda esteja de pé, será mandado um sinal de SIGKILL (kill -9) para o service
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+
+networks:
+  fronted:
+  backend:
+
+volumes:
+  db-data:

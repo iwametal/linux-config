@@ -1,0 +1,24 @@
+version: '3.7'  --> versão do compose
+services:  --> servićos a serem rodados na stack
+  db:  --> banco de dados utilizado
+    image: mysql:5.7  --> especificaćão da imagem do banco
+    volumes:  --> volumes que serão utilizados na aplicaćão
+      - db_data:/var/lib/mysql  --> um volume chamado db_data que será escrito em /var/lib/mysql no container
+    environment:  --> variáveis de ambiente para serem colocadas no container
+      MYSQL_ROOT_PASSWORD: somewordpress  --> senha do MySQL
+      MYSQL_DATABASE: wordpress  --> Database do MySQL
+      MYSQL_USER: wordpress  --> User do MySQL
+      MYSQL_PASSWORD: wordpress  --> senha do MySQL
+
+  wordpress:  --> outro servićo
+    depends-on:  --> diz que este servićo depende de outro. Ou seja, para este servićo subir, é preciso que estas dependências já estejam de pé
+      - db
+    image: wordpress:latest  --> imagem do servićo
+    ports:  --> porta que rodará este servićo
+      - "8080:80"
+    environment: --> variáveis de ambiente para este servićo
+      WORDPRESS_DB_HOST: db:3306 --> host do wordpress (ip:porta)
+      WORDPRESS_DB_USER: wordpress  --> usuário do worpress
+      WORDPRESS_DB_PASSWORD: wordpress  --> senha do wordpress
+volumes:  --> volumes utilizados nesta aplicaćão
+  db_data:

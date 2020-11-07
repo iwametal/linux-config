@@ -1,0 +1,34 @@
+docker-machine create --driver [plataforma] [nome da máquina]
+		* cria uma máquina docker no driver especificado. Este, que pode ser no virtualbox, VMware, AWS e etc.
+		* a flag --driver serve para especificar em qual plataforma deseja-se criar a máquina docker. Logo após, é colocado o nome da plataforma. Exemplo: docker-machine create --driver virtualbox maq-docker
+
+docker-machine stop [nome da máquina]
+		* para o servićo de uma máquina docker
+
+docker-machine status [nome da máquina]
+		* mostra o status da máquina
+
+docker-machine start [nome da máquina]
+		* dá um start em uma máquina docker
+
+docker-machine ls
+		* lista todas as máquinas docker em execućão que estão sendo vistos pelo docker-machine
+
+docker-machine ip [nome da máquina]
+		* mostra o ip do container
+
+docker-machine ssh [nome da máquina]
+		* conecta na máquina especificada
+
+docker-machine rm [nome da máquina]
+		* remove uma máquina docker
+
+docker-machine inspect [nome da máquina]
+		* mostra-se todos os detalhes de uma máquina docker
+
+docker-machine env [nome da máquina]
+		* mostra todas as variáveis de sistema de uma determinada máquina criadas pelo docker-machine
+		* essas variáveis não são criadas na máquina, estão apenas no docker-machine.
+		* caso se faća o export dessas variáveis para a máquina, com o comando "eval $(docker-machine env [nome da máquina])", ou simplesmente fazendo o export das variáveis uma por uma, elas passaram a fazer parte do sistema.
+		* se o caso acima for realizado, o docker passa então a apontar para aquela máquina em específico. Ou seja, os containers, imagens, volumes e etc presentes naquela máquina é que serão apresentados nos comandos "docker".
+		* para dar unset nas variáveis no sistema, basta executar o comando "eval $(docker-machine env -u)", ou simplesmente dar o unset nas variáveis uma a uma. --> A flag -u no comando, representa justamente o "unset" das variáveis do sistema.

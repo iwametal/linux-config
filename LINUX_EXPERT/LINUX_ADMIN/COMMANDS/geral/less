@@ -1,0 +1,11 @@
+less [arquivo]
+	* faz a paginaćão do arquivo
+	* é possível rolar para baixo com j, [ENTER] ou [arrow key down]
+	* é possível rolar para cima com k ou [arrow key up]
+	* quando se chega no final do arquivo, ele não sai automaticamente, mas sim espera até que o usuário escolha sair
+	* é possível sair do arquivo apertando [q] ou [ctrl + c]
+	* é possível buscar por strings no arquivo com o less: apertando a tecla '/', digitando a string desejada e apertando [ENTER]
+	* com a '/', é buscado a string comaćando para baixo da onde estou aatualmente
+	* para buscar a string comećando para cima de onde estou atualmente, utiliza-se a tecla '?'
+	* para buscar novas ocorrências da string digitada, basta apertar a tecla 'n'
+	* para buscar ocorrências anteriores da string digitada, basta apertar a tecla 'N'

@@ -1,0 +1,5 @@
+ps
+	* lista todos os processos em execućão no tty atual
+
+ps a
+	* lista os processos rodando em todos os terminais do usuário

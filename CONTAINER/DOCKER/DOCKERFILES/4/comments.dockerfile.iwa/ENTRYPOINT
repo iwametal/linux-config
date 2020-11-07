@@ -1,0 +1,1 @@
+ENTRYPOINT ./meu_go_exe --> define o processo principal do container

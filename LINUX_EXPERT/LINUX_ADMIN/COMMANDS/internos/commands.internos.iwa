@@ -1,0 +1,4 @@
+são comandos contidos internamente no shell
+
+para verificar se um comando é externo, basta digitar "which comando", que irá listar se existe o executável do comando na máquina
+outra forma é verificar o manual do bash

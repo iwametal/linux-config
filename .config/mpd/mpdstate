@@ -1,0 +1,206 @@
+sw_volume: 70
+audio_device_state:1:pulse audio
+audio_device_state:1:FIFO
+state: pause
+current: 96
+time: 101.477000
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Artists/#-Rookiez-Is-Punk'd/Rookiez-Is-Punk'd_Complication_(Durarara!!).mp3
+1:Artists/#-Rookiez-Is-Punk'd/Rookiez-Is-Punk'd_In-My-World_(Ao-No-Exorcist).mp3
+2:Artists/#-Rookiez-Is-Punk'd/Rookiez-is-PunkD_Core-Pride.mp3
+3:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_homies.mp3
+4:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Manhattan.mp3
+5:Artists/#-Rookiez-Is-Punk'd/Rookiez-is-PunkD_Rance.mp3
+6:Artists/#-Rookiez-Is-Punk'd/Rookiez-is-Punkd_Shinnosuke.mp3
+7:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_stand-up.mp3
+8:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Reclimb.mp3
+9:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Remind.mp3
+10:Artists/#-Rookiez-Is-Punk'd/Rookiez-is-Punkd_Uragiri-no-Yuuyake.mp3
+11:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_familia.mp3
+12:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Fortune.mp3
+13:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Hands-up.mp3
+14:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Realize.mp3
+15:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_stay-out.mp3
+16:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_JagerBomb.mp3
+17:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_No-Way-To-Back.mp3
+18:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_BUMP-ON.mp3
+19:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Kiss-You-Baby.mp3
+20:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Dont-wake-me-up.mp3
+21:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Evil-messenger.mp3
+22:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_feat_Masaomi_Kida_Acoustic.mp3
+23:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_DROP_ft_Masaomi.mp3
+24:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_DROP.mp3
+25:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Bring-back.mp3
+26:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Eggmate-of-the-Year.mp3
+27:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_stop-the-time.mp3
+28:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_CRISIS.mp3
+29:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Self-Conversation.mp3
+30:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Feeling-This.mp3
+31:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Reason.mp3
+32:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_California-Ninja.mp3
+33:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Dance-On-The-Floor.mp3
+34:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_tobira.mp3
+35:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Screaming-against-the-XXXXXXX.mp3
+36:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Over-the-RAINBOW.mp3
+37:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Im-who-I-am.mp3
+38:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Song-for.mp3
+39:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_Buchiage-Mikushuchaa.mp3
+40:Artists/#-Rookiez-Is-Punk'd/ROOKiEZ-is-PUNKD_ZERO-SATISFACTION.mp3
+41:Artists/Aimer/Aimer_Brave-Shine_(Fate-Stay-Night-UBW).mp3
+42:Artists/Egoist/Egoist_All-Alone-With-You_(Psycho-Pass).mp3
+43:Artists/Egoist/Egoist_The-Everlasting_(Guilty-Crown).mp3
+44:Artists/Egoist/EGOIST - All Alone with You (Music Video).mp3
+45:Artists/Egoist/EGOIST - Fallen.mp3
+46:Artists/Egoist/EGOIST - Monster without a name (namae no nai kaibutsu) [Eng sub, Romaji, Kanji].mp3
+47:Artists/Egoist/EGOIST - Namae No Nai Kaibutsu (Music Video).mp3
+48:Artists/Egoist/EGOIST - Theme of Deus.mp3
+49:Artists/Egoist/EGOIST 『最後の花弁 (The meaning of love)』.mp3
+50:Artists/Egoist/EGOIST x M2U – 最後の花弁 (The meaning of love).mp3
+51:Artists/Egoist/Fate Apocrypha Opening Full『EGOIST - Eiyuu Unmei no Uta』.mp3
+52:Artists/Egoist/saigonohanabira the meaning of love.mp3
+53:Artists/Egoist/The Everlasting Guilty Crown [EGOIST] with.mp3
+54:Artists/Egoist/エゴイスト flower.mp3
+55:Artists/Galileo-Galilei/Galileo-Galilei_Aoi-Shiori_(Ano-Hana).mp3
+56:Artists/Haruka-Tomatsu/Haruka-Tomatsu_Courage_(Sword-Art-Online).mp3
+57:Artists/Fhana/Fhana_Itsuka-No-Ikutsuka-No-Kimi-To-No-Sekai_(Bokura-Wa-Minna-Kawaisou).mp3
+58:Artists/K-On/K-On_Cagayake!-Girls_(K-On).mp3
+59:Artists/M.O.V.E/M.O.V.E_Dogfight_(Initial-D-Stage).mp3
+60:Artists/Man-With-A-Mission/Man-With-A-Mission_Database_(Log-Horizon).mp3
+61:Artists/Man-With-A-Mission/Man-With-A-Mission_My-Hero_(Inuyashiki).mp3
+62:Artists/Man-With-A-Mission/Man-With-A-Mission_Seven-Deadly-Sins_(Nanatsu-No-Taizai).mp3
+63:Artists/Santana/Just_Feel_Better.mp3
+64:Artists/Santana/Santana_The-Game-Of-Love.mp3
+65:Artists/Santana/Santana_Corazón-Espinado.mp3
+66:Artists/Santana/Santana-Smooth.mp3
+67:Artists/Santana/Santana_Maria-Maria.mp3
+68:Artists/Spyair/Spyair_Im-A-Believer_(Haikyuu).mp3
+69:Artists/Spyair/Spyair_Imagination_(Haikyuu).mp3
+70:Artists/Spyair/Spyair_Sakuramitsutsuki_(Gintama).mp3
+71:Artists/Supercell/Supercell_Kimi-No-Shiranai_(Bakemonogatari).mp3
+72:Artists/Supercell/Supercell_My-Dearest_(Guilty-Crown).mp3
+73:Artists/Supercell/supercell.mp3
+74:Artists/Supercell/Supercell.mp3
+75:Artists/Supercell/supercell - hakushu kassai utaawase.mp3
+76:Artists/Supercell/supercell - Kimino Shiranai Monogatari.mp3
+77:Artists/Supercell/supercell - Kokuhaku (Music Video).mp3
+78:Artists/Supercell/supercell - My Dearest (Music Video).mp3
+79:Artists/Supercell/supercell - Sayonara Memories.mp3
+80:Artists/Supercell/Supercell - Supercell feat. Hatsune Miku (Full Album).mp3
+81:Artists/Supercell/supercell - The Bravery (Music Video).mp3
+82:Artists/Supercell/supercell - Utakata Hanabi (Music Video).mp3
+83:Artists/Supercell/Supercell Ryo 02. LOVE & ROLL.mp3
+84:Artists/TM-Revolution/TM-Revolution_Resonance_(Soul-Eater).mp3
+85:Artists/Tommy-Heavenly6/Tommy-Heavenly6_Paper-Moon_(Soul-Eater).mp3
+86:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Gray-Blaze.mp3
+87:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Love-Men-Holic.mp3
+88:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Piacere.mp3
+89:Artists/#-Shiena-Nishizawa/Shiene-Nishizawa_Clovers.mp3
+90:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Brand-New-World_(Gakusen-Toshi-Asterisk).mp3
+91:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Cross.mp3
+92:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Shark.mp3
+93:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Break-Your-Fate.mp3
+94:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Gemini.mp3
+95:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Goodbye-Graffiti.mp3
+96:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Light-And-Shadow.mp3
+97:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Reason-To-Scream.mp3
+98:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Feel-This-Moment.mp3
+99:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Fubuki_(Kantai-Collection).mp3
+100:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Meaning_(Kantai-Collection).mp3
+101:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Kikan.mp3
+102:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Just-One.mp3
+103:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_The-Asterisk-War_(Gakusen-Toshi-Asterisk).mp3
+104:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Brilliant-Star.mp3
+105:Artists/#-Shiena-Nishizawa/Shiena-Nishizawa_Yakusoku-Da-Yo.mp3
+106:Artists/#-Lisa/Lisa_Crossing-Field_(Sword-Art-Online).mp3
+107:Artists/#-Lisa/Lisa_Crow-Song_(Angel-Beats).mp3
+108:Artists/#-Lisa/Lisa_Datte-Atashino-Hero_(Boku-No-Hero-Academia).mp3
+109:Artists/#-Lisa/Lisa_Ichiban-No-Takaramono_(Angel-Beats).mp3
+110:Artists/#-Lisa/LiSA_Mirai-Kaze.mp3
+111:Artists/#-Lisa/Lisa_Oath-Sign_(Fate-Zero).mp3
+112:Artists/#-Lisa/Lisa_Rally-Go-Round_(Nisekoi).mp3
+113:Artists/#-Lisa/Lisa_Rising-Hope_(Mahouka-Koukou-No-Rettousei).mp3
+114:Artists/#-Lisa/LiSa_Tales-Of-Xillia-X-Tales-Of-Symphonia.mp3
+115:Artists/#-Lisa/Lisa_Träumerei_(Genei-Wo-Kakeru-Taiyou).mp3
+116:Artists/#-Lisa/LiSA_Shirushi.mp3
+117:Artists/#-Lisa/LiSA_No-More-Time-Machine.mp3
+118:Artists/#-Lisa/LiSA_Orange-Cider.mp3
+119:Artists/#-Lisa/LiSA_This-Illusion.mp3
+120:Artists/#-Lisa/LiSA_Ranic.mp3
+121:Artists/#-Lisa/LiSA_Bright-Flight.mp3
+122:Artists/#-Lisa/LiSA_Empty_Mermaid.mp3
+123:Artists/#-Lisa/LiSA_Antihero.mp3
+124:Artists/#-Lisa/LiSA_Canvas-Boy-X-Palette-Girl.mp3
+125:Artists/#-Lisa/LiSA_Doctor.mp3
+126:Artists/#-Lisa/LiSA_Boku-No-Kotoba-De.mp3
+127:Artists/#-Lisa/LiSA_Usotsuki-No-Namida.mp3
+128:Artists/#-Lisa/LiSA_Gyakkou-Orchestra.mp3
+129:Artists/#-Lisa/LiSA_Rapid-Life.mp3
+130:Artists/#-Lisa/LiSA_Bad-Sweet-Trap.mp3
+131:Artists/#-Lisa/LiSA_Eien.mp3
+132:Artists/#-Lisa/LiSA_Mousou-Controller.mp3
+133:Artists/#-Lisa/LiSA_Little-Braver.mp3
+134:Artists/#-Lisa/LiSA_Shine-Days.mp3
+135:Artists/#-Lisa/LiSA_Lover-Smile.mp3
+136:Artists/#-Lisa/LiSA_Hana-No-Mitubashi.mp3
+137:Artists/#-Lisa/LiSA_Hands-&-Smile.mp3
+138:Artists/#-Lisa/LiSA_Spice.mp3
+139:Artists/#-Lisa/LiSA_Yuuyake-Nostalgia.mp3
+140:Artists/#-Lisa/LiSA_Haretara-Li-Ne.mp3
+141:Artists/#-Aerosmith/Aerosmith_Crazy.mp3
+142:Artists/#-Aerosmith/Aerosmith_Dream-On.mp3
+143:Artists/#-Aerosmith/Aerosmith_Fly-Away-From-Here.mp3
+144:Artists/#-Aerosmith/Aerosmith_Girls-Of-Summer.mp3
+145:Artists/#-Aerosmith/Aerosmith_Hole-In-My-Soul.mp3
+146:Artists/#-Aerosmith/Aerosmith_Last-Child.mp3
+147:Artists/#-Aerosmith/Aerosmith_Love-In-An-Elevator.mp3
+148:Artists/#-Aerosmith/Aerosmith_Pink.mp3
+149:Artists/#-Aerosmith/Aerosmith_Walk-This-Way-RUN-DMC.mp3
+150:Artists/#-Aerosmith/Aerosmith_What-Could-Have-Been-Love.mp3
+151:Artists/#-Aerosmith/Aerosmith_What-It-Takes.mp3
+152:Artists/#-Aerosmith/Aerosmith_You-See-Me-Crying.mp3
+153:Artists/#-Aerosmith/Aerosmith_Angel.mp3
+154:Artists/#-Aerosmith/Aerosmith_Livin'-On-The-Edge.mp3
+155:Artists/#-Aerosmith/Aerosmith_Walk-This-Way-LIVE.mp3
+156:Artists/#-Aerosmith/Aerosmith_Same-Old-Song-Dance.mp3
+157:Artists/#-Aerosmith/Aerosmith_I-Don't-Want-To-Miss-A-Thing.mp3
+158:Artists/#-Aerosmith/Aerosmith_Come-Together.mp3
+159:Artists/#-Aerosmith/Aerosmith_Rag-Doll.mp3
+160:Artists/#-Aerosmith/Aerosmith_Dude-Look-Like-A-Lady.mp3
+161:Artists/#-Aerosmith/Aerosmith_Back-In-The-Saddle.mp3
+162:Artists/#-Aerosmith/Aerosmith_Sweet-Emotion.mp3
+163:Artists/#-Aerosmith/Aerosmith_Jaded.mp3
+164:Artists/#-7!!/7!!_Ai-No-Shirushi.mp3
+165:Artists/#-7!!/7!!_Fallin-Love.mp3
+166:Artists/#-7!!/7!!_Lovers_(Naruto-Shippuden).mp3
+167:Artists/#-7!!/7!!_Orange_(Shigatsu-Wa-Kimi-No-Uso).mp3
+168:Artists/#-7!!/7!!_Primitive-Power.mp3
+169:Artists/#-7!!/7!!_Nemurenai-Yoru-Ni.mp3
+170:Artists/#-7!!/7!!_Ai-No-Kotoba.mp3
+171:Artists/#-7!!/7!!_Kimi-To-Watashi-No-Ballad.mp3
+172:Artists/#-7!!/7!!_Heros-Come-Back.mp3
+173:Artists/#-7!!/7!!_Kono-Hiroi-Sora-No-Shita-De.mp3
+174:Artists/#-7!!/7!!_Sutātorain.mp3
+175:Artists/#-7!!/7!!_ReRe.mp3
+176:Artists/#-7!!/7!!_Mr-Harō.mp3
+177:Artists/#-7!!/7!!_Sayonara-Memory.mp3
+178:Artists/#-7!!/7!!_Kirari-To-Hikare.mp3
+179:Artists/#-7!!/7!!_Melody-Maker.mp3
+180:Artists/#-7!!/7!!_Sun-Light.mp3
+181:Artists/#-7!!/7!!_My-Darling.mp3
+182:Artists/#-7!!/7!!_Taiyou-Ni-Kiss.mp3
+183:Artists/#-7!!/7!!_The-Kiss-In-The-Sun.mp3
+184:Artists/#-7!!/7!!_Please-Please.mp3
+185:Artists/#-7!!/7!!_I-Stay.mp3
+186:Artists/#-7!!/7!!_Nostalgia.mp3
+187:Artists/#-7!!/7!!_Before-The-Rain.mp3
+188:Artists/#-7!!/7!!_Kono-Ame-Ga-Furu-Mae-Ni.mp3
+189:Artists/#-7!!/7!!_Snow-Man_(Acoustic).mp3
+190:Artists/#-7!!/7!!_Yowamushi-san.mp3
+playlist_end

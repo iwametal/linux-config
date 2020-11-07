@@ -1,0 +1,37 @@
+=======================
+Install MySQL / MariaDB:
+=======================
+  
+  # downloading the package
+  sudo pacman -S mariadb
+
+  # installing package
+  sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+  # or
+  sudo mysql_install_db
+
+===================
+Run MySQL / MariaDB:
+===================
+  
+  # starting the service with systemd
+  sudo systemclt start mysqld
+
+=========================
+Configure MySQL / MariaDB:
+=========================
+
+  # secure the installation
+  mysql_secure_installation
+
+==========================================
+Configure Remote Access to MySQL / MariaDB:
+==========================================
+  # check https://dominicm.com/install-mysql-mariadb-on-arch-linux/
+
+===================
+Use MySQL / MariaDB:
+===================
+
+  # Entering db
+  sudo mysql -u root -p

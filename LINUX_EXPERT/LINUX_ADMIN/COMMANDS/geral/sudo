@@ -1,0 +1,4 @@
+sudo
+	* também permite a escala de privilégios para super usuário
+	* é possível especificar quais usuários poderão fazer essa escalada, adicionando eles no grupo sudo (ou no arquivo sudoers)
+	* guarda sessões

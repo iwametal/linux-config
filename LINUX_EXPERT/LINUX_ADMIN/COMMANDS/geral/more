@@ -1,0 +1,6 @@
+more [arquivo]
+	* faz a paginaćão do arquivo
+	* apertando [ENTER], ele vai de linha em linha
+	* apertando [SPACE], ele vai de página em página
+	* pode-se sair do arquivo com [q] ou [ctrl + c]
+	* quando se chega no final do arquivo, ele sai da paginaćão automáticamente

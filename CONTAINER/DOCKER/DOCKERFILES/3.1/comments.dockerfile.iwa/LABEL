@@ -1,0 +1,4 @@
+# labels criados para o dockerfile
+
+LABEL description="Webserver"
+LABEL version="2.0.0"

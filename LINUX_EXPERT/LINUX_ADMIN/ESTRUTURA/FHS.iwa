@@ -1,0 +1,180 @@
+FHS (File-System Hierarchy Standard)
+	--> Gera um padrão na estrutura de diretórios no Linux
+	|_> Todas as distribuićões que seguem o LSB, devem seguir o FHS
+
+# DIRETORIOS
+
+----
+/bin/
+----
+
+armazena binários do sistema (arquivos executáveis)
+contém executáveis essenciais para o Linux
+comandos utilizados com frequência no sistema Linux
+
+-----
+/boot/
+-----
+
+arquivos essenciais para o boot do sistema
+
+----
+/dev/
+----
+
+dev significa devices
+armazena, portanto, todos os dispositivos do sistema, como HDD's, por exemplo
+
+-rwxr--r--
+^
+|_> arquivo comum
+
+drwxrwxrwx
+^
+|_> diretório
+
+brw-rw----
+^
+|_> dispositivo de bloco (armazena informaćão)
+
+crw-------
+^
+|_> dispositivo de caractere (transfere informaćão)
+
+lrwxrwxrwx
+^
+|_> link simbólico
+
+srwxrw-rw-
+^
+|_> dipositivos sockets
+
+----
+/etc/
+----
+
+guarda toda a configuraćão da máquina
+ou arquivos de configuraćão da máquina
+
+/etc/motd --> messege of the day
+					|_> mensagem apresentada no momento que se loga na máquina
+
+-----
+/home/
+-----
+
+contém os usuários home de cada usuário da máquina por padrão
+
+----
+/lib/
+----
+
+contém bibliotecas compartilhadas entre os programas, além dos módulos do kernel
+
+libs geralmente possuem extensão .so e módulos de kernel geralmente possuem extensão .ko
+	# exemplo:
+		libdiscover.so.2.0.1
+		geneve.ko
+
+-----------
+/lost+found
+-----------
+
+todo sistema de arquivo tipo journal, possui o lost+found, para salvar arquivos em caso de queda de energia ou desligamento inesperado da máquina
+cada partićão do disco possui um lost+found
+
+-------
+/media/
+-------
+
+diretório onde são montadas as mídias externas
+
+-----
+/mnt/
+-----
+
+ponto de montagem temporário do Linux
+
+-----
+/opt/
+-----
+
+não é muito utilizado, porém serve para armazenar os arquivos de softwares diversos instalados na máquina
+
+------
+/proc/
+------
+
+um diretório que exete... só que não xD
+um file system virtual
+possui arquivos criados pelo kernel e por outros processos
+possui informaćões dinâmicas sobre o sistema [kernel e processos]
+
+todos os arquivos/diretórios presentes no /proc/ são processos, criados no momento que se liga a máquina e destruídos no momento que se desliga
+
+------
+/root/
+------
+
+diretório home do usuário root
+
+-----
+/run/
+-----
+
+traz informaćões sobre tudo o que está rodando no sistema desde o último boot
+o /run/ é considerado um arquivo temporário (tmpfs - temporary file system)
+por ser um arquivo temporário, as informaćões presentes nele são deletadas todo o momento que a máquina é desligada ou restartada
+
+------
+/sbin/
+------
+
+possui binários essenciais de uso do super usuário (root ou sudo)
+
+-----
+/srv/
+-----
+
+possui dados estáticos
+servićos do apache, FTP, git e etc.
+outra estrutura muito pouco utilizada
+
+-----
+/sys/
+-----
+
+informaćões referentes ao sistema
+devices, modules e etc.
+
+-----
+/tmp/
+-----
+
+diretório temporário
+todo conteúdo é excluído quando a máquina é desligada ou restartada
+
+-----
+/usr/
+-----
+
+segunda hierarquia de sistemas do Linux
+
+/usr/bin --> binários não essenciais para o sistema
+
+/usr/lib, /usr/lib32 e /usr/lib64 --> bibliotecas para /usr/bin e /usr/sbin
+
+/usr/include --> cabećalhos
+
+/usr/share --> documentaćão, compartilhamento de dados de um programa/aplicativo
+
+/usr/src --> código fonte de programas
+
+/usr/local --> terceira hierarquia de diretórios do Linux
+	--> para dados locais, dados específicos do sistema
+
+-----
+/var/
+-----
+
+possui informaćões de log, caches, libs de programas, općão de backup e etc.

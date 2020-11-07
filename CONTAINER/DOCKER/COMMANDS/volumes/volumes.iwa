@@ -1,0 +1,20 @@
+Volumes são uma forma de manter os dados de um container, mesmo depois da exclusão do mesmo. É criado um diretório no disco da sua máquina local, deixando assim os dados salvos em uma parte isolada da sua máquina e não dentro de um container. Ao rodar uma imagem do container, são então passados alguns parâmetros, indicando que será criado um volume, onde a parte do seu file-system que guardará os dados será passada para o container, podendo-se assim, manter tais dados, mesmo após a exclusão do mesmo.
+
+Existem duas formas de se criar um volume no container: por meio do tipo bind e por meio do tipo volume.
+	*O tipo "bind" é usado quando ja se tem um diretório criado na sua máquina para armazenagem dos dados, passando assim o caminho do diretório para o container utilizá-lo.
+	*Já o tipo "volume", é quando se cria um volume com "docker volume create". É então passado como parâmetro o nome do volume criado. Quando se cria um volume pelo docker, ele vai para o seguinte caminho: /var/lib/docker/volumes. EXEMPLO: caso fosse criado um volume da seguinte forma: "docker volume create vol_test", o caminho para o mesmo seria: /var/lib/docker/volumes/vol_test. Dentro de todo volume criado, existe um diretório chamado _data/ e é justamente dentro desse diretório, que ficarão todos os dados savos em um volume dentro do container.
+
+Abaixo um exemplo de implementaćão de um volume utilizando o tipo "bind":
+
+# mkdir /opt/volume_teste
+# docker container run -ti --mount type=bind,src=/opt/volume_teste,dst=/volume debian
+
+	* mkdir /opt/volume_teste criará o diretório volume_teste/ dentro de /opt na sua máquina. Volume esse que será usado dentro do container.
+	* O segundo comando iniciará o container com o volume. FLAGS e parâmetros:
+			** --mount: indica que será montado um diretório da sua máquina local dentro do container
+			** type: Indica qual o tipo do volume [explicado anteriormente], 'bind' ou 'volume'
+			** src [ou source]: Indica o caminho completo do diretório na sua máquina.
+			** dst [ou destination]: Indica onde será montado o diretório especificado dentro do container e qual será o nome da pasta. No exemplo acima, a montagem ocorrerá no diretório / [raíz] e o nome da pasta será volume
+			** Existe também o paretro ro, que indica que o container que está sendo criado é "read only" [apenas leitura], ou seja, não será possível alterar absolutamente nada no volume dentro do container. Exemplo: docker container run -ti --mount type=bind,src=/opt/volume_teste,dst=/volume,ro debian
+
+	* IMPORTANTE: Apenas os arquivos presentes dentro do diretório que representa a parte do file-system de sua máquina serão salvos. Todos os arquivos fora do volume serão perdidos. No caso do parâmetro 'dst', onde cria-se o nome da pasta e seu caminho no container, pode-se por exemplo, criar uma raíz de diretórios, desta forma: dst=/dir/volume/teste/bind. Porém, neste caso, o diretório que representa o diretório do volume é o últim apenas (no caso, o bind/), ou seja, qualquer arquivo criado fora dele, por exemplo /dir/volume ou /dir/volume/teste, não estará dentro do volume e será perdido.

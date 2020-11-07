@@ -1,0 +1,85 @@
+docker volume ls
+	* lista todos os volumes criados
+
+docker volume create [nome do volume]
+	* cria um novo volume para utilizaćão com o nome especificado
+
+docker volume inspect [nome do volume]
+	* tráz informaćões sobre o volume especificado
+
+docker volume rm [nome do volume]
+	* remove o volume com o nome especificado. Volume que ainda estiverem em uso, não serão removidos.
+
+-----------------------------------------------------------
+UTILIZAĆÃO DE UM VOLUME MONTADO NA MÁQUINA EM UM CONTAINER:
+-----------------------------------------------------------
+
+docker container run -ti --mount type=volume,src=[nome do volume],dst=/volume centos
+
+EXEMPLO:
+
+docker volume create vol_test
+docker container run -ti --mount type=volume,src=vol_test,dst=/volume centos
+
+docker volume prune
+	* exclui todos os volumes que não estiverem sendo utilizados por pelo menos um container
+
+------------------------------------
+CRIAĆÃO DE VOLUMES DA MANEIRA ANTIGA
+------------------------------------
+
+docker container create -v [ponto de montagem do volume no container e o nome do mesmo] --name dbdados [nome da imagem]
+	* flag -v --> indica que um volume será criado.
+	* No caso acima, não se deu nenhum nome para o volume e também nenhum caminho para sua criaćão foi especificado. Assim, o volume será criado dentro do path padrão (/var/lib/docker/volumes/) e seu nome será o ID do container.
+	* --name --> É dado um nome para o container
+
+EXEMPLO:
+docker container create -v /data --name dbdados debian
+
+PS: Na criaćão do volume, obrigatoriamente tem de se utilizar o /data como destino no container, caso contrário, o postgreSQL não conseguirá identificar o volume.
+
+--------------------------------------------------------------------------------------
+FAZENDO BUILD NO POSTGRE, RELACIONANDO VOLUMES -- FORMA ANTIGA DE UTILIZAĆÃO DE VOLUME
+--------------------------------------------------------------------------------------
+
+docker container run -d -p 5432:5432 --name pgsql1 --volumes-from dbdados -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql
+		* flag -p --> utilizada para indicar uma porta, no caso do pgsql, a porta utilizada é a 5432:5432, onde a primeira é a porta do Host na máquina e a segunda é a porta do container.
+		* --name --> Da um nome para o container, no caso acima, chamado de pgsql1
+		* --volumes-from --> Indica um volume criado em outro container, que também será utilizado neste.
+		* -e --> flag de "environment", para criar uma variável de ambiente no container. No caso do postgre é necessário esta općão para seu funcionamento. POSTGRESQL_USER, indica o usuário do postgre, POSTGRESQL_PASS, indica a senha e POSTGRESQL_DB indica o nome do banco de dados a ser criado.
+		* kamui/postgresql --> Imagem que reprenta o postgre.
+
+------------------------------------------------------------------------------------
+FAZENDO BUILD NO POSTGRE, RELACIONANDO VOLUMES -- FORMA NOVA DE UTILIZAĆÃO DE VOLUME
+------------------------------------------------------------------------------------
+
+# cria-se um volume qualquer
+
+docker volume create vol_test
+
+# cria-se o container com a imagem que utilizará o volume criado
+
+docker container run -d -p 5432:5432 --mount type=volume,src=vol_test,dst=/data -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql
+
+	* As informaćões passadas são exatamente as mesmas se comparadas com a forma antiga, sendo a criaćão do volume a única diferenća, substituindo-se o "--volumes-from" por "--mount [informaćões do volume]".
+
+------------------------------
+CRIANDO UM BACKUP DE UM VOLUME
+------------------------------
+
+mkdir [caminho do bind / nome do bind]
+docker container run -ti --mount type=volume,src=[caminho do bind],dst[ponto de montagem / nome no container] --mount type=bind,src=[caminho do diretório],dst=[ponto de montagem / nome do container] [nome da imagem] [OPCIONAL --> comando para realizaćão do backup sem precisar entrar na imagem para tal]
+
+EXEMPLO:
+
+# há um volume chamado dbdados guardando os dados de um banco
+
+mkdir /opt/BKP-DBDADOS
+
+docker container run - ti --mount type=volume,src=dbdados,dst=/data --mount type=bind,src=/opt/BKP-DBDADOS,dst=/bkp-dbdados debian tar -cvf /bkp-dbdados/backup_dbdados.tar /data
+
+	* o primeiro --mount representa o volume no qual os dados originais estão salvos
+	* o segundo --mount representa o volume/bind onde será feito o backup do primeiro diretório
+	* TAR
+		* os comandos após o nome da imagem, referen-se ao comando tar do linux, usado para compactar, descompactar, empacotar, desempacotar arquivos e etc. No caso do exemplo acima, está sendo feito um empacotamento dos dados de /data para dentro de /bkp-dbdados com o nome de backup_dbdados.tar.
+		* as flags -c -v e -f representam a criaćão do pacote, uma sitaxe verbose para deixar explícito o que está ocorrendo no tar e uma indicaćão do arquivo que será criado, respectivamente. Poderia-se, além de empacotar, também compactar o arquivo, utilizando, por exemplo, as flags: -cvzf. No qual as flags -c, -v e -f possuem o mesmo significado dito anteriormente e a flag -z indica que o arquivo será compactado em .gz.

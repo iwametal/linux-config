@@ -1,0 +1,15 @@
+nl [arquivo]
+	* numera a quantidade de linhas de um arquivo
+	* semelhante ao cat -n [arquivo]
+
+nl -f a [arquivo]
+	* não numera linhas vazias
+
+nl -i 1 [arquivo]
+	* a flag -i indica o incremento na contagem das linhas
+	* no caso acima, o incremento é de 1 em 1 (default)
+	* mas poderia ser passado o número 3 por exemplo, assim, as linhas seriam numeradas de 3 em 3 (1, 4, 7...)
+
+nl -v 2 [arquivo]
+	* a flag -v indica qual número comećará a contagem das linhas
+	* no exemplo acima, a contagem comećará do 2 (2, 3, 4)

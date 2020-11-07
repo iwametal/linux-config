@@ -1,0 +1,344 @@
+#!/bin/sh
+
+path=$(pwd)
+
+echo "_______________________"
+echo "Creating symbolic links"
+echo "-----------------------"
+
+##################
+# home directory #
+##################
+
+echo "##################"
+echo "# \$HOME direcoty #"
+echo "##################"
+
+# .bash_profile
+echo "linking .bash_profile"
+ln -sf $path/.bash_profile $HOME/.bash_profile
+
+# .bashrc
+echo "linking .bashrc"
+ln -sf $path/.bashrc $HOME/.bashrc
+
+# .dmrc
+echo "linking .dmrc"
+ln -sf $path/.dmrc $HOME/.dmrc
+
+# .fehbg
+echo "linking .fehbg"
+ln -sf $path/.fehbg $HOME/.fehbg
+
+# .gitconfig
+echo "linking .gitconfig"
+ln -sf $path/.gitconfig $HOME/.gitconfig
+
+# .profile
+echo "linking .profile"
+ln -sf $path/.profile $HOME/.profile
+
+# .vimrc
+echo "linking .vimrc"
+ln -sf $path/.vimrc $HOME/.vimrc
+
+# .xprofile
+echo "linking .xprofile"
+ln -sf $path/.xprofile $HOME/.xprofile
+
+# coffeefetch
+echo "linkgin coffeefetch"
+ln -sf $path/coffeefetch $HOME/coffeefetch
+
+# config_dependencies.iwa
+echo "linking config_dependencies.iwa"
+ln -sf $path/config_dependencies.iwa $HOME/config_dependencies.iwa
+
+# fck-u
+echo "linking fck-u"
+ln -sf $path/fck-u $HOME/fck-u
+
+#####################
+# .config directory #
+#####################
+
+echo "###########################"
+echo "# \$HOME/.config directory #"
+echo "###########################"
+
+# creating .config directory
+[ ! -d $HOME/.config ] && mkdir $HOME/.config
+
+# alacritty
+echo "removing alacritty"
+[ -d $HOME/.config/alacritty ] && rm -rf $HOME/.config/alacritty
+echo "linking alacritty"
+ln -sf $path/.config/alacritty $HOME/.config/alacritty
+
+# bashtop
+echo "removing bashtop"
+[ -d $HOME/.config/bashtop ] && rm -rf $HOME/.config/bashtop
+echo "linking bashtop"
+ln -sf $path/.config/bashtop $HOME/.config/bashtop
+
+# broot
+echo "removing broot"
+[ -d $HOME/.config/broot ] && rm -rf $HOME/.config/broot
+echo "linking broot"
+ln -sf $path/.config/broot $HOME/config.broot
+
+# bspwm
+echo "removing bspwm"
+[ -d $HOME/.config/bspwm ] && rm -rf $HOME/.config/bspwm
+echo "linking bspwm"
+ln -sf $path/.config/bspwm $HOME/.config/bspwm
+
+# coc
+echo "removing coc"
+[ -d $HOME/.config/coc ] && rm -rf $HOME/.config/coc
+echo "linking coc"
+ln -sf $path/.config/coc $HOME/.config/coc
+
+# configstore
+echo "removing configstore"
+[ -d $HOME/.config/configstore ] && rm -rf $HOME/.config/configstore
+echo "linking configstore"
+ln -sf $path/.config/configstore $HOME/.config/configstore
+
+# gtk-2.0
+echo "removing gtk-2.0"
+[ -d $HOME/.config/gtw-2.0 ] && rm -rf $HOME/.config/gtk-2.0
+echo "linking gtk-2.0"
+ln -sf $path/.config/gtk-2.0 $HOME/.config/gtk-2.0
+
+# gtk-3.0
+echo "removing gtk-3.0"
+[ -d $HOME/.config/gtw-3.0 ] && rm -rf $HOME/.config/gtk-3.0
+echo "linking gtk-3.0"
+ln -sf $path/.config/gtk-3.0 $HOME/.config/gtk-3.0
+
+# gtk-4.0
+echo "removing gtk-4.0"
+[ -d $HOME/.config/gtw-4.0 ] && rm -rf $HOME/.config/gtk-4.0
+echo "linking gtk-4.0"
+ln -sf $path/.config/gtk-4.0 $HOME/.config/gtk-4.0
+
+# gwe
+echo "removing gwe"
+[ -d $HOME/.config/gwe ] && rm -rf $HOME/.config/gwe
+echo "linking gwe"
+ln -sf $path/.config/gwe $HOME/.config/gwe
+
+# lf
+echo "removing lf"
+[ -d $HOME/.config/lf ] && rm -rf $HOME/.config/lf
+echo "linking lf"
+ln -sf $path/.config/lf $HOME/.config/lf
+
+# mpd
+echo "removing mpd"
+[ -d $HOME/.config/mpd ] && rm -rf $HOME/.config/mpd
+echo "linking mpd"
+ln -sf $path/.config/mpd $HOME/.config/mpd
+
+# nvim
+echo "removing nvim"
+[ -d $HOME/.config/nvim ] && rm -rf $HOME/.config/nvim
+echo "linking nvim"
+ln -sf $path/.config/nvim $HOME/.config/nvim
+
+# picom
+echo "removing picom"
+[ -d $HOME/.config/picom ] && rm -rf $HOME/.config/picom
+echo "linking picom"
+ln -sf $path/.config/picom $HOME/.config/picom
+
+# polybar
+echo "removing polybar"
+[ -d $HOME/.config/polybar ] && rm -rf $HOME/.config/polybar
+echo "linking polybar"
+ln -sf $path/.config/polybar $HOME/.config/polybar
+
+# pulse
+echo "removing pulse"
+[ -d $HOME/.config/pulse ] && rm -rf $HOME/.config/pulse
+echo "linking pulse"
+ln -sf $path/.config/pulse $HOME/.config/pulse
+
+# ranger
+echo "removing ranger"
+[ -d $HOME/.config/ranger ] && rm -rf $HOME/.config/ranger
+echo "linking ranger"
+ln -sf $path/.config/ranger $HOME/.config/ranger
+
+# shellconfig
+echo "removing shellconfig"
+[ -d $HOME/.config/shellconfig ] && rm -rf $HOME/.config/shellconfig
+echo "linking shellconfig"
+ln -sf $path/.config/shellconfig $HOME/.config/shellconfig
+
+# sxhkd
+echo "removing sxhkd"
+[ -d $HOME/.config/sxhkd ] && rm -rf $HOME/.config/sxhkd
+echo "linking sxhkd"
+ln -sf $path/.config/sxhkd $HOME/.config/sxhkd
+
+# sxiv
+echo "removing sxiv"
+[ -d $HOME/.config/sxiv ] && rm -rf $HOME/.config/sxiv
+echo "linking sxiv"
+ln -sf $path/.config/sxiv $HOME/.config/sxiv
+
+# QtProject.conf
+echo "linking QtProject.conf"
+ln -sf $path/.config/QtProject.conf $HOME/.config/QtProject.conf
+
+# dleyna-renderer-service.conf
+echo "linking dleyna-renderer-service.conf"
+ln -sf $path/.config/dleyna-renderer-service.conf $HOME/.config/dleyna-renderer-service.conf
+
+# dleyna-server-service.conf
+echo "linking dleyna-server-service.conf"
+ln -sf $path/.config/dleyna-server-service.conf $HOME/.config/dleyna-server-service.conf
+
+# dragonplayerrc
+echo "linking dragonplayerrc"
+ln -sf $path/.config/dragonplayerrc $HOME/.config/dragonplayerrc
+
+# kolourpaintrc
+echo "linking kolourpaintrc"
+ln -sf $path/.config/kolourpaintrc $HOME/.config/kolourpaintrc
+
+# mimeapps.list
+echo "linking mimeapps.list"
+ln -sf $path/.config/mimeapps.list $HOME/.config/mimeapps.list
+
+######################
+# .ncmpcpp directory #
+######################
+
+echo "############################"
+echo "# \$HOME/.ncmpcpp directory #"
+echo "############################"
+
+echo "removing .ncmpcpp"
+[ -d $HOME/.ncmpcpp ] && rm -rf $HOME/.ncmpcpp
+echo "linking .ncmpcpp"
+ln -sf $path/.ncmpcpp $HOME/.ncmpcpp
+
+#######################
+# .pylint.d directory #
+#######################
+
+echo "#############################"
+echo "# \$HOME/.pylint.d directory #"
+echo "#############################"
+
+echo "removing .pylint.d"
+[ -d $HOME/.pylint.d ] && rm -rf $HOME/.pylint.d
+echo "compying .pylint.d"
+ln -sf $path/.pylint.d $HOME/.pylint.d
+
+###########################
+# .screenlayout directory #
+###########################
+
+echo "#################################"
+echo "#	\$HOME/.screenlayout directory #"
+echo "#################################"
+
+echo "removing .screenlayout"
+[ -d $HOME/.screenlayout ] && rm -rf $HOME/.screenlayout
+echo "compying .screenlayout"
+ln -sf $path/.screenlayout $HOME/.screenlayout
+
+######################
+# .scripts directory #
+######################
+
+echo "############################"
+echo "# \$HOME/.scripts directory #"
+echo "############################"
+
+echo "removing .scripts"
+[ -d $HOME/.scripts ] && rm -rf $HOME/.scripts
+echo "linking .scripts"
+ln -sf $path/.scripts $HOME/.scripts
+
+#######################
+# .vim-custom-plugins #
+#######################
+
+echo "#######################################"
+echo "# \$HOME/.vim-custom-plugins directory #"
+echo "#######################################"
+
+echo "removing .vim-custom-plugins"
+[ -d $HOME/.vim-custom-plugins ] && rm -rf $HOME/.vim-custom-plugins
+echo "linking .vim-custom-plugins"
+ln -sf $path/.vim-custom-plugins $HOME/.vim-custom-plugins
+
+#########
+# .wine #
+#########
+
+echo "###############"
+echo "# \$HOME/.wine #"
+echo "###############"
+
+echo "removing .wine"
+[ -d $HOME/.wine ] && rm -rf $HOME/.wine
+echo "linking .wine"
+ln -sf $path/.wine $HOME/.wine
+
+#############
+# .Suckless #
+#############
+
+echo "###################"
+echo "# \$HOME/.Suckless #"
+echo "###################"
+
+echo "removing Suckless"
+[ -d $HOME/Suckless ] && rm -rf $HOME/Suckless
+echo "linking Suckless"
+ln -sf $path/Suckless $HOME/Suckless
+
+####################
+# vim-plug-install #
+####################
+
+echo "##########################"
+echo "# \$HOME/vim-plug-install #"
+echo "##########################"
+
+echo "removing vim-plug-install"
+[ -d $HOME/vim-plug-install ] && rm -rf $HOME/vim-plug_install
+echo "linking vim-plug-install"
+ln -sf $path/vim-plug-install $HOME/vim-plug_install
+
+################
+# wal-palettes #
+################
+
+echo "#######################"
+echo "# \$HOME/wal-palettes #"
+echo "#######################"
+
+echo "removing wal-palettes"
+[ -d $HOME/wal-palettes ] && rm -rf $HOME/wal-palettes
+echo "linking wal-palettes"
+ln -sf $path/wal-palettes $HOME/wal-palettes
+
+#############
+# wallpaper #
+#############
+
+echo "###################"
+echo "# \$HOME/wallpaper #"
+echo "###################"
+
+echo "removing wallpaper
+[ -d $HOME/wallpaper ] && rm -rf $HOME/wallpaper
+echo "linking wallpaper
+ln -sf $path/wallpaper $HOME/wallpaper

@@ -1,0 +1,5 @@
+RUN apt-get update && apt-get install -y apache2 && apt-get clean --> indica os comandos que serão executados enquanto está sendo feito o build da imagem || Motivo de estar tudo na mesma linha: Camadas do Docker
+|
+--> OBS: Atualmente, o apt já faz a remoćão dos arquivos .deb (com o comando apt-get clean) automaticamente. Ou seja, para novas versões do container, não há necessidade deste último comando.
+
+RUN chown www-data:www-data /var/lock/ && chown www-data:www-data /var/run/ && chown www-data:www-data /var/log/ --> Muda o dono destes diretórios executados pelo o apache para o usuário www-data, permitindo que o mesmo consiga acessá-los. Neste caso em específico, mesmo trocando o own destes diretórios não será possível executar o container, pois não será possível realizar o bind na porta 80 sem o usuário root, por quetões de outros privilégios além dos diretórios.

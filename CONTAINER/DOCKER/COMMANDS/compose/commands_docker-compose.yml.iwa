@@ -1,0 +1,18 @@
+version: "3.7"  --> versão do docker-compose a ser utilizada
+services:  --> servićos que serão utilizados no container
+  web:  --> servićo web
+    image: nginx  --> imagem a ser utilizada
+    deploy:  --> como será o deploy da aplicaćão
+      replicas: 5  --> indica que serão subidas 5 replicas do servićo
+      resources:  --> resources da aplicaćão
+        limits:  --> lista os limites que terá a aplicaćão
+          cpus: "0.1"  --> utilizará apenas 10% do CPU
+          memory: 50M  --> utilizará apenas 50M de memória
+      restart_policy:  --> politica de restart da aplicaćão
+        condition: on-failure  --> indica que a condićão para o container restartar é em todo caso de falha
+    ports:  --> portas que rodará o container
+      - "8080:80" [porta do host]:[porta do container]
+    networks: --> a rede de deploy será chamada webserver
+    - webserver
+networks: --> como foi especificada a rede webserver acima, é preciso criá-la aqui
+  webserver:

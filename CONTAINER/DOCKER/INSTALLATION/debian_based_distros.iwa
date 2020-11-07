@@ -1,0 +1,12 @@
+curl -fsSL https://get.docker.com | bash
+
+-------------
+CONFIGURATION in systemd
+-------------
+
+# adiciona meu usuário ao grupo docker, permitindo a utilizaćão do mesmo sem a necessidade do sudo
+sudo usermod -aG docker my-user
+
+# habilita o docker e starta o server (talvez não seja necessário, mas pode ocorred do server não estar em execućão)
+sudo systemctl enable docker
+sudo systemctl start docker

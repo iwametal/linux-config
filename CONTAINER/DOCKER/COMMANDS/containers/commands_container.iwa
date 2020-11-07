@@ -1,0 +1,108 @@
+docker ps
+			* comando antigo para listar os containers ativos (ou pausados) [maneira antiga de listagem]
+
+docker container ls
+		* lista todos os containers ativos no momento (ou pausados) [maneira nova de listagem]
+
+docker container ls -a
+		* lista todos os containers presentes na máquina
+
+ps -ef
+		* lista todos os processos do container
+
+docker container run -ti [nome da imatem]
+		* verifica primeiramente se o container descrito existe na máquina.
+		* caso o container exita, ele será iniciado
+		* caso o container não exista, será feito um PULL (o container será baixado) e logo depois será iniciado
+		* a flag -ti significa interaćão com o terminal, basicamente, iniciará uma interaćão com o usuário automaticamente assim que o container for ativado
+		* o comando ctrl + d finalizará o processo do bash. Em containers como ubuntu, centos e etc. no qual o bash é o processo principal para manter a imagem do container ativa, quando finalizado este processo, o container será automaticamente finalizado também. Em casos de imagens como o nginx, no qual o bash não é o processo principal, mesmo quando finalizado, o container continuará ativo.
+		* o comando "ctrl + p + q" sairá do bash da imagem no container, mas não a finalizará, ou seja, o container continuará ativo.
+
+docker container create [nome da imagem]
+		* cria um novo container, mas não o coloca em execućão, diferente do "docker container run [nome da imagem]"
+
+docker container run -d [nome da imagem]
+		* funciona de maneira parecida com o comando aterior, porém a imagem aqui, será iniciada em segundo plano, graćas a flag -d.
+		* caso se utiliza a flag -m (--memory), pode-se limitar o uso de memória do container. Exemplo: docker container -d -m 128M nginx
+		* com a flag "--cpus", é possível limitar o uso do cpu no container, através da quantidade permitida de utilizaćão de cores. Exemplo: docker container run -d --cpus 1.5 nginx (permite que a imagem de nginx utilize no máximo 1 core e meio)
+
+docker container exec -ti [id ou nome] bash (ou algum comando bash explícito)
+		* será executado um bash no container explicitado.
+		* caso seja digitado "bash", abrirá um terminal para utilizaćão. Em imagens como nginx, por exemplo, que são utilizadas em segundo plano (usando a flag -d ao fazer o run), mas ainda sim tem a possibilidade de utilizaćão de um terminal, este comando acaba se tornando bem útil.
+		* caso seja digitado um comando específico ('ls', por exemplo), será retornado o resultado deste comando no terminal, mas não será aberto um terminal para aplicaćão. Ou seja, caso precise realizar outros comandos, precisará digitar a instrućão de exec acima novamente.
+
+docker container stop [id ou nome]
+		* finalizará um container ativo
+
+docker container start [id ou nome]
+		* irá "startar" um container parado, que esteja na máquina, porém não esteja ativo
+
+docker container pause [id ou nome]
+		* pausará um container ativo. Ele continuará entre os containers ativos, porém terá seu processo pausado
+
+docker container unpause [id ou nome]
+		* despausará um container.
+
+docker container inspect [id ou nome]
+		* trará informaćões sobre o container especificado através de um arquivo JSON.
+
+docker container attach [id ou nome]
+		* entrará em modo interaćão novamente com um container ativo. Por exemplo, para um container de imagem ubuntu, entrará no bash do mesmo.
+
+docker container logs -f [id ou nome]
+		* fará com que o terminal explicite todas as requisićões ao container
+
+docker container rm [id ou nome]
+		* remove um container
+		* caso o container esteja em execućão, o mesmo não será removido a não ser que seja adicionada a flag -f para forćar a remoćão
+
+docker container stats
+		* trás informaćões referentes a CPU, memória, rede e de blocos sobre todas as imagens
+		* caso o ID de uma imagem seja especificado apóes o "stats", apenas informaćões sobre a imagem especificada serão mostradas
+
+docker container top [id ou nome]
+		* processos em execućão dentro de um container
+
+docker container update [option to update] [id ou nome]
+		* realiza o update de um container em execućão. Exemplo: docker container update --cpus 1.2 c3e
+
+docker container prune
+		* remove todos os containers que não estiverem em execućão
+
+docker container rm -f $(docker container ls -q)
+		* utiliza um subshell para retornar todos os IDS de containers em execućão. Sendo que o docker container ls retorna todos os containers em execućão, e a flag -q, serve para retornar apenas o ID destes containers.
+		* poderia-se utilizar a flag -aq ou -qa, que retornaria os ID's de todos os containers, não apenas aqueles em execućão.
+
+docker commit -m "mensagem" [id do container]
+		* transforma um container em uma imagem.
+		* é bastante útil em situaćões onde precisa-se de uma imagem que traga alguns pacotes já instalados, como uma imagem do Debian com o VIM, por exemplo. Basta, então pegar a imagem padrão do Debian, rodá-la, instalar o VIM, e então executar este comando, para gerar uma nova imagem do debian baseada no container, que no caso, tinha o VIM instalado.
+
+------------------
+RODANDO O REGISTRY
+------------------
+
+docker container run -d -p 5000:5000 --restart=always --name registry registry:2
+		* cria um container rodando um registry do docker, capaz de armazenar imagens, assim como o dockerhub.
+		* flag --restart=always --> indica que sempre que o container for parado por algum motivo ele será restartado.
+		* o motivo de se utilizar a tag :2 no registry, é pelo fato da mesma representar a versão mais recente do registry no docker.
+
+UTILIZAĆÃO
+
+	Assim como para subir imagens para registries remotos (dockerhub) é necessário iniciar o nome da imagem com seu usuário do dockerhub, para subir imagens para registries locais, também há um nome específico para se utilizar nas imagens. No exemplo acima, o container utiliza a porta 5000 do localhost, portanto, uma possibilidade é "taggear" a imagem da seguinte forma: localhost:5000/nome_da_imagem:1.0.0
+
+	Desta forma, assim que for realizado o "docker push [imagem]", a mesma já será automaticamente redirecionada para o container atuando como registry
+
+	Para visualizar as imagens dentro de um registry local, basta utilizar o comando: curl localhost:5000/v2/_catalog
+
+	Para listar as tags de uma imagem específica dentro do registry local, basta utilizar o comando: curl localhost:5000/v2/[nome da imagem]/tags/list
+
+----------------------------------------------------------------
+FAZENDO BUILD NO POSTGRE -- FORMA ANTIGA DE UTILIZAĆÃO DE VOLUME
+----------------------------------------------------------------
+
+docker container run -d -p 5432:5432 --name pgsql1 --volumes-from dbdados -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql
+		* flag -p --> utilizada para indicar uma porta, no caso do pgsql, a porta utilizada é a 5432:5432, onde a primeira é a porta do Host na máquina e a segunda é a porta do container.
+		* --name --> Da um nome para o container, no caso acima, chamado de pgsql1
+		* --volumes-from --> Indica um volume utilizado em outro container, que também será utilizado neste.
+		* -e --> flag de "environment", para criar uma variável de ambiente no container. No caso do postgre é necessário esta općão para seu funcionamento. POSTGRESQL_USER, indica o usuário do postgre, POSTGRESQL_PASS, indica a senha e POSTGRESQL_DB indica o nome do banco de dados a ser criado.
+		* kamui/postgresql --> Imagem que reprenta o postgre.

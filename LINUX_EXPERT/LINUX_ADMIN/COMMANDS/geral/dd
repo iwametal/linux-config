@@ -1,0 +1,6 @@
+dd
+	* cria um arquivo ou um espaćo em disco de um tamanho delimitado
+	--> dd if=/dev/zero of=/home/coffee/folder_criado_com_dd bs=1M count=1024
+	|_> if -> arquivo de entrada, no caso acima, é um arquivo nulo, portanto, será criado um folder vazio
+	|_> of -> arquivo de saída, basicamente o nome do diretório que será criado.
+	|_> bs -> "block size", indica o tamanho do bloco que será criado (em bytes). No caso acima, foi especificado o 'M', portanto, o bloco foi criado em Mega Bytes. O count é opciona e indica quantas vezes o tamnaho do bs será aplicado. No caso acima, foi utilizado count=1024. Ou seja, o folder que será criado será 1024 vezes o tamanho do bloco especificado no bs. No caso, 1024M, ou 1G.

@@ -1,0 +1,3 @@
+RUN apt-get update && apt-get install -y apache2 && apt-get clean --> indica os comandos que serão executados enquanto está sendo feito o build da imagem || Motivo de estar tudo na mesma linha: Camadas do Docker
+|
+--> OBS: Atualmente, o apt já faz a remoćão dos arquivos .deb (com o comando apt-get clean) automaticamente. Ou seja, para novas versões do container, não há necessidade deste último comando.

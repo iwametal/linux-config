@@ -1,0 +1,1 @@
+RUN go build -o meu_go_exe --> executa um comando no build da imagem do container

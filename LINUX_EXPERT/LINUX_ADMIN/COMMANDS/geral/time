@@ -1,0 +1,2 @@
+time [comando]
+	* executa o comando especificado e no final mostra quanto tempo a execućão do programa demorou

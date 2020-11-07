@@ -1,0 +1,1 @@
+WORKDIR /app --> define o diretório principal de trabalho da imagem

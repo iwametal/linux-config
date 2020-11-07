@@ -1,0 +1,6 @@
+alias ccompile='gcc -o exe *.c'
+alias cppcompile='gcc -lstdc++ -o exe *.cpp'
+alias cppcompile-lm='gcc -lstdc++ -o exe *.cpp -lm'
+alias cppcompile-lc='gcc -lstdc++ -o exe *.cpp -lcurses -lncurses'
+alias cppcompile-lclm='gcc -lstdc++ -o exe *.cpp -lcurses -lncurses -lm'
+alias cppcompile-lmlc='gcc -lstdc++ -o exe *.cpp -lcurses -lncurses -lm'

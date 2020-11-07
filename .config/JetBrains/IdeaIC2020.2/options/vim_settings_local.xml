@@ -1,0 +1,26 @@
+<application>
+  <component name="VimMarksSettings">
+    <globalmarks />
+    <filemarks>
+      <file name="$USER_HOME$/git/unimed/chs-backend/global-modules/patients/webservices/src/main/java/com/criticalsoftware/chs/globalmodules/patients/webservices/PatientRESTImpl.java" timestamp="1603990675249">
+        <mark key="'" line="13" column="4" />
+        <mark key="[" line="147" column="53" />
+        <mark key="]" line="147" column="53" />
+        <mark key="^" line="147" column="53" />
+        <mark key="." line="147" column="52" />
+      </file>
+    </filemarks>
+    <jumps>
+      <jump line="13" column="4" filename="$USER_HOME$/git/unimed/chs-backend/global-modules/patients/webservices/src/main/java/com/criticalsoftware/chs/globalmodules/patients/webservices/PatientRESTImpl.java" />
+    </jumps>
+  </component>
+  <component name="VimRegisterSettings">
+    <registers />
+  </component>
+  <component name="VimSearchSettings">
+    <search>
+      <last-dir>0</last-dir>
+      <show-last>false</show-last>
+    </search>
+  </component>
+</application>

@@ -1,0 +1,1 @@
+USER www-data --> indica que o container será executado com este usuário específico e não mais com o padrão (root)

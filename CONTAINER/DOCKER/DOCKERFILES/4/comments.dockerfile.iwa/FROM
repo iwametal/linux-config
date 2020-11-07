@@ -1,0 +1,1 @@
+FROM golang --> imagem na qual o dockerfile irá se basear

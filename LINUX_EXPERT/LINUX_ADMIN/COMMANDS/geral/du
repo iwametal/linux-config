@@ -1,0 +1,25 @@
+du
+	* mostra o quanto está sendo utilizado de disco na máquina por cada arquivo.
+
+du -H
+	* exibe montando bolocos de 1000
+
+du -h
+	* exibe em formato mais legível para humanos
+
+du -s
+	* mostra a soma de ocupaćão de todos os arquivos no diretório
+	* caso se utilize a flag -h junto (df -hs), a saída se torna mais legível para humanos
+
+du -k
+	* mostra a utilizaćão em KB
+
+du -m
+	* mostra a utilizaćão em MB
+
+du --inodes
+	* mostra a utilizaćao em inodes
+
+du -c
+	* junćão do comando "du" com "du -s", mostra todos os conteúdos do du, porém no final também mostra o total de ocupaćão no diretório
+	* utilizando a flag -h, a saída torna-se mais legível para humanos

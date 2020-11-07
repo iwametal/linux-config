@@ -1,0 +1,2 @@
+[comando] !*
+	* !* representa todos os argumentos do comando anterior. Exemplo: "touch test1 test2 test3" possui 3 argumentos (test1, test2 e test3). Portanto, caso seja utilizado o comando "chmod +x !*" logo após, será adicionada permissão de execućão para todos os arquivos anteriores, já que está se pegando todos os parâmetros do comando anterior.

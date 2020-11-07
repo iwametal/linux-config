@@ -1,0 +1,5 @@
+cmp [arquivo 1] [arquivo 2]
+	* compara o conteúdo dos dois arquivos
+	* caso o conteúdo seja o mesmo, não será exibido nada no console e será retornado "0" para a variável de erro do shell
+	* caso o conteúdo seja diferente, será exibido no console a primeira diferenća (em bytes) dos dois arquivos e será retornado "1" para a variável de erro do shell
+	* com a flag -s (cmp -s [arquivo 1] [arquivo 2]), não será exibido nada na tela caso os dois arquivos sejam diferentes, porém ainda será retornado 1 para a variável de erro do shell

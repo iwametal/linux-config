@@ -1,0 +1,1 @@
+ENTRYPOINT ["/usr/sbin/apachectl"] --> ENTRYPOINT representa o "init" para uma máquina Linux. Representa, portanto, o principal processo de um container. Caso esse processo morra, o container também esvairá.

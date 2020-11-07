@@ -1,0 +1,20 @@
+uname
+	* retorna o nome do sistema operacional
+
+uname -a
+	* retorna diversas informaćões do sistema (todos os parâmetros especificados no uname): nome da máquina, versão do kernel e etc
+
+uname -s
+	* exibe o kernel
+
+uname -n
+	* exibe o hostname
+
+uname -r
+	* exibe a versão atual do kernel
+
+uname -v
+	* mostra a data em que o kernel foi compilado
+
+uname -m
+	* mostra a arquitetura que está sendo usada

@@ -1,0 +1,11 @@
+seq 10
+	* numero de 1 a 10, incrementando 1 a 1
+
+seq 2 10
+	* numera de 2 a 10, incrementando 1 a 1
+
+seq 1 3 10
+	* numera de 1 a 10, incrementando de 3 em 3
+
+seq 10 -w
+	* numera de 1 a 10, porém alinha os números com 0 a esquerda

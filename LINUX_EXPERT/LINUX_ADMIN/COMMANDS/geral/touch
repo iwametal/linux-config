@@ -1,0 +1,8 @@
+touch [nome do novo arquivo]
+	* cria um arquivo vazio
+
+touch -t [mes][dia][ano][hora][segundo (opcional)]
+	* muda a data de modificaćão do arquivo
+
+touch -a -t [mes][dia][ano][hora][segundo (opcional)]
+	* semelhante ao comando anterior, porém muda a data de acesso do arquivo, ao invés da data de modificaćão

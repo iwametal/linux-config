@@ -1,0 +1,39 @@
+free
+	* exibe informaćões sobre a memória RAM e a memória SWAP da máquina, como memória utilizada, memória disponível, em cache e etc.
+
+free -h
+	* semelhante ao comando anterior, mas exibe a saída de maneira mais legível a humanos
+
+free --kilo
+	* mostra a saída em kilo bytes
+
+free --mega
+	* mostra a saída em mega bytes
+
+free --giga
+	* mostra a saída em giga bytes
+
+free --tera
+	* mostra a saída em tera bytes
+
+free --peta
+	* mostra a saída em petabytes
+
+free --kibi
+	* utiliza o padrão de 1024 para conversão de bytes (kibi bytes)
+
+free --mebi
+	* assim como o kibi, utiliza blocos de 1024 para a conversão (mebi bytes)
+
+free --gibi
+	* assim como o kibi e o mebi, usa-se de blocos de 1024 bytes para conversão (gibi bytes)
+
+free --tebi
+	* saída em tebi bytes (conversão com blocos de 1024)
+
+free --pebi
+	* saída em pebi bytes (conversão com blocos de 1024)
+
+free -s 2
+	* executa o comando do free a cada 2 segundo
+	* caso o parâmetro especificado fosse 5, executaria o comando a cada 5 segundos

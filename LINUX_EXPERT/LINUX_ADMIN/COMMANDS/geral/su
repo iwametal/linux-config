@@ -1,0 +1,15 @@
+su
+	* eleva os privilégios para usuário root
+
+su -
+	* semelhante ao comando anterior, porém é como se estivesse fazendo login como root
+	* assim, você é transferido de área de trabalho, todas as variáveis de ambiente feitas anteriormentes também são excluídas, iniciando um ambiente completamente novo
+
+/bin/su [ou] /bin/su -
+	* igual aos comandos anteriores, porém é considerada uma prática mais segura e recomendada
+	* pois é possível que se tenha um path alterado, assim, quando se executa apenas "su" ou "su -", em ambientes alterados, é possivel que execute um comando que não é o correto do sistema
+	* com o /bin/ na frente do comando, é forćado que o comando su seja executado de forma correta e eleve os privilégios da maneira adequada
+
+/bin/su - [usuário] -s /bin/bash
+	* é passado um shell para o usuário conectado
+	* é útil para usuários que não possuem um shell padrão

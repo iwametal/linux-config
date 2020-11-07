@@ -1,0 +1,38 @@
+halt
+	--> desliga a máquina
+
+systemctl halt
+	--> desliga a máquina
+
+poweroff
+	--> desliga a máquina
+
+shutdown -H [time]
+	--> desliga a máquina
+
+shutdown -h [time]
+	--> desliga a máquina
+
+shutdown -P [time]
+	--> desliga a máquina
+
+init 0
+	--> desliga a máquina
+
+echo o >/proc/sysrq-trigger
+	--> desliga a máquina
+
+reboot
+	--> reinicia a máquina
+
+systemctl reboot
+	--> reinicia a máquina
+
+shutdown -r [time]
+	--> reinicia a máquina
+
+init 6
+	--> reinicia a máquina
+
+echo b >/proc/sysrq-trigger
+	--> reinicia a máquina

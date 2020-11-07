@@ -1,0 +1,133 @@
+#! /bin/sh
+
+#######################################################################
+#                    ___           ___         ___           ___      #
+#     _____         /  /\         /  /\       /__/\         /__/\     #
+#    /  /::\       /  /:/_       /  /::\     _\_ \:\       |  |::\    #
+#   /  /:/\:|     /  /:/ /\     /  /:/\:\   /__/\ \:\      |  |:|:\   #
+#  /  /:/~/::\   /  /:/ /::\   /  /:/~/:/  _\_ \:\ \:\   __|__|:|\:\  #
+# /__/:/ /:/\:| /__/:/ /:/\:\ /__/:/ /:/  /__/\ \:\ \:\ /__/::::| \:\ #
+# \  \:\/:/~/:/ \  \:\/:/~/:/ \  \:\/:/   \  \:\ \:\/:/ \  \:\~~\__\/ #
+#  \  \::/ /:/   \  \::/ /:/   \  \::/     \  \:\ \::/   \  \:\       #
+#   \  \:\/:/     \__\/ /:/     \  \:\      \  \:\/:/     \  \:\      #
+#    \  \::/        /__/:/       \  \:\      \  \::/       \  \:\     #
+#     \__\/         \__\/         \__\/       \__\/         \__\/     #
+#                                                                     #
+#######################################################################
+#      ___        ____        ___       ___       ___       ___       #
+#     /          /    \      /__       /__       /__       /__        #
+#     |          |    |      |         |         |         |          #
+#     \___       \____/      |         |         |___      |___       #
+#                                                                     #
+#######################################################################
+
+#                                                                     #
+#                 L E O  A N D R A D E  c o n f i g s                 #
+#                                                                     #
+
+#########
+# rules #
+#########
+
+# reset
+bspc rule -r "*"
+
+#############
+# autostart #
+#############
+
+# keybindings
+sxhkd &
+
+# make ~/.scripts/bspwm folder executable
+export PATH="${PATH}:$HOME/.scripts/bspwm"
+
+# polybar
+launchpolybar &
+
+# set the desktop wallpaper
+setwallpaper &
+
+# change map keys between CAPSLOCK and ESCAPE
+keyboard_change_CAPS_ESC.sh &
+
+# enable ABNT stuffs for US layout keyboards
+keyboard_set_ABNT2_layout.sh &
+
+# start st
+startst &
+
+# enable swallow
+# (ps x | bspswallow | grep -v grep) || bspswallow &
+killall bspswallow
+pidof bspswallow || bspswallow &
+
+############
+# monitors #
+############
+
+# set monitors and workspaces
+bspc monitor -d 1 2 3 4 5 6 7 8 9
+
+###################
+# global settings #
+###################
+
+# monitor and desktop settings
+bspc config top_padding 13
+bspc config bottom_padding 6
+bspc config left_padding 6
+bspc config right_padding 6
+bspc config border_width         2
+bspc config window_gap           7
+
+# colors
+
+# wired wallpaper palette
+bspc config normal_border_color "#160c16"
+bspc config active_border_color "#1e1e1e"
+bspc config focused_border_color "#9f78e1"
+bspc config presel_feedback_color "#5e81ac"
+bspc config urgent_border_color "#dd2727"
+
+# general bspc settings
+#bspc config automatic_scheme alternate
+#bspc config initial_polarity second_child
+#bspc config pointer_modifier lock
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+#bspc config click_to_focus none
+bspc config split_ratio          0.5
+
+bspc config focus_follows_pointer true
+bspc config remove_desabled_monitors true
+bspc config remove_unplugged_monitors true
+#bspc config merge_overlapping_monitors true
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# screen blanking
+#xset dpms 0 0 0
+xset -dpms s off
+
+#########
+# rules #
+#########
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a idea desktop='^7' state=tiled follow=on
+bspc rule -a Brave desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+
+bspc rule -a steam desktop='^10' state=floating follow=on
+
+# set desktop 7 to start with floating windows
+#FLOATING_DESKTOP_ID=$(bspc query -D -d '^7')
+#bspc subscribe node_manage | while read -a msg ; do
+	#desk_id=${msg[2]}
+	#wid=${msg[3]}
+	#[ "$FLOATING_DESKTOP_ID" = "$desk_id" ] && bspc node "$wid" -t floating
+#done

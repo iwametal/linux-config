@@ -1,0 +1,20 @@
+Antes da instalaćão, é necessário utilizar uma chave, baixada da oracle, dizendo que o virtual box é confiável.
+Este é o comando para atribuićão da chave na máquina:
+	--> wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | apt-key add -
+	|_> wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | apt-key add -
+
+OBS 1: O oracle possui 2 chaves para autenticaćão, portanto, é preciso baixar as duas.
+OBS 2: Os comandos acima são baseados na distribuićão Debian, portanto, se a distro não for alguma baseada em Debian (ou o próprio Debian, claro), o comando acima não funcionará
+OBS 3: Esta fase de autenticaćão de chaves só precisa ser feita uma única vez
+
+# adiciona-se o reposítório onde o pacote da oracle será baixado
+	--> echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian buster contrib" >/etc/apt/sources.list.d/virtualbox.list
+
+# de um update no repositório
+	--> apt-get update
+
+# instale as dependências utilizadas pelo virtualbox para compilar o módulo de kernel
+	--> apt install make gcc libncurses5-dev linux-headers-amd64
+
+# instale o virtualbox
+	--> apt install virtualbox-6.1 # instalando a versão 6.1 do virtualbox

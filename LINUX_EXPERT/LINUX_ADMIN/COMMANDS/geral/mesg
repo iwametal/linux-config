@@ -1,0 +1,11 @@
+mesg
+	* mensagem do talker
+
+mesg y
+	* ativa o recebimento e envio de mensagens para outros usuários
+
+mesg n
+	* desativa o recebimento e envio de mensagens para outros usuários
+
+write [usuário] [numero tty (opcional)]
+	* conecta com outro usuário para envios e recebimentos de mensagens

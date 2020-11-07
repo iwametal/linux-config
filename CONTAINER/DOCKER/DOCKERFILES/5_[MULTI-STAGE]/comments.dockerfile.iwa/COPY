@@ -1,0 +1,1 @@
+COPY --from=building /app/meu_go_exe /diretorio_go --> copia o arquivo meu_go_exe, gerado no bloco "building" para dentro do diretorio diretorio_go. É possível copiar arquivos de blocos anteriores de um dockerfile ao invés do localhost, utilizando a flag --from, indicando o nome do bloco

@@ -1,0 +1,6 @@
+package main --> indica o pacote de trabalho do código
+import "fmt" --> uma classe com algumas funćões/métodos básicos da linguagem
+
+func main () { --> define a funćão principal
+	fmt.Println("Alguma coisa sendo printada na tela pelo GO") --> printa algo na tela
+}

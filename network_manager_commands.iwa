@@ -1,0 +1,62 @@
+Iik
+--------------------------
+installing network manager
+--------------------------
+
+sudo pacman -S wpa_supplicant netorkmanager wireless_tools
+
+	-- for mobile broadband support:
+sudo pacman -S modemanager mobile-broadband-provider-info usb_modeswitch
+
+	-- for PPPoE/DSL support:
+sudo pacman -S rp-pppoe
+
+	-- for GUI
+sudo pacman -S nm-connection-editor network-manager-applet
+
+---------------------------
+configuring network manager
+---------------------------
+
+sudo systemctl enable NetworkManager.service
+
+sudo systemctl disable dhcpcd.service
+
+sudo systemctl enable wpa_supplicant.service
+
+--------------------
+using netork manager
+--------------------
+
+# list all avaliable wifi
+nmcli device wifi list
+	## alias -- nmcli d wifi list
+
+# connecting to a wifi
+nmcli device wifi connect [SSID] password [SSID password]
+	## exemple: nmcli device connect RedeWifiGratuita password pass123
+	## alias -- nmcli d wifi con RedeWifiGratuita password pass123
+
+# list all the connected networks
+nmcli connection show
+
+# device status
+nmcli device
+	## alias -- nmcli d
+
+# disconnect a network
+nmcli connection down [interface]
+	## example: nmcli connection down ADAILTON
+	## alias -- nmcli con down ADAILTON
+
+# reconnect with a network
+nmcli connection show
+	## alias -- nmcli con show
+nmcli connection up uui [UUID]
+	## alias -- nmcli con up uui [UUID]
+
+# disable wifi
+nmcli radio off
+
+# enable wifi
+nmcli radio on

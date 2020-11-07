@@ -1,0 +1,15 @@
+ln [arquivo existente] [nome do link]
+	* cria um hardlink para um arquivo
+
+ln -s [arquivo existente] [nome do link]
+	* cria um link simbólico para um arquivo ou diretório
+	* apenas um apontamento visual para o arquivo
+	8 não faz referência ao inode propriamente dito, mas sim a um símbolo para poder acessar o arquivo alvo
+
+Hardlinks --> links que podem ser feitos dentro do mesmo sistema de arquivos. O resultado desse link é como um arquivo convencional
+Links simbólicos --> podem ser feitos entre sistemas de arquivos diferentes ou no mesmo sistema de arquivos
+
+-rwx-r-xr-x 2 root root 138856 fev 28 2019 /bin/ps
+            ^
+						|
+						---> Número de links (referências) criados para o arquivo

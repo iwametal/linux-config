@@ -1,0 +1,10 @@
+python -V
+	* mostra a versão atual
+
+ls -l /usr/bin/python
+	* também mostra a versão atual, mostrando para qual versão o diretório python está apontando
+
+sudo ls -sf /usr/bin/python[versao] /usr/bin/python
+	* troca a versão do python
+	# exemplo
+		sudo ln -sf /usr/bin/python2.7 /usr/bin/python

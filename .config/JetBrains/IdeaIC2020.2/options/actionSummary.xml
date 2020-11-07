@@ -1,0 +1,72 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <data>
+      <entry key="$SelectAll">
+        <ActionSummary times="1" last="1603738082012" />
+      </entry>
+      <entry key="ActivateMavenToolWindow">
+        <ActionSummary times="1" last="1603912568673" />
+      </entry>
+      <entry key="CloseProject">
+        <ActionSummary times="2" last="1603912336895" />
+      </entry>
+      <entry key="EditorBackSpace">
+        <ActionSummary times="18" last="1603990194841" />
+      </entry>
+      <entry key="EditorPaste">
+        <ActionSummary times="2" last="1603738104985" />
+      </entry>
+      <entry key="SearchEverywhere">
+        <ActionSummary times="9" last="1603990170651" />
+      </entry>
+      <entry key="ShowSettings">
+        <ActionSummary times="5" last="1603990257324" />
+      </entry>
+      <entry key="WelcomeScreen.CreateNewProject">
+        <ActionSummary times="1" last="1597876773470" />
+      </entry>
+      <entry key="WelcomeScreen.OpenProject">
+        <ActionSummary times="2" last="1603912343633" />
+      </entry>
+      <entry key="WelcomeScreen.Plugins">
+        <ActionSummary times="1" last="1603738064772" />
+      </entry>
+      <entry key="com.intellij.ide.plugins.newui.PluginsTab$3$1">
+        <ActionSummary times="1" last="1603738147169" />
+      </entry>
+      <entry key="com.intellij.openapi.actionSystem.EmptyAction$MyDelegatingAction">
+        <ActionSummary times="10" last="1603990675247" />
+      </entry>
+      <entry key="com.intellij.openapi.editor.impl.EditorMarkupModelImpl$StatusAction">
+        <ActionSummary times="2" last="1603990230708" />
+      </entry>
+      <entry key="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+        <ActionSummary times="1" last="1603737929237" />
+      </entry>
+      <entry key="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+        <ActionSummary times="3" last="1603990195577" />
+      </entry>
+      <entry key="com.intellij.openapi.ui.DialogWrapper$5">
+        <ActionSummary times="5" last="1603743320978" />
+      </entry>
+      <entry key="com.intellij.openapi.ui.impl.DialogWrapperPeerImpl$AnCancelAction">
+        <ActionSummary times="1" last="1603913706416" />
+      </entry>
+      <entry key="com.intellij.openapi.wm.impl.ToolWindowHeader$HideAction">
+        <ActionSummary times="2" last="1603912690140" />
+      </entry>
+      <entry key="com.intellij.openapi.wm.impl.ToolWindowHeader$ShowOptionsAction">
+        <ActionSummary times="2" last="1603912578031" />
+      </entry>
+      <entry key="com.intellij.ui.CommonActionsPanel$AddButton">
+        <ActionSummary times="4" last="1603912467382" />
+      </entry>
+      <entry key="com.intellij.ui.ScrollingUtil$6">
+        <ActionSummary times="2" last="1603738060903" />
+      </entry>
+      <entry key="editRunConfigurations">
+        <ActionSummary times="2" last="1603913689167" />
+      </entry>
+    </data>
+  </component>
+</application>

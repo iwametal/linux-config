@@ -1,0 +1,5 @@
+FROM golang AS building --> imagem na qual o dockerfile irá se basear
+											 |__> o comando AS, dá o nome para este bloco, chamando-o de "building"
+											 |__> o bloco termina até achar outro comando "FROM", indicando que será iniciado um novo bloco, encerrando então o bloco atual. Ou no final do arquivo
+
+FROM alpine --> inicia um novo bloco, se baseando agora em uma imagem do alpine

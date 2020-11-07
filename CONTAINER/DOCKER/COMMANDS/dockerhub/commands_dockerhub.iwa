@@ -1,0 +1,12 @@
+docker login
+		* realiza o login no dockerhub pelo terminal
+
+docker logout
+		* realiza o logout no dockerhub pelo terminal
+
+docker push [nome da imagem]:[tag da imagem (caso possua)]
+		* sobe uma imagem do host para o dockerhub. Exemplo: docker push freshcoffee/meu_apache:1.0.0
+
+docker pull [nome da imagem]:[tag da image (caso possua)]
+		* baixa uma imagem do dockerhub para o localhost
+		* caso o nome da imagem siga as especificaćões [usuário dockerhub]/[nome da imagem]:[tag (caso possua)], não há a necessidade de fazer o pull para utilizaćão da imagem, o docker fará isso automaticamente ao executar o docker container run -[flags] [OPĆÕES] [nome da imagem]:[tag (caso possua)]

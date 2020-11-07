@@ -1,0 +1,3 @@
+docker network create [nome da rede]
+		* cria-se uma rede para ser usada nos containers
+		* há a općão da flag -d, que indica o tipo de rede a ser criada, por padrão, o tipo de rede é bridge. Por exemplo, caso você queira uma rede para seu swarm, e queira que os containers de seu swarm tenham a possibilidade de conversar entre si, é necessário o tipo de rede overlay. Exemplo de criaćão de uma rede overlay: docker network create -d overlay minha_rede

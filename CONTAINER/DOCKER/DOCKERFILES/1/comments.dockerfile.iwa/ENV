@@ -1,0 +1,11 @@
+# variáveis de ambiente necessárias para que a imagem seja executada (apache)
+
+ENV APACHE_LOCK_DIR="/var/lock" --> arquivo de LOCK criado, para que não haja 2 processos do apache rodando simultaneamente
+
+ENV APACHE_PID_FILE="/var/run/apache2.pid" --> identifica o pid do processo
+
+ENV APACHE_RUN_USER="www-data" --> usuário responsável pelo apache
+
+ENV APACHE_RUN_GROUP="www-data" --> grupo responsável pelo apache
+
+ENV APACHE_LOG_DIR="/var/log/apache2" --> diretório onde serão salvos os logs do apache

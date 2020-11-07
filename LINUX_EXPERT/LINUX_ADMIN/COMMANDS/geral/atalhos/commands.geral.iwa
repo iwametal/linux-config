@@ -1,0 +1,91 @@
+df
+	* mostra suas partićões no disco e informaćões de armazenamento.
+	-> df -h --> mostra o espaćo ocupado em B, MB, GB e etc... A flag -h indica --human, basicamente uma leitura facilitada de tamanho para humanos, usando unidades de bytes ao invés de blocos.
+	--> df -i --> mostra o espaćo ocupado em nodes. Nodes são como "gavetas", que também possuem um limite dentro do disco. Portanto, é possível que você fique sem espaćo mesmo com bytes livres em disco, se ocupar todos os nodes.
+
+netstat
+	* mostra as portas da sua máquina, assim como os processos em execućão na mesma, se ela está ativa ou não e etc. Muito útil para verificaćões de servidores ou de servićos que se utilizam de portas para sua execućão.
+	--> netstat -atunp --> mostra todas as informaćões acima de modo siples e fácil, trazendo informaćões como PID, TCP e UDP e etc...
+	|_> flag -a --> traz todas as portas presentes na máquina.
+	|_> flag -t --> traz todos os servićos TCP (TCP e TCP6).
+	|_> flag -u --> traz todos os servićos UDP.
+	|_> flag -n --> traz as portas como numeric. Basicamente ele não trará o nome do servićo rodando na porta, mas sim o número da porta em si.
+	|_> flag -p --> traz o PID dos servićoes em execućão nas portas apresentadoas.
+
+ps
+	* mostra todos os processos em execućão na máquina.
+	--> ps -ef
+	--> ps -aux
+
+top
+	* parecido com o ps, mas com informaćões mais concentradas.
+	* e por ser uma aplicaćão, os servićos são atualizados de forma dinâmica.
+
+du
+	* mostra o quanto está sendo utilizado de disco na máquina.
+	--> du -sh * --> mostra o tamanho de tudo que há no diretório.
+	|_> flag -s --> summarize. Resume as informaćões apenas para o diretŕorio em que se encontra.
+	|_> flag -h --> human readable, transforma os blocks em unidades de Bytes, para melhor leitura.
+
+dd
+	* cria um arquivo ou um espaćo em disco de um tamanho delimitado
+	--> dd if=/dev/zero of=/home/coffee/folder_criado_com_dd bs=1M count=1024
+	|_> if -> arquivo de entrada, no caso acima, é um arquivo nulo, portanto, será criado um folder vazio
+	|_> of -> arquivo de saída, basicamente o nome do diretório que será criado.
+	|_> bs -> "block size", indica o tamanho do bloco que será criado (em bytes). No caso acima, foi especificado o 'M', portanto, o bloco foi criado em Mega Bytes. O count é opciona e indica quantas vezes o tamnaho do bs será aplicado. No caso acima, foi utilizado count=1024. Ou seja, o folder que será criado será 1024 vezes o tamanho do bloco especificado no bs. No caso, 1024M, ou 1G.
+
+history
+	* mostra o histórico de comandos utilizados na máquina. por default, são mostrados os últimos 1.000 comandos realizados na máquina.
+	--> history | tail --> associa o comando histpry com o tails, mostrando apenas os útlimos 10 comandos realizados na máquina.
+
+ctrl + R
+	* reverse-i-search --> busca no histórico de comandos.
+
+[comando] !*
+	* !* representa todos os argumentos do comando anterior. Exemplo: "touch test1 test2 test3" possui 3 argumentos (test1, test2 e test3). Portanto, caso seja utilizado o comando "chmod +x !*" logo após, será adicionada permissão de execućão para todos os arquivos anteriores, já que está se pegando todos os parâmetros do comando anterior.
+
+alt + t
+	* inverte as duas últimas palavras digitadas. Exemplo: "kubectl pods get", caso seja pressionado o "alt + T", o comando passará a ser "kubeclt get pods".
+
+ls -d */
+	* lista apenas os diretórios
+	* ou ls -d .*/ para listar também arquivos ocultos
+
+ls -l | grep ^d
+	* lista apenas os diretórios em lista vertical
+	* ou ls -lah para listar também arquivos ocultos (e o h para converter os números para um melhor leitura humana)
+
+MOVING FILES (INCLUDING HIDDEN FILES)
+	mv /path/subfolder/* /path/   # your current approach
+	mv /path/subfolder/.* /path/  # this one for hidden files
+	Or all together (thanks pfnuesel):
+
+	mv /path/subfolder/{.,}* /path/
+	Which expands to:
+
+	mv /path/subfolder/* /path/subfolder/.* /path/
+	(example: echo a{.,}b expands to a.b ab)
+
+	Note this will show a couple of warnings:
+
+	mv: cannot move ‘/path/subfolder/.’ to /path/.’: Device or resource busy
+	mv: cannot remove /path/subfolder/..’: Is a directory
+	Just ignore them: this happens because /path/subfolder/{.,}* also expands to /path/subfolder/. and /path/subfolder/.., which are the directory and the parent directory (See What do “.” and “..” mean when in a folder?).
+
+	If you want to just copy, you can use a mere:
+
+	cp -r /path/subfolder/. /path/
+	#                     ^
+	#                     note the dot!
+	This will copy all files, both normal and hidden ones, since /path/subfolder/. expands to "everything from this directory" (Source: How to copy with cp to include hidden files and hidden directories and their contents?)
+
+----------------------------------------
+
+lsb_release
+		Mostra a versão lsb
+		--> a flag -a, mostra todas as informaćões sobre o sistema lsb, como o nome da distribuićão, versão, tipo de release e etc.
+
+rfkill --> to study
+	--> But actually is usefull to enable bluetooth connections
+	--> rfkill list
+	--> rfkill unblock all

@@ -1,0 +1,1 @@
+WORKDIR /var/www/html --> indica qual é o diretório padrão do container. Ou seja, quando o container subir ou quando for acessado, é este diretório que se entrará.

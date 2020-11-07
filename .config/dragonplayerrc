@@ -1,0 +1,18 @@
+[General]
+TimeFormat=1
+Volume=1
+
+[MainWindow]
+Height 768=715
+State=AAAA/wAAAAD9AAAAAAAABTgAAAKFAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1366=1336
+
+[file:///home/coffee/wallpaper/%25dragon-drag-and-drop]
+Brightness=0
+Contrast=0
+Date=2020,7,21
+Hue=0
+IsVideo=false
+Preferred Size=100,30
+Saturation=0

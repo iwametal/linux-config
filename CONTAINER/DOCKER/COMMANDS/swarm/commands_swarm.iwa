@@ -1,0 +1,36 @@
+docker swarm init
+		* inicializa um swarm
+		* caso se tenha mais de uma rede na máquina, é importante especifica qual delas será usada pelo cluster. Para isso, utiliza-se a flag --avertise-addr, seguido do IP para utilizaćão. Exemplo: docker swarm init --advertise-addr 192.168.0.1
+
+docker node ls
+		* lista todos os nodes presentes no swarm (manager)
+
+docker node inspect [nome do node]
+		* trará informaćões sobre o node especificado.
+
+docker node promote [nome do host]
+		* promove um host ao cargo de manager
+
+docker node demote [nome do host]
+		* remove um host do cargo de manager
+
+docker node update --availability [value] [nome do node]
+		* este comando faz o update em um node, neste caso, com a flag --availability, atualiza a disponibilidade de containers no node.
+		* existem 3 valores possíveis para o --availability: drain, pause e active.
+		* drain --> O node será completamente limpo, ou seja, todos os containers existentes neste node irão ser desativados.
+		* pause --> O node não aceitará novos containers. Os containers presentes no node continuarão funcionando sem problemas, porém nenhum novo container será aceito.
+		* acitve --> Valor padrão do node. Continuará aceitando novos containers sem problemas.
+		* exemplo fora da flag --availability: docker node update --label-add chave=valor
+			** docker node update --label-add dc=UK
+
+docker swarm leave
+		* sai de um swarm
+		* caso o node seja um manager, só será possível deixar um swarm a forća, com a flag -f
+
+docker swarm join-token worker
+		* mostra o token utilizado para se juntar ao cluster no swarm como um worker.
+		* caso seja adicionada a flag --rotate, a chave para acesso ao swarm será trocada.
+
+docker swarm join-token manager
+		* mostra o token utilizado para se juntar ao cluster no swarm como um manager.
+		* caso seja adicionada a flag --rotate, a chave para acesso ao swarm será trocada.

@@ -1,0 +1,32 @@
+FROM debian // indica a imagem na qual o dockerfile irá se basear
+
+RUN apt-get update && apt-get install -y apache2 && apt-get clean --> indica os comandos que serão executados enquanto está sendo feito o build da imagem || Motivo de estar tudo na mesma linha: Camadas do Docker
+|
+--> OBS: Atualmente, o apt já faz a remoćão dos arquivos .deb (com o comando apt-get clean) automaticamente. Ou seja, para novas versões do container, não há necessidade deste último comando.
+
+# variáveis de ambiente necessárias para que a imagem seja executada (apache)
+
+ENV APACHE_LOCK_DIR="/var/lock" --> arquivo de LOCK criado, para que não haja 2 processos do apache rodando simultaneamente
+
+ENV APACHE_PID_FILE="/var/run/apache2.pid" --> identifica o pid do processo
+
+ENV APACHE_RUN_USER="www-data" --> usuário responsável pelo apache
+
+ENV APACHE_RUN_GROUP="www-data" --> grupo responsável pelo apache
+
+ENV APACHE_LOG_DIR="/var/log/apache2" --> diretório onde serão salvos os logs do apache
+
+# labels criados para o dockerfile
+
+LABEL description="Webserver"
+LABEL version="1.0.0"
+
+VOLUME /var/www/html/ --> cira-se um volume automaticamente para este container.
+										 |__> Como o volume será criado automaticamente, o nome do mesmo também. O nome se originará da Hash representante do ID do container.
+										 |__> Não é possível criar um bind dentro de um dockerfile. Já que o mesmo tem referência apenas do container, ele não é capaz de fazer contato direto com a máquina, portanto não há como referenciar um diretório do host para o container.
+										 |__> O tópico acima será possível através de Dockercomposer
+
+EXPOSE 80 --> Indica ao container, que é esperado que a porta 80 esteja em execućão.
+				 |__> quando é utilizado o comando: docker container run -ti -p 8080:80 [nome da imagem], é passado explicitamente a porta 80 para o container (segundo parâmetro). Porém, com o EXPOSE, é possível utilizar a flag -P, no lugar da -p, para indicar a porta. Com a utilizaćão do -P, não é preciso passar nenhum parâmetro, ele irá pegar uma porta aleatória do seu host e irá fazer o bind com a porta especificada no EXPOSE do container.
+
+OBS: Neste caso de dockerfile, o apache não está sendo executado. Assim, para que o mesmo rode, é preciso entrar no container e executar manualmente.

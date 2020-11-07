@@ -1,0 +1,3 @@
+history
+	* mostra o histórico de comandos utilizados na máquina. por default, são mostrados os últimos 1.000 comandos realizados na máquina.
+	--> history | tail --> associa o comando histpry com o tails, mostrando apenas os útlimos 10 comandos realizados na máquina.

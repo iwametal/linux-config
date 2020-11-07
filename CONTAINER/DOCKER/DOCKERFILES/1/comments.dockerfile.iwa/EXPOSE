@@ -1,0 +1,4 @@
+EXPOSE 80 --> Indica ao container, que é esperado que a porta 80 esteja em execućão.
+				 |__> quando é utilizado o comando: docker container run -ti -p 8080:80 [nome da imagem], é passado explicitamente a porta 80 para o container (segundo parâmetro). Porém, com o EXPOSE, é possível utilizar a flag -P, no lugar da -p, para indicar a porta. Com a utilizaćão do -P, não é preciso passar nenhum parâmetro, ele irá pegar uma porta aleatória do seu host e irá fazer o bind com a porta especificada no EXPOSE do container.
+
+OBS: Neste caso de dockerfile, o apache não está sendo executado. Assim, para que o mesmo rode, é preciso entrar no container e executar manualmente.

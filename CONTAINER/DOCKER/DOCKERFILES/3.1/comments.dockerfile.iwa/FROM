@@ -1,0 +1,1 @@
+FROM debian // indica a imagem na qual o dockerfile irá se basear

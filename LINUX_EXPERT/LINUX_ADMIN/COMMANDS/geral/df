@@ -1,0 +1,27 @@
+df
+	* mostra suas partićões no disco e informaćões de armazenamento.
+
+df -h
+	* mostra o espaćo ocupado em B, MB, GB e etc... A flag -h indica --human, basicamente uma leitura facilitada de tamanho para humanos, usando unidades de bytes ao invés de blocos.
+
+df -H
+	* semelhante ao -h, porém ao invés de utilizar blocos de 1024 na conversão de bytes, utiliza blocos de 1000
+
+df -i
+	* mostra o espaćo ocupado em nodes (inodes). Nodes são como "gavetas", que também possuem um limite dentro do disco. Portanto, é possível que você fique sem espaćo mesmo com bytes livres em disco, se ocupar todos os nodes.
+
+df -l
+	* exibe apenas os sistemas de arquivos locais
+
+df -m
+	* exibe a saída em MB
+
+df -a
+	* inclui pseudo file-systems do unix
+
+df -T
+	* mostra qual sistema de arquivos é utilizado em cada partićão
+	* caso se utilize o -t, será exibido apenas o sistema de arquivos especificado. Exemplo: df -Th -t ext4
+
+df -P
+	* traz a saída em formato Posix

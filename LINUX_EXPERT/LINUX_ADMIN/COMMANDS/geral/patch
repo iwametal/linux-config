@@ -1,0 +1,13 @@
+patch [opcao] <[arquivo que está armazenando as diferenćas entre os arquivos/diretórios]
+	* aplica ou remove as diferenćas de arquivos ou diretórios
+
+# exemplos:
+
+patch -p1 -N <../diferencas.patch
+	* -N indica que o patch será aplicado
+	* -p1 indica que os patchs serão aplicados a um nível abaixo do diretório atual (caso esteja em /home/coffee/git/unimed, o patch será aplicado em /home/coffee/git)
+
+patch -p1 -R <../diferencas.patch
+	* -R indica que o patch será revertido
+
+OBS: Os comandos de patch são aplicados dentro do diretório que sofrerá as mudanćas

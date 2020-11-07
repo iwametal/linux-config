@@ -1,0 +1,18 @@
+docker stack deploy -c [nome do compose file] [nome da stack]
+	--> realiza o deploy de uma aplicaćão docker
+	|_> a flag -c indica que o que será deployado é um compose-file
+	|_> exemplo: docker stack deploy -c docker-compose.yml iwasawa
+
+docker stack ls
+	--> lista todas as stacks
+
+docker stack ps [nome da stack]
+	--> mostra onde está rodando os servićos do compose file, assim como algumas informaćões como o status, ID, nome e etc.
+	|_> exemplo: docker stack ps iwasawa
+
+docker stack services [nome da stack]
+	--> mostra quais os servićos na stack especificada
+
+docker stack rm [nome da stack]
+	--> remove uma stack, removendo assim, consequentemente, os services, networks e demais aplicaćões na mesma
+	|_> exemplo: docker stack rm iwasawa

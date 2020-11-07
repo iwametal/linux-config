@@ -1,0 +1,3 @@
+lsb_release
+		Mostra a versão lsb
+		--> a flag -a, mostra todas as informaćões sobre o sistema lsb, como o nome da distribuićão, versão, tipo de release e etc.

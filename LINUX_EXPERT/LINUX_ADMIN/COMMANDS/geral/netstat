@@ -1,0 +1,8 @@
+netstat
+	* mostra as portas da sua máquina, assim como os processos em execućão na mesma, se ela está ativa ou não e etc. Muito útil para verificaćões de servidores ou de servićos que se utilizam de portas para sua execućão.
+	--> netstat -atunp --> mostra todas as informaćões acima de modo siples e fácil, trazendo informaćões como PID, TCP e UDP e etc...
+	|_> flag -a --> traz todas as portas presentes na máquina.
+	|_> flag -t --> traz todos os servićos TCP (TCP e TCP6).
+	|_> flag -u --> traz todos os servićos UDP.
+	|_> flag -n --> traz as portas como numeric. Basicamente ele não trará o nome do servićo rodando na porta, mas sim o número da porta em si.
+	|_> flag -p --> traz o PID dos servićoes em execućão nas portas apresentadoas.

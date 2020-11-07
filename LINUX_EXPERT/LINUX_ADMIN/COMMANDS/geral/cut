@@ -1,0 +1,17 @@
+cut -d ":" -f 3 [arquivo]
+	* cut permite cortar a saída de um arquivo da maneira que o usuário desejar
+	* -d --> serve para indicar um delimitador (serve para separar as colunas). No exemplo acima, será o :
+	* -f --> serve para indicar qual campo (coluna) se quer do arquivo. No exemplo acima, será o terceiro campo
+		** a flag -f também permite que se passe mais de um campo. Por exemplo, caso eu queira o primeiro e o sétimo campo do arquivo /etc/passwd, delimitando a separaćão de colunas pelo ':', poderia utilizar:
+		|
+		|_> cut -d ":" -f 1,7 /etc/passwd
+		**
+		** também é possível usar um intervalo de campos (do 1 ao 3, por exemplo):
+		|
+		|_> cut -d ":" -f 1-3,7 /etc/passwd
+
+cut -b 1-4 /etc/passwd
+	* pega do primeiro ao quarto byte de cada linha do arquivo
+
+cut -c 1-7 /etc/passwd
+	* semelhante ao comando anterior, porém com a flag -c, os espećos não são contados como caractere

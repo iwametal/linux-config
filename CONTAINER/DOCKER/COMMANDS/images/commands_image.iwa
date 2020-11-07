@@ -1,0 +1,16 @@
+docker image ls
+		* lista todas as imagens na máquina
+		* outra općão para a listagem das imagens presentes no host seria: docker images
+
+docker image build -t [nome-da-imagem] [diretório-do-dockerfile]
+		* faz o build de uma imagem baseado em um dockerfile criado.
+		* a flag -t indica que queremos dar um nome para a imagem, e posteriormente a ela, é colocado o nome desejado para a mesma.
+		* caso haja uma outra imagem que já tenha utilizado os mesmos comandos indicados no Dockerfile, o docker se utilizará do cache, ou seja ele não irá refazer todo o processo de build, apenas para comandos novos. Caso não queira utilizar nada do cache e queira fazer todo o processo passo-a-passo, basta utilizar a flag --no-cache ao final do comando.
+
+docker image tag [id da imagem] novo_nome_da_imagem:[versão-opcional]
+		* altera-se/adiciona-se o nome e a TAG (versão) de uma imagem.
+		* é possivel realizar o mesmo comando ocultando a palavra "image", desta forma: docker tag [id da imagem] [nome para a imagem]:[versão (opcional)]
+
+docker image tag [id da imagem] [username dockerhub]/[(novo)? nome da image]:[versão-opcional]
+		* nomeia uma imagem com seu usuário do dockerhub + o nome da mesma, para que fique pronta para subir para o dockerhub
+		* é importante que seja colocado seu nome de usuário do dockerhub, pois como ele é único, acaba tornando sua imagem única também.

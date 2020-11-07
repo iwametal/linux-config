@@ -1,0 +1,48 @@
+FROM debian // indica a imagem na qual o dockerfile irá se basear
+
+RUN apt-get update && apt-get install -y apache2 && apt-get clean --> indica os comandos que serão executados enquanto está sendo feito o build da imagem || Motivo de estar tudo na mesma linha: Camadas do Docker
+|
+--> OBS: Atualmente, o apt já faz a remoćão dos arquivos .deb (com o comando apt-get clean) automaticamente. Ou seja, para novas versões do container, não há necessidade deste último comando.
+
+RUN chown www-data:www-data /var/lock/ && chown www-data:www-data /var/run/ && chown www-data:www-data /var/log/ --> Muda o dono destes diretórios executados pelo o apache para o usuário www-data, permitindo que o mesmo consiga acessá-los. Neste caso em específico, mesmo trocando o own destes diretórios não será possível executar o container, pois não será possível realizar o bind na porta 80 sem o usuário root, por quetões de outros privilégios além dos diretórios.
+
+# variáveis de ambiente necessárias para que a imagem seja executada (apache)
+
+ENV APACHE_LOCK_DIR="/var/lock" --> arquivo de LOCK criado, para que não haja 2 processos do apache rodando simultaneamente
+
+ENV APACHE_PID_FILE="/var/run/apache2.pid" --> identifica o pid do processo
+
+ENV APACHE_RUN_USER="www-data" --> usuário responsável pelo apache
+
+ENV APACHE_RUN_GROUP="www-data" --> grupo responsável pelo apache
+
+ENV APACHE_LOG_DIR="/var/log/apache2" --> diretório onde serão salvos os logs do apache
+
+# COPY index.html /var/www/html/ --> Copia um arquivo do localhost para dentro de um diretório especificado do container
+
+ADD index.html /var/www/html/ --> Funciona de forma parecida com o COPY, porém com algumas diferenćas. Uma delas, é referente a arquivos.tar, onde o COPY, simplesmente copiaria este arquivo para dentro do container. Já o ADD, copiaria apenas o conteúdo do arquivo.tar, ou seja, o .tar explodido. Outra questão é em relaćão a arquivos remotos. Basicamente o ADD é capaz de adicionar arquivos remotos (arquivos que não estão no localhost) para dentro do container. Onde é feito automaticamente o download do arquivo, por um parâmetro URL.
+
+HEALTHCHECK --interval=1m --timeout=3s \ --> realiza um teste no container de tempos em tempos. O healthcheck serve para realizar uma aćão especificada para verificar a "saúde" do container. --> A \ indica que o comando continua na linha de baixo. A flag --interval, indica de quanto em quanto tempo o teste é realizado. E a flag --timeout indica qual o tempo máximo de duraćão de cada teste.
+	CMD curl -f http://localhost/ || exit 1 --> Aqui, é especificada qual aćão será feita no teste do container. Neste caso, está sendo chamado o CMD, realizando uma chamada no localhost com o curl. Caso esta chamada não seja atendida ou o tempo limite de 3s especificado anteriormente seja estourado, é então realizada a segunda aćão, que indica um exit do bash. O parâmetro 1 no exit, indica para o bash que o processo foi encerrado com algum problema, diferente do parâmetro 0, que indica que o processo foi encerrado sem problemas.
+
+# labels criados para o dockerfile
+
+LABEL description="Webserver"
+LABEL version="2.0.0"
+
+USER www-data --> indica que o container será executado com este usuário específico e não mais com o padrão (root)
+
+WORKDIR /var/www/html --> indica qual é o diretório padrão do container. Ou seja, quando o container subir ou quando for acessado, é este diretório que se entrará.
+
+VOLUME /var/www/html/ --> cira-se um volume automaticamente para este container.
+										 |__> Como o volume será criado automaticamente, o nome do mesmo também. O nome se originará da Hash representante do ID do container.
+										 |__> Não é possível criar um bind dentro de um dockerfile. Já que o mesmo tem referência apenas do container, ele não é capaz de fazer contato direto com a máquina, portanto não há como referenciar um diretório do host para o container.
+										 |__> O tópico acima será possível através de Dockercomposer
+
+EXPOSE 80 --> Indica ao container, que é esperado que a porta 80 esteja em execućão.
+				 |__> quando é utilizado o comando: docker container run -ti -p 8080:80 [nome da imagem], é passado explicitamente a porta 80 para o container (segundo parâmetro). Porém, com o EXPOSE, é possível utilizar a flag -P, no lugar da -p, para indicar a porta. Com a utilizaćão do -P, não é preciso passar nenhum parâmetro, ele irá pegar uma porta aleatória do seu host e irá fazer o bind com a porta especificada no EXPOSE do container.
+
+ENTRYPOINT ["/usr/sbin/apachectl"] --> ENTRYPOINT representa o "init" para uma máquina Linux. Representa, portanto, o principal processo de um container. Caso esse processo morra, o container também esvairá.
+
+CMD ["-D", "FOREGROUND"] --> O CMD representa um comando/parâmetro passado para o principal processo do container. No case, se não existisse o comando de ENTRYPOINT, o principal processo deste container seria o Bash, já que o mesmo se utiliza de uma imagem debian. Porém, como indicamos o ENTRYPOINT acima passando o parâmetro para inicializaćão do apache, a partir de agora, o principal processo deste container passou a ser o apache, sendo assim, os comandos passados pelo CMD devem ser destinados ao apache e não mais ao Bash.
+		* A flag -D, indica o plano em que o apache executurá. E FOREGROUND indica que o mesmo executará em primeiro plano. Assim, quando entrar-se no container, a pessoa será direcionada diretamente para o processo do apache. Caso este estivesse rodando em BACKGROUND, a pessoa seria direcionada para o Bash, por exemplo.

@@ -1,0 +1,4 @@
+ps
+	* mostra todos os processos em execućão na máquina.
+	--> ps -ef
+	--> ps -aux

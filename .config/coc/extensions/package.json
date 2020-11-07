@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "coc-angular": ">=0.1000.4",
+    "coc-css": ">=1.2.4",
+    "coc-html": ">=1.2.4",
+    "coc-json": ">=1.2.6",
+    "coc-pairs": ">=1.2.21",
+    "coc-prettier": ">=1.1.17",
+    "coc-python": ">=1.2.12",
+    "coc-snippets": ">=2.1.28",
+    "coc-tsserver": ">=1.5.3",
+    "coc-vimtex": ">=1.0.3"
+  }
+}

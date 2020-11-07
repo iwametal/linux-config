@@ -1,0 +1,1 @@
+ADD . /app --> copia todos os arquivos do diretório que o dockerfile se encontra para dentro do container

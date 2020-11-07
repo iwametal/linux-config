@@ -1,0 +1,35 @@
+sort [arquivo]
+	* semelhante ao cat, porém ordena o arquivo em ordem alfabética
+
+sort -r [arquivo]
+	* inverte a classificaćão do arquivo [z-a]
+
+sort -n [arquivo]
+	* classifica em ordem numérica
+
+sort -c [arquivo]
+	* verifica se o arquivo está ordenada (ordem alfabética) ou não
+
+sort -n -c [arquivo]
+	* verifica se o arquivo está ordenado (ordem numérica) ou não
+
+sort +1 [arquivo]
+	* ordena um arquivo pela segunda coluna
+	* caso o parâmetro especificado fosse +2, ordenaria pela terceira coluna
+	* outra forma de executar esse mesmo comando seria: sort -k 2 [arquivo]
+
+sort +1 [arquivo] -f " "
+	* ordena um arquivo pela segunda coluna
+	* caso o parâmetro especificado fosse +2, ordenaria pela terceira coluna
+	* outra forma de executar esse mesmo comando seria: sort -k 2 [arquivo]
+	* o delimitador para mudar de coluna agora é o espaćo (o que já é o delimitador padrão)
+
+sort +1 [arquivo] -f "L"
+	* ordena um arquivo pela segunda coluna
+	* caso o parâmetro especificado fosse +2, ordenaria pela terceira coluna
+	* outra forma de executar esse mesmo comando seria: sort -k 2 [arquivo]
+	* o delimitador para mudar de coluna agora é a letra "L"
+
+sort +2 -4 [arquivo]
+	* ordena um arquivo pela terceira coluna (+2)
+	* porém, caso haja linhas com o mesmo valor na terceira coluna, ocorrerá um desempate na quarta coluna (-4)

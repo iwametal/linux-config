@@ -1,0 +1,85 @@
+find
+	* permite localizar todos os arquivos no sistema dentro do diretório atual
+
+find [diretório que quer pesquisar] -name [nome do arquivo]
+	* pesquisa dentro do diretório especificado, o nome do arquivo especificado
+
+find [diretório que quer pesquisar] -type d -name [nome do arquivo]
+	* semelhante ao comando anterior, porém agora o find pesquisará apenas por diretórios, pois foi passado o type d para o mesmo
+
+find [diretório que quer pesquisar] -type f -name [nome do arquivo]
+	* semelhante ao comando anterior, porém agora o find pesquisará apenas por arquivos, pois foi passado o type f para o mesmo
+
+find [diretório que quer pesquisar] -type f -name [nome do arquivo]
+	* semelhante ao comando anterior, porém agora o find pesquisará apenas por blocos, pois foi passado o type b para o mesmo
+
+find [diretório que quer pesquisar] -type l -name [nome do arquivo]
+	* semelhante ao comando anterior, porém agora o find pesquisará apenas por links, pois foi passado o type l para o mesmo
+
+find [diretório que quer pesquisar] -type c -name [nome do arquivo]
+	* semelhante ao comando anterior, porém agora o find pesquisará apenas por dispositivos de caracteres, pois foi passado o type c para o mesmo
+
+find [diretório que quer pesquisar] -type s -name [nome do arquivo]
+	* semelhante ao comando anterior, porém agora o find pesquisará apenas por sockets, pois foi passado o type s para o mesmo
+
+find [diretório que quer pesquisar] -type p -name [nome do arquivo]
+	* semelhante ao comando anterior, porém agora o find pesquisará apenas por pipes, pois foi passado o type p para o mesmo
+
+find -maxdepth 2 [diretório que quer pesquisar] -type f -name [nome do arquivo]
+	* procura no máximo 2 níveis abaixo do diretório especificado
+	* caso houvesse passado o número 5 para o -maxdepth, o nível de pesquisa seria de até 5 níveis
+
+find -mindepth 2 [diretório que quer pesquisar] -type f -name [nome do arquivo]
+	* procura no mínimo 2 níveis abaixo do diretório especificado
+	* caso houvesse passado o número 5 para o -mindepth, o nível de pesquisa seria de no mínimo 5 níveis
+
+find [diretório] -mtime -1
+	* procura todos os arquivos no diretório especificado que foram alterados no máximo 1 dia atrás
+	* caso o parâmetro fosse -2, seria a até no máximo 2 dias
+	* caso o parâmetro fosse +4, seria a no mínimo 4 dias
+	* mtime = modified time
+	* mtime --> pesquisa por dias
+	* mmin --> pesquisa por minutos
+
+find [diretório] -ctime -1
+	* procura todos os arquivos no diretório especificado que foram criados no máximo 1 dia atrás
+	* caso o parâmetro fosse -2, seria a até no máximo 2 dias
+	* caso o parâmetro fosse +4, seria a no mínimo 4 dias
+	* ctime = created time
+	* ctime --> pesquisa por dias
+	* cmin --> pesquisa por minutos
+
+find [diretório] -atime -1
+	* procura todos os arquivos no diretório especificado que foram acessados no máximo 1 dia atrás
+	* caso o parâmetro fosse -2, seria a até no máximo 2 dias
+	* caso o parâmetro fosse +4, seria a no mínimo 4 dias
+	* atime = access time
+	* atime --> pesquisa por dias
+	* amin --> pesquisa por minutos
+
+find [diretório] -mount -name [nome do arquivo ou diretório]
+	* a flag -mount, faz com que o find procure apenas nas estruturas montadas dentro de um mesmo sistema de arquivos
+	* caso exista algum diretório montado em um outro sistema de arquivos do diretório atual, ele não será adentrado pelo find
+
+find [diretório] -gid [número do id] -name [nome do arquivo ou diretório]
+	* a flag -gid procura por arqvuios com o mesmo group id especificado
+
+find [diretório] -uid [número do id] -name [nome do arquivo ou diretório]
+	* a flag -gid procura por arqvuios com o mesmo user id especificado
+
+find [diretório] -group [nome do grupo] -name [nome do arquivo ou diretório]
+	* a flag -group procura por arqvuios com o mesmo nome de grupo especificado
+
+find [diretório] -user [nome usuario] -name [nome do arquivo ou diretório]
+	* a flag -user procura por arqvuios com o mesmo nome de usuário especificado
+
+find [diretório] -links 7
+	* pesquisa todos os arquivos com 7 links como referência
+	* caso o parâmetro passado fosse 13, ele pesquisaria todos os arquivos com 13 links como referência
+
+find [diretório] -size -1000
+	* pesquisa todos os arquivos com menos de 1000 blocos em tamanho
+	* caso o parâmetro passado fosse +1000, seriam pesquisados os arquivos com mais de 1000 blocos em tamanho
+	* caso o parâmetro passado fosse 1000, seriam pesquisados os arquivos com exatamente 1000 blocos em tamanho
+	* caso o parâmetro especificado fosse -1000k, seriam pesquisados os arquivos com menos de 1000 KB em tamanho
+	* caso o parâmetro especificado fosse -1000c, seriam pesquisados os arquivos com menos de 1000 B em tamanho

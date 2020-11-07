@@ -1,0 +1,4 @@
+VOLUME /var/www/html/ --> cira-se um volume automaticamente para este container.
+										 |__> Como o volume será criado automaticamente, o nome do mesmo também. O nome se originará da Hash representante do ID do container.
+										 |__> Não é possível criar um bind dentro de um dockerfile. Já que o mesmo tem referência apenas do container, ele não é capaz de fazer contato direto com a máquina, portanto não há como referenciar um diretório do host para o container.
+										 |__> O tópico acima será possível através de Dockercomposer

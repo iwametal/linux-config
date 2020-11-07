@@ -1,0 +1,15 @@
+FROM golang AS building --> imagem na qual o dockerfile irá se basear
+											 |__> o comando AS, dá o nome para este bloco, chamando-o de "building"
+											 |__> o bloco termina até achar outro comando "FROM", indicando que será iniciado um novo bloco, encerrando então o bloco atual. Ou no final do arquivo
+
+WORKDIR /app --> define o diretório principal de trabalho da imagem
+ADD . /app --> copia todos os arquivos do diretório que o dockerfile se encontra para dentro do container
+
+RUN go build -o meu_go_exe --> executa um comando no build da imagem do container
+
+FROM alpine --> inicia um novo bloco, se baseando agora em uma imagem do alpine
+
+WORKDIR /diretorio_go --> define o diretório principal de trabalho da imagem (agora, para a imagem do alpine)
+COPY --from=building /app/meu_go_exe /diretorio_go --> copia o arquivo meu_go_exe, gerado no bloco "building" para dentro do diretorio diretorio_go. É possível copiar arquivos de blocos anteriores de um dockerfile ao invés do localhost, utilizando a flag --from, indicando o nome do bloco
+
+ENTRYPOINT ./meu_go_exe --> define o processo principal do container

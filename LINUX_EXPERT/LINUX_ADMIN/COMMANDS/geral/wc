@@ -1,0 +1,20 @@
+wc
+	* wc = word count
+	* conta o número de palavras, bytes (caracteres) e linhas de um arquivo ou entrada especificada
+
+30 44 1646 /path/arquivo
+^   ^   ^
+|   |   |__> número de caracteres (bytes) no arquivo
+|   |
+|   |______> número de palavras encontradas no arquivo
+|
+|__________> número de linhas do arquivo
+
+wc -c [arquivo]
+	* mostra o número de bytes (caracteres) do arquivo
+
+wc -l [arquivo]
+	* mostra o número de linhas do arquivo
+
+wc -w [arquivo]
+	* mostra o número de palavras do arquivo

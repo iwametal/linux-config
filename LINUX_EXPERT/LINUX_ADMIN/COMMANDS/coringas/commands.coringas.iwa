@@ -1,0 +1,34 @@
+coringas: '*', '?', '[]' e '{}'
+
+*:
+	identifica nenhum, um ou mais caracteres naquela posicao especificada
+	# exemplo:
+		cp -R ~/Do* ~
+
+		# copia todos os arquivos ou diretórios dentro da pasta home do usuario que comecem com Do
+
+?:
+	identifica um caractere naquela posicao especificada
+	# exemplo:
+		cp -R ~/Documents/l?i? ~
+
+		# copia todos os arquivos ou diretórios que comecem com l, tenha exatamente 1 caractere na segunda posicao, depois contenha a letra i e por fim tenha exatamente 1 caractere após a letra i
+
+[]:
+	monta um padrão para a busca
+
+	# exemplo
+		cp -R ~/Documents/la[b-z]n ~
+
+		# copia todos os arquivos ou diretórios que comece com la, tenha exatamente 1 caractere depois, porém este caractere deve obrigatoriamente estar entre a letra b e a letra z, incluindo os extremos e por fim termine com a letra n
+
+{}:
+	monta um padrão para a busca, porém agora com strings
+
+	# exemplo
+		cp -R ~/Documents/Pro{"gramm","grams"}
+
+		# copia todos os arquivos ou diretório que comece com Pro e tenha uma substring logo após, seja ela "gramm" ou "grams"
+
+Obviamente é possível também juntar os coringas em uma busca só, exemplo:
+	ls -d {"S","s"}eri[a-z]l_{"e","E"}[w-z]??{"riments_","riment_"}{"l","L"}a?[m-n]

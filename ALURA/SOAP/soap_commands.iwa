@@ -1,0 +1,3 @@
+wsgen -wsdl -cp bin br.com.caelum.estoque.ws.EstoqueWS
+  --> gera o .wsdl do projeto para o eclipse
+  |_> este comando é padrão do JDK

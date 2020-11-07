@@ -1,0 +1,11 @@
+tail [arquivo]
+	* visualiza as 10 últimas linhas do arquivo
+
+tail -n 7 [arquivo]
+	* visualiza as 7 últimas linhas de um arquivo
+	* caso o parâmetro especificado fosse 13, seriam visualizadas as 13 últimas linhas de um arquivo
+
+tail -f [arquivo]
+	* espera por modificaćões em um arquivo
+	* -f = "follow"
+	* para sair do modo, basta apertar [ctrl + c]

@@ -1,0 +1,72 @@
+# NESRY OFCL PCKGS
+alacritty
+alsa
+bashtop
+bspwm
+ccls
+dmenu
+dragon
+dragon-drag-and-drop
+exa
+feh
+ncmpcpp
+neofetch
+networ
+pulseaudio
+st
+sxhkd
+vim
+neovim
+networkmanager
+openvpn
+protonvpn
+polybar
+wireless_tools
+wpa_supplicant
+xorg-server
+xorg-xinit
+xorg-xprop
+xorg-xset
+yay
+
+# NESRY AUR PCKGS
+wal
+
+# NESRY DPNCS
+broot
+calcurse
+git
+mpc
+mpd
+python
+python-pip
+vscode
+
+# INTNG PCKGS
+audacious
+cava
+eclipse-jee
+figlet
+fzf
+gotop
+htop
+intellij-idea-community-edition
+jp2a
+mpv
+ranger
+slack-desktop
+snap
+sxiv
+vlc
+zathura
+zathura-cb
+zathura-djvu
+zathura-pdf-mupdf
+zathura-pdf-poppler
+zathura-ps
+
+# PY DPNCS
+coc (in pip)
+coc (in pip3)
+jedi (in pip)
+jedi (in pip3)

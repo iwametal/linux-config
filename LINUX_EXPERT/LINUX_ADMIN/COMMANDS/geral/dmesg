@@ -1,0 +1,25 @@
+dmesg
+	* exibe as mensagens do ring buffer do kernel
+	* área utilizada para exibir as últimas mensagens exibidas no contexto do kernel
+	* por padrão, é exibido 64 KB, mas pode ser customizado na arquitetura de múltiplos processadores, durante a compilaćão do kernel
+
+dmesg -t
+	* exibe o dmesg sem a primeira coluna (coluna que representa o timestamp após o boot do sistema)
+
+dmesg --color=never
+	* retira as cores da saída, exibindo apenas em preto e branco
+	* caso o parâmetro fosse --color=auto, a listagem seria sempre colorida
+
+dmesg -w
+	* funćão parecida com o tail -f, fica seguindo mensagens do kernel
+	* a toda nova ocorrência de mensagens do kernel, a mesma será exibida na tela
+	* para sair do modo "follow", basta apertar [ctrl + c]
+
+dmesg -x
+	* decodifica algumas mensagens em texto legível
+
+dmesg -T
+	* pega a time stamp do boot e transforma em uma data legível
+
+dmesg -c
+	* mostra toda a mensagem do kernel (comando dmesg) e logo em seguida limpa esse buffer

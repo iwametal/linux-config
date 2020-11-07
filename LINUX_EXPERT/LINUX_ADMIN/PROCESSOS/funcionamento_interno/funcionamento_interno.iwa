@@ -1,0 +1,18 @@
+Quando um processo está em execućão, ele recebe um PID (Proccess Identification)
+Assim que o processo finaliza, esse número é liberado, podendo assim ser usado por outros processos
+
+Enquanto o processo ainda estiver em execućão, é criada uma pasta dentro de /proc
+O nome da pasta é o PID do processo
+
+Dentro dessa pasta, existem vários arquivos que controlam o processo (toda a representaćão do que etá sendo executado no processo)
+Um desses arquivos é chamado de cmdline
+
+### alguns arquivos ###
+
+# cmdline
+
+	# mostra os comandos executados no programa
+
+# status
+
+	# mostra o status da execućão do processo, através de diversas informaćões

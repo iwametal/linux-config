@@ -1,0 +1,8 @@
+diff [arquivo 1] [arquivo 2]
+	* mostra as diferenćas entre os dois arquivos
+	* mostra as linhas diferentes
+	* adicionando a flag -u, as diferenćas serão retornadas de forma mais legível, com legendas para o conteúdo dos dois arquivos
+
+diff -r [diretório 1] [diretório 2]
+	* faz a comparaćão do conteúdo de dois diretórios e mostra as diferenćas entre ambos
+	* pode ser utilizada a flag -u em conjunto, mostrando em um formato mais legível

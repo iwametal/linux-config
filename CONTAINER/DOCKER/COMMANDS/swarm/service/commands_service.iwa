@@ -1,0 +1,85 @@
+docker service create --name webserver --replicas [numero de replicas] -p [porta_cluster]:[porta_container] [nome da imagem]
+		* cria um servićo com uma determinada imagem para o swarm
+		* flag --name, permite criar um nome para o servićo. Serve como referência para manejamento do mesmo pelos comandos do docker service.
+		* flag --replicas permite dizer quantas réplicas deste servićo serão criadas. O trabalho é dividido entre as réplicas. Assim como, se uma réplica fica indisponível, o servićo será redistribuído e a aplicaćão continuará rodando sem problemas.
+		* flag -p [--publish], redireciona a porta X [primeira porta indicada] do cluster (dos nodes do swarm) para a porta Y [segunda porta indicada] do container.
+		* existe a flag --hostname, que, seguido de um nome, permite criar um nome para o host do service. Desta forma: --hostname nome_para_o_host_service
+		* a flag --limit-cpu, seguido de um número, permite limitar o uso do cpu. Exemplo: --limit-cpu 2.5 (limitando o uso dp CPU para 2 cores e meio)
+		* a flag --limit-memory, seguido de um número, permite limitar o uso da RAM. Exemplo: --limit-memory 100M (limitando o uso da memória para 100 megas)
+		* a flag --env, seguido de uma variável e um valor, permite atribuir uma variável de ambiente para o service. Exemplo: --env iwa_sama=perfeita (cria uma variável chamada iwa_sama, com o valor "perfeita")
+		* a flag --dns, seguido de um valor para o mesmo, permite fixar um dns para o service. Exemplo: --dns 8.8.8.8
+		* a flag --network, seguido de um nome de rede (criada pelo docker network), permite fazer com que o service opere em uma rede específica. Exemplo: --networ my_network
+		* a flag --secret, seguido do nome da secret desejada, permite adicionar uma docker secret ao service.
+			--> Exemplo_1: --secret iwa-sama
+			|_> Exemplo_2: --secret src=iwa-sama,target=meu-secret,uid=200,gid=200,mode=0400 --> src = indica onde a secret se localiza no host
+																																											 |_> target = indica o nome da secret dentro do container
+																																											 |_> uid = define o ID do usuário dono da secret
+																																											 |_> gid = define o ID do grupo dono da secret
+																																											 |_> mode = define as permissões do dono sobre o arquivo
+
+docker service ls
+		* mostra todos os services criados.
+
+docker service ps [nome do service - opcional]
+		* mostra o service especificado e onde o mesmo está rodando.
+		* caso não seja especificado nenhum service, será mostrado as tasks de todos os services.
+
+docker service rm [nome do service]
+		* remove o service especificado
+
+docker service inspect [nome do service]
+		* mostra informaćões sobre o container especificado
+		* é possível utilizar a flag --pretty, onde será mudado o formato de saída. Ao invés do print em formato JSON, será feita uma nova formataćão para as informaćões.
+
+docker service scale [nome do service]=[numero de scales desejado]
+		* é feita a reformulaćão no número de répplicas da imagem.
+
+docker service logs -f [nome do service]
+		* é mostrado os logs de todos os containers que estão rodando o service especificado.
+
+docker service update [informaćão a ser atualizada]
+		* atualiza uma informaćão no service.
+
+
+----------------------------
+MOUNTING VOLUMES IN SERVICES - old way
+----------------------------
+
+
+1) na sua máquina host [caso a mesma seja uma máquina linux], instale o nfs-server. Exemplo de instalaćão em distros baseadas em debian:
+[sudo] apt-get update && [sudo] apt-get install nfs-server
+
+2) criaremos nosso volume no host. Nos próximos passos, alteraremos o caminho para o volume por questões de privilégio.
+docker volume create site
+
+3) apague o _data/ do volume, para trocar o caminho para o mesmo.
+rm -rf /var/lib/docker/volumes/site/_data
+
+4) crie o diretório em que ficará seu volume. é necessário criar o volume em um diretório diferente do padrão (/var/lib/docker/volumes), por questões de privilégios, pois o container não conseguirá acessar este diretório para realizar o sync. Neste caso, criaremos o volume no seguinte path: /opt. E chamaremos o volume de site/. Portanto, criaremos o volume da seguinte forma:
+mkdir -p /opt/site/_data
+
+5) crie (opcional) algum conteúdo incial para o volume (dentro do diretório personalizado que usaremos, no caso, /opt):
+echo "IWA SAMA PERFEITA" > /opt/site/_data/index.html
+
+6) crie um link simbólico entre o volume original e o seu volume personalizado no diretório _data/, assim o docker ainda conseguirá reconhecer o volume normalmente:
+ln -s /opt/site/_data /var/lib/docker/volumes/site
+
+7) abra o /etc/exports com um editor de texto e insira os seguintes comandos (referentes a qual volume você queira compartilhar com os containers):
+/opt/site *(rw,sync,subtree_check)
+
+8) exporte o arquivo acima do nfs-server, permitindo a sua total visualizaćão:
+exportfs -ar
+
+9) dentro de todos os containers que compartilharão o volume, faća a instalaćão do nfs-common. Exemplo de instalaćão em distros baseadas em debian:
+apt-get install nfs-common
+
+10) cheque se o nfs do container consegue enxergar os arquivos compartilhados:
+showmount -e [IP do host]
+
+11) monte o diretório do host dentro do container:
+mount [IP do host]:/opt/site/_data /var/lib/docker/volumes/site
+
+12) crie seu servićo, passando o volume criado. Como há o link simbólico no volume, pode-se passar o volume original. Exemplo subindo um servićo nginx:
+docker service create --name nginx_server --replicas 3 -p 8080:80 --mount type=volume,src=site,dst=/usr/share/nginx/html nginx
+
+13) pronto.

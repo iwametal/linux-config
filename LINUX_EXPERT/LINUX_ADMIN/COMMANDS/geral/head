@@ -1,0 +1,10 @@
+head [arquivo]
+	* mostra as 10 primeiras linhas de um arquivo
+
+head -n 7 [arquivo]
+	* mostra as 7 primeiras linhas de um arquivo
+	* caso o parâmetro especificado fosse 13, mostraria as 13 primeiras linhas de um arquivo
+
+head -c 21 [arquivo]
+	* mostra os 21 primeiros bytes na entrada de um arquivo
+	* caso o parâmetro especificado fosse 42, seriam mostrados os 42 primeiros bytes de um arquivo

@@ -1,0 +1,9 @@
+pgrep [općões] [processo]
+	* realiza o grep de processos
+
+pgrep sshd
+	* pesquisa em todos os usuários que estejam rodando o processo especificado
+
+pgrep -u root sshd
+	* realiza o grep de todos os processos com usuário root de nome sshd
+	* retorna o PID do processo

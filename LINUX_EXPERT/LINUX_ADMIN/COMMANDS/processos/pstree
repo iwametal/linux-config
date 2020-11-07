@@ -1,0 +1,9 @@
+pstree
+	* exibe a árvore de processos sendo executados no sistema
+	* a općão -A, eexibe a saída utilizando cartacteres ASCII
+	* a općão -c, mostra toda a estrutura, incluindo processos pais
+	* a općão -h, destaca os processos pais e os antecessores
+	* a općão -p, mostra o PID de cada processo
+	* a općão -H seguida do PID de um processo, destaca o processo com o PID especificado e seu processo pai
+	* a općão -u, mostra o ID do processo em execućão
+	* a općão -g, mostra o grupo de execućão dos processos

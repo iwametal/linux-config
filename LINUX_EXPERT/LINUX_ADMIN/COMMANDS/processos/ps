@@ -1,5 +1,40 @@
 ps
 	* lista todos os processos em execućão no tty atual
 
-ps a
+ps -a
 	* lista os processos rodando em todos os terminais do usuário
+
+ps -ax
+	* a flag x, permite mostrar também comandos não associados com o tty e também de todos os usuários da máquina
+	* adicionando também a općão -u, é mostrado a qual usuário cada processo listado pertence
+
+ps -axm
+	* a općão -m mostra detalhes quanto ao uso de memória de cada processo
+
+ps -axf
+	* o -f, faz a listagem em modo tree (árvore), mostrando qual processo chamou qual
+
+ps -axe
+	* a općão -e, mostra as variáveis de ambiente utilizadas no comando
+	* neste caso, em linhas muito longas, não será exibida todo o conteúdo, portanto pode-se utilizar a općão -w, que forća a continuaćão do detalhamento na linha debaixo
+
+ps -ax --sort=pid
+	* o --sort, permite ordenar o conteúdo da listagem por alguma coluna
+	* no caso acima, a listagem está sendo ordenada pelo PID do processo
+
+-----
+
+STAT:
+
+S --> Soneca não interrompível
+	--> Um processo que é importante estar executando o tempo todo
+
+D --> Está fazendo um IO de disco ou está lendo alguma coisa do disco. Geralmente possuída por programas que estão fazendo muito acesso ao disco
+
+I --> Oceoso. Está parado ou esperando alguma aćão para continuar rodando
+
+R --> Rodando (Running)
+
+Z --> Status Zumbi. Quando um programa roda outro programa, mas o programa pai morre, deixando o programa iniciado por ele solto.
+
+X --> Processo morto. Nunca deve ser exibido

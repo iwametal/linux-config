@@ -1,0 +1,2 @@
+killall5 -9
+	* mata todos os processos da máquina (processos não essenciais para a mesma continuar rodando)

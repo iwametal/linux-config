@@ -1,0 +1,25 @@
+tmux new
+	* cria uma nova sessão
+
+CTRL + B ; C
+	* cria uma nova tela
+
+CTRL + B ; [número da tela]
+	* vai para a tela especificada
+
+CTRL + B ; D
+	* desconecta (detach)
+	* os programas da tela desconectada continuam em execućão
+
+tmux attach
+	* reconecta (attach) uma sessão desconectada (detached)
+
+CTRL + B; "
+	* divide a tela horizontalmente
+	* CTRL + B ; [seta para cima] vai para o terminal de cima
+	* CTRL + B ; [seta para baixo] vai para o terminal de baixo
+
+CTRL + B ; %
+	* divide a tela verticalmente
+	* CTRL + B ; [seta para a esquerda] vai para a esquerda
+	* CTRL + B ; [seta para a direita] vai para o terminal da direita

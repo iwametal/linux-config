@@ -1,0 +1,33 @@
+screen
+	* entra em modo screen
+
+CTRL + [letra] ; [letra]
+	* CTRL + A define os atalhos do screen
+
+CTRL + A ; C
+	* cria uma nova scree no terminal
+
+CTRL + A ; CTRL + A
+	* alterna entre screens
+	* vai pra screen utilizada anteriormente
+
+CTRL + A ; [Número da screen]
+	* alterna para a screen especificada
+	## exemplo:
+		CTRL + A ; 0 --> alterna para a screen 0
+
+CTRL + A ; W
+	* mostra as screens criadas no canto inferior do terminal
+
+CTRL + D
+	* deixa a sessão
+
+CTRL + A ; X
+	* fecha o terminal
+
+CTRL + A ; D
+	* desconecta (detach) de uma screen
+	* nenhum programa é finalizado, mesmo com a screen desconectada
+
+screen -x
+	* reconecta uma screen desconectada (detached) e volta para a mesma

@@ -1,0 +1,3 @@
+nohup [comando]
+	* protege um comando de sinais de interrupćões
+	* sinais de interrupćões, são općões do kill que não se referem a matar um processo, como o -1 (HUP), por exemplo

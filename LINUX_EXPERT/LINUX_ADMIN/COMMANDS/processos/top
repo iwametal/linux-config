@@ -1,0 +1,8 @@
+top
+	* gerenciador de processos
+
+top -i
+	* roda o gerenciador de processos, porém ignora os processos Zumbis (processos que não estão em execućão no momento)
+
+top -c
+	* mostra a linha de comando inteira do programa, ao invés de somente o processo

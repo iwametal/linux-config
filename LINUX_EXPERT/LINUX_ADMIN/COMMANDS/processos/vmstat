@@ -1,0 +1,5 @@
+vmstat
+	* permite visualizar o tempo de utilizaćão dos parâmetros do sistema linha a linha
+
+vmstat [tempo]
+	* mostra o vmstat de [tempo] em [tempo]

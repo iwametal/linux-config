@@ -1,0 +1,3 @@
+pidof [nome do processo]
+	* retorna o PID de um processo especificado pelo nome
+	* com a općão -s, é retornado apenas o primeiro PID encontrado

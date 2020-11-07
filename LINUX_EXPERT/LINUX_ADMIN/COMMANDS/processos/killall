@@ -1,0 +1,5 @@
+killall [općões] [processo]
+	* mata todos os processos com o nome/PID especificado
+
+killall -u coffee terminator
+	* mata todos os processos com o nome terminator no usuário coffee

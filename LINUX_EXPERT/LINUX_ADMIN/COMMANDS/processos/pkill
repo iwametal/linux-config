@@ -1,0 +1,5 @@
+pkill [općões] [processo]
+	* mata um processo com a possibilidade de algumas especificaćões parecidas com o pgrep
+
+pkill -u coffee terminator
+	* mata todos os processos do usuário coffee que tenham o nome de terminator

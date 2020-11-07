@@ -1,0 +1,22 @@
+kill [PID]
+	* encerra uma tarefa
+
+kill "[nome do prcesso]"
+	* encerra o processo com o nome especificado
+
+kill -15 [općões anteriores]
+	* -15 é o sinal padrão para o comando kill, que significa terminate
+	* com o parâmetro -15, o programa é finalizado de uma forma amigável (fechar arquivos em aberto, salvar o que tiver que salvar, até chegar na finalizaćão)
+	* outra forma de executar o mesmo comando seria: kill -TERM [općões]
+
+kill -9 [općões anteriores]
+	* mata a seco, na paulada, certeiro
+	* não pergunta nada, não salva nada, simplesmente termina o processo
+	* outra forma de executar o mesmo comando seria: kill -KILL [općões]
+
+kill -HUP [općões anteriores]
+	* faz com que o processo releia os arquivos de configuraćão sem finalizar o mesmo
+	* outra forma de executar o mesmo comando seria: kill -1 [općões]
+
+kill %[ID do comando rodando em segundo plano (background)]
+	* encerra a tarefa

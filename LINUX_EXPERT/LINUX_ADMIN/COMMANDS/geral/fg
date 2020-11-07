@@ -1,0 +1,2 @@
+fg [ID do comando rodando em background]
+	* trás um comando para o foreground (para primeiro plano)

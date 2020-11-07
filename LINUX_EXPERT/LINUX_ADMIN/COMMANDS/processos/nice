@@ -1,0 +1,14 @@
+nice -n 10 [processo]
+	* indica a prioridade 10 para um processo no sistema
+	* por padrão, processos criados vem com prioridade 0
+	* as prioridades variam de -20 (maior prioridade, processos de maior importância da máquina) até 19 (menor prioridade, processos de menor importância da máquina)
+	* prioridades abaixo de 0, são autorizadas apenas para usuário root
+
+renice -n 2 -p [PID do processo]
+	* troca a prioridade de um processo em execućão
+
+renice -n 10 -u [usuário]
+	* todos os processos do usuário especificado serão reajustados para prioridade 10
+
+renice -13 -g [grupo]
+	* todos os processos do grupo especificado serão reajustados para prioridade 13

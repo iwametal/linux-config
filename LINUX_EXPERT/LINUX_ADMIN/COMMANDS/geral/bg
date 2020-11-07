@@ -1,0 +1,5 @@
+ctrl + Z
+	* para um programa que está rodadno em primeiro plano (foreground)
+
+bg [ID do comando rodando em foreground]
+	* leva um comando rodando em primeiro plano (foreground) para segundo plano (background)

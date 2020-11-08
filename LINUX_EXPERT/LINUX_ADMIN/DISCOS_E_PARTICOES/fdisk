@@ -1,0 +1,14 @@
+fdisk -l
+	* lista todos os discos da máquina e suas respectivas partićões, junto a algumas informaćões adicionais
+
+fdisk -l [disco]
+	* lista o disco especificado e suas respectivas partićões
+
+fdisk [disco]
+	* entra no particionador de discos, entrando em edićão no disco especificado
+	# g --> cria uma tabela de partićão GPT [tabela mais nova]
+	# m --> menu de ajuda para os comandos
+	# n --> cria uma nova partićão
+	# o --> cria uma tabela de partićão DOS [tabela mais antiga]
+	# p --> lista as partićões do disco, assim como seus tipos
+	# t --> altera o tipo de uma partićão

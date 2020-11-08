@@ -1,0 +1,7 @@
+parted [disco]
+	* entra no gerenciamento de partićões do disco especificado
+	# help --> menu de ajuda
+	# print --> lista as partićões
+	# mklabel [tabela de partićão (GPT ou DOS)] --> cria o label (tabela de partićão do sistema)
+	# mkpart --> cria uma partićão
+	# quit --> sai do parted

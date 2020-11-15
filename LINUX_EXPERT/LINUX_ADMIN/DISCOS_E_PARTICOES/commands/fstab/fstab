@@ -1,0 +1,33 @@
+# fstab é um arquivo que diz para o sistema operacional on deve ser montada cada partićão no momento de boot
+
+# <file system>  <mount point>  <type>  <options>  <dump>  <pass>
+
+# file system -> refere-se a partićãu que será montada (/dev/sdx1)
+
+# mount point -> refere-se ao local onde a partićão será montada (/var)
+
+# type -> refere-se ao sistema de arquivos que a partićão possui (ext4)
+
+# options -> refere-se as općões de montagem com relaćão a partićão
+	## defaults --> općões padrão
+	## noatime --> não será salvo o tempo de acesso aos arquivos (o que impede dos mesmos serem atualizados a todo momento)
+		### É interessante para partićões que sofrem constantes atualizaćões, impedindo a queda de performance
+	## nodiratime --> mesmo conceito de noatime, porém servindo agora para diretórios ao invés de arquivos
+	## noexec --> impede a execućão de binários dentro da partićão (até mesmo para usuário root)
+	## nosuid -->
+	## nodev --> não se pode criar nenhu dispositivo dentro da partićão
+
+# dump -> permite fazer backup do sistema de arquivos em formato dump e armazenar em um arquivo de saída (muito pouco utilizado atualmente)
+
+# pass ->
+	## 0 --> Não verifica o sistema de arquvos no boot. Esteja ele corrompido ou não, não será feita nenhuma checagem, ele apenas será montado
+	## 1 --> Sempre fará uma verificaćão, caso precise ser checado no boot
+		### ---> Sistemas de arquivos precisam ser verificados quando:
+			#### corrompem e não é desmontado corretamente (como o comando umount). Caso o computador desligue repentinamente, arquivos muito provavelmente serão corrompidos
+			#### o número de vezes que ele foi montado supera o número configurado (esse número geralmente é 20). Caso a máquina seja reiniciada 20 vezes, por exemplo, é feita a checagem forćada do sistema de arquivos
+			#### é passado 6 meses e ainda não foram verificados. Servidores, por exemplo, que não são reiniciados com frequência, é comum essa checagem por tempo
+
+## EXEMPLO DE FSTAB ##
+
+<file system>  <mount point>  <type>  <options>  <dump>  <pass>
+/dev/sda1      /boot          vfat    defaults   0       1

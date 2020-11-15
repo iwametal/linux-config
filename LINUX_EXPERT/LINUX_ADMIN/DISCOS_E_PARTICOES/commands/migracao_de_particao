@@ -1,0 +1,50 @@
+#########################################################
+# EXEMPLO MIGRANDO O DIRETÓRIO /VAR PARA OUTRA PARTIĆÃO #
+#########################################################
+
+# situaćão: o diretório /var, está atualmente montado em /dev/sda1, e passaremos a montagem para /dev/sda6
+
+# cria um ponto de montagem temporário para a partićão
+mkdir /tmp/mount_var
+
+# monta a partićão no ponto de montagem temporário
+mount /dev/sda6 /tmp/mount_var
+
+# apenas lista as partićões, sua utilizaćão e o ponto de montagem
+df -hT
+
+# entra no ponto de montagem temporário
+cd /tmp/mount_var
+
+# copia todo o conteúdo dentro de /var para o ponto de montagem temporário, preservando todos os seus atributos (-a)
+cp -a /var/* /tmp/mount_var
+
+#
+
+# altera o fstab colocando a partićão /dev/sda6 no ponto de montagem /var
+# assim, quando se reiniciar a máquina, o /dev/sda6 será montado no /var, com todos os seus arquivos anteriores (vindos do ponto de montagem temporário)
+
+#
+
+# reboot
+
+#
+
+# nesse momento, o conteúdo foi migrado, porém a partićão raíz (/dev/sda1), ainda ocupará o mesmo espaćo, ou seja, seu espaćo não foi liberado, mesmo passando o conteúdo para outra partićão
+# isso porque o conteúdo de /dev/sda6 foi salvo por cima do conteúdo de /dev/sda1, mas o conteúdo original não foi eliminado
+
+#
+
+# agora, então, basta entrar no arquivo fstab, comentar a linha que é gerado o ponto de montagem de /dev/sda6 para o /var e dar o reboot na máquina novamente
+
+#
+
+# agora, basta entrar dentro de /var e excluir todo o seu conteúdo (rm -rf *)
+# entrar novamente dentro do arquivo fstab, descomentar a linha que é gerado o ponto de montagem de /dev/sda6 em /var e rebootar a máquna novamente
+
+# pronto, a migraćão a quente foi realizada com sucesso
+
+OBS: A migraćão a quente funciona para algumas partićões, mas não funciona muito bem com outras
+		 Por exemplo com o /usr
+		 o /usr possui alguns diretórios que são essenciais para o boot do sistema, como o /usr/bin e os /usr/lib*
+		 caso exclua esses diretórios para realizar a partićão a quente, por mais que os realoque montando a nova partićão, seu sistema não dará boot

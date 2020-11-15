@@ -1,0 +1,5 @@
+lsof
+	# lista todos os arquivos que estão abertos (em todos os diretórios)
+
+lsof -t [diretório]
+	# especifica a busca de arquivos em aberto para o diretório digitado

@@ -1,0 +1,3 @@
+mklost+found
+	# cria a pasta lost+found dentro da raíz de um ponto de montagem
+	# útil em situaćões onde o diretório é excluído

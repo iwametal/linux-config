@@ -1,0 +1,7 @@
+# mounting an external device:
+	# mkdir /run/media/name_of_device_dir
+	# mount /dev/sdx1 /run/media/name_of_device_dir
+
+# unmounting an external device:
+	# umount /dev/sdx1
+	# udiskctl power-off -b /dev/sdx # or udisks --detach /dev/sdx

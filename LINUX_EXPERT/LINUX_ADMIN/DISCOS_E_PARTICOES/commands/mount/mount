@@ -1,0 +1,15 @@
+mount [partićão] [ponto de montagem]
+	# mont uma determinada partićão em algum ponto
+
+mount -o remount [partićão]
+	# relê as novas configuraćões do arquivo fstab e faz a remontagem da partićão
+
+mount -o remount,rw [partićão]
+	# o rw [read & write], permite que o sistema de arquivos seja montado como leitura e gravaćão
+	# caso fosse passada a općão ro [read only], o sistema de arquivos seria montado apenas como leitura
+
+umount [partićão]
+	# faz a desmontagem de uma determinada partićão
+
+mount | grep [partićão]
+	# mostra onde determinada partićão está montada

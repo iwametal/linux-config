@@ -5,3 +5,6 @@ COPYING FILES (INCLUDING HIDDEN FILES)
 	#                     ^
 	#                     note the dot!
 	This will copy all files, both normal and hidden ones, since /path/subfolder/. expands to "everything from this directory" (Source: How to copy with cp to include hidden files and hidden directories and their contents?)
+
+	cp -a path/de/origem path/de/destino
+		* a općão -a permite preservar todos os atributos dos arquivos

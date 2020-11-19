@@ -45,8 +45,8 @@ xampp/
 .anyconnect
 .anydesk/
 .astah
-.bash_*
-.bashrc
+.bash_history
+.bash_logout
 .cache
 .cmake/
 .conda

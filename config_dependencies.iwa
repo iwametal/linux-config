@@ -6,7 +6,6 @@ bspwm
 ccls
 dmenu
 dragon
-dragon-drag-and-drop
 exa
 feh
 ncmpcpp
@@ -30,6 +29,7 @@ xorg-xset
 yay
 
 # NESRY AUR PCKGS
+dragon-drag-and-drop
 wal
 
 # NESRY DPNCS
@@ -40,9 +40,11 @@ mpc
 mpd
 python
 python-pip
+starship
 vscode
 
 # INTNG PCKGS
+alsa-utils
 audacious
 cava
 eclipse-jee
@@ -54,11 +56,15 @@ htop
 intellij-idea-community-edition
 jp2a
 mpv
+pamixer
+playerctl
 ranger
 screen
 slack-desktop
 snap
 sxiv
+ttf-font-awesome
+tmux
 vlc
 zathura
 zathura-cb

@@ -8,6 +8,7 @@ dmenu
 dragon
 exa
 feh
+maim
 ncmpcpp
 neofetch
 networ
@@ -20,6 +21,7 @@ networkmanager
 openvpn
 protonvpn
 polybar
+ueberzug
 wireless_tools
 wpa_supplicant
 xorg-server
@@ -33,7 +35,7 @@ dragon-drag-and-drop
 wal
 
 # NESRY DPNCS
-broot
+broot # needs to run "broot --install"
 calcurse
 git
 mpc
@@ -55,6 +57,7 @@ gotop
 htop
 intellij-idea-community-edition
 jp2a
+maven
 mpv
 pamixer
 playerctl

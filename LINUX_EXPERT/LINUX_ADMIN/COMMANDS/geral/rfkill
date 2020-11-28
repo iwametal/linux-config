@@ -1,4 +1,0 @@
-rfkill --> to study
-	--> But actually is usefull to enable bluetooth connections
-	--> rfkill list
-	--> rfkill unblock all

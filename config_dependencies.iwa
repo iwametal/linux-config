@@ -24,6 +24,7 @@ polybar
 ueberzug
 wireless_tools
 wpa_supplicant
+xclip
 xorg-server
 xorg-xinit
 xorg-xprop

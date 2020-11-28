@@ -1,2 +1,0 @@
-alt + t
-	* inverte as duas últimas palavras digitadas. Exemplo: "kubectl pods get", caso seja pressionado o "alt + T", o comando passará a ser "kubeclt get pods".

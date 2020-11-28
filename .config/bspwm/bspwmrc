@@ -48,8 +48,8 @@ launchpolybar &
 # set the desktop wallpaper
 setwallpaper &
 
-# change map keys between CAPSLOCK and ESCAPE
-keyboard_change_CAPS_ESC.sh &
+# keyboard actions
+keyboard_actions.sh
 
 # enable ABNT stuffs for US layout keyboards
 keyboard_set_ABNT2_layout.sh &

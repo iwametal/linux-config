@@ -38,6 +38,7 @@ wal
 # NESRY DPNCS
 broot # needs to run "broot --install"
 calcurse
+ffmpegthumbnailer
 git
 mpc
 mpd

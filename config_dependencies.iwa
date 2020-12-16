@@ -19,9 +19,7 @@ vim
 neovim
 networkmanager
 openvpn
-protonvpn
 polybar
-ueberzug
 wireless_tools
 wpa_supplicant
 xclip
@@ -33,6 +31,8 @@ yay
 
 # NESRY AUR PCKGS
 dragon-drag-and-drop
+protonvpn
+ueberzug
 wal
 
 # NESRY DPNCS
@@ -50,23 +50,26 @@ vscode
 # INTNG PCKGS
 alsa-utils
 audacious
-cava
-eclipse-jee
+cava # yay
+discord
+eclipse-jee # yay
 edex-ui
 figlet
 fzf
-gotop
+gotop # yay
 htop
 intellij-idea-community-edition
 jp2a
+lf # yay
 maven
 mpv
 pamixer
 playerctl
 ranger
 screen
-slack-desktop
-snap
+slack-desktop # yay
+snap # yay
+steam
 sxiv
 ttf-font-awesome
 tmux

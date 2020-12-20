@@ -129,7 +129,7 @@ if !exists('g:vscode')
 	" Commenting
 	Plug 'tpope/vim-commentary'
 	" Motions
-	Plug 'justinmk/vim-sneak'
+	"Plug 'justinmk/vim-sneak'
 	" Misc
 	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 	Plug 'voldikss/vim-floaterm'

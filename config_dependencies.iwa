@@ -55,6 +55,7 @@ alsa-utils
 audacious
 cava # yay
 discord
+dunst
 eclipse-jee # yay
 edex-ui
 figlet
@@ -66,6 +67,7 @@ jp2a
 lf # yay
 maven
 mpv
+nvtop
 pamixer
 playerctl
 ranger

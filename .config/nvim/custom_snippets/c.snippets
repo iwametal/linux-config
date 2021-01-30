@@ -18,6 +18,7 @@ $3
 #endif
 endsnippet
 
+# simple c library implementation scope
 snippet ch_scope "C implementation for a library" b
 #include <stdio.h>
 
@@ -51,7 +52,7 @@ snippet fg "fgets()" b
 fgets(${1:char *restrict __s}, ${2:int __n}, ${3:FILE *restrict __stream});
 endsnippet
 
-# function snippet
+# function scope
 snippet func "C scope for a function" b
 ${1:T} ${2:func_name}(${3:...})
 {

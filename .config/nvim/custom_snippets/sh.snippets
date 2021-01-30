@@ -1,17 +1,50 @@
+#                           #
+# SNIPPETS FOR SHELL HEADER #
+#                           #
+
 snippet _sh "#!/bin/sh" b
 #!/bin/sh
 
 
 endsnippet
 
-snippet ba_sh "#!/bin/bash" b
-#!/bin/sh
+snippet _bash "#!/bin/bash" b
+#!/bin/bash
 
 
 endsnippet
 
-snippet z_sh "#!/bin/zsh" b
+snippet _zsh "#!/bin/zsh" b
 #!/bin/zsh
 
 
+endsnippet
+
+#                            #
+# SNIPPETS FOR IF CONDITIONS #
+#                            #
+
+snippet _if "if scope for shell" b
+if [[ ${1:...} ]] ; then
+	$2
+fi
+endsnippet
+
+snippet _ifl "if scope for shell in one line" b
+[[ ${1:...} ]] && ${2:true...} || ${3:false...}
+endsnippet
+
+#                               #
+# SNIPPETS FOR WHILE CONDITIONS #
+#                               #
+
+snippet _while "while scope for shell" b
+while [[ ${1:...} ]]
+do
+	$2
+done
+endsnippet
+
+snippet _whilel "while scope for shell in one line" b
+while [[ ${1:...} ]] ; do ${2:...} ; done
 endsnippet

@@ -1,4 +1,5 @@
 {
+  "snippets.userSnippetsDirectory": "~/.config/nvim/custom_snippets",
   "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"],
   "suggest.noselect": false,
   "coc.preferences.formatOnSaveFiletypes": [

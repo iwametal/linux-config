@@ -22,6 +22,7 @@ neovim
 networkmanager
 openvpn
 polybar
+python-lxml
 wireless_tools
 wpa_supplicant
 xclip

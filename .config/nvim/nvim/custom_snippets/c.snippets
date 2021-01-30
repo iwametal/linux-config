@@ -1,0 +1,52 @@
+# simple c project scope
+snippet c_scope "C project scope" b
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+	$1
+}
+endsnippet
+
+# simple c library scope
+snippet h_scope "C library scope" b
+#ifndef $1
+#define $2
+
+$3
+
+#endif
+endsnippet
+
+snippet ch_scope "C implementation for a library" b
+#include <stdio.h>
+
+#include "$1"
+
+$2
+endsnippet
+
+# printf scope
+snippet pf "printf ()" b
+printf("$1");
+endsnippet
+
+# scanf scope
+snippet sf "scanf()" b
+scanf("$1");
+endsnippet
+
+# sprintf scope
+snippet spf "sprintf()" b
+sprintf($1);
+endsnippet
+
+# sscanf scope
+snippet ssf "sscanf()" b
+sscanf($1);
+endsnippet
+
+# fgets scope
+snippet fg "fgets()" b
+fgets($1);
+endsnippet

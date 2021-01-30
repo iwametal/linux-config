@@ -112,8 +112,6 @@ if !exists('g:vscode')
 	" Center text
 	Plug 'junegunn/goyo.vim'
 	" coc.nvim
-	Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-	" Code Completion
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	" CPP
 	Plug 'bfrg/vim-cpp-modern'
@@ -508,6 +506,11 @@ if !exists('g:vscode')
 				\ 'coc-angular',
 				\ 'coc-vimtex'
 				\ ]
+				" \ 'coc-eslint',
+
+	inoremap {<cr> {<cr>}<c-o>O<tab>
+
+	let g:UltiSnipsSnippetsDir = "~/.confg/nvim/custom_snippets"
 
 	" From Coc Readme
 	set updatetime=300

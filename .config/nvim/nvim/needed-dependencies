@@ -1,0 +1,9 @@
+# Dependencies
+--> pip && pip3 - (in package "python-pip" in archwiki)
+
+# Processes to be done
+1. sudo pip uninstall neovim
+2. sudo pip3 uninstall neovim
+3. pip install --user neovim
+4. pip3 install neovim
+

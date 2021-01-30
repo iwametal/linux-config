@@ -1,5 +1,3 @@
-" ~ Based on @BrodieRobertson configs
-
 let mapleader=" "
 
 " Use system clipboard
@@ -11,6 +9,10 @@ autocmd BufRead,BufNewFile *.tex set filetype=tex
 autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
 
 autocmd FileType tex,latex,markdown setlocal spell spelllang=en_au
+
+" NerdTree refreshing
+" autocmd CursorHold,CursorHoldI * call NERDTreeFocus() | call g:NERDTree.ForCurrentTab().getRoot().refresh() | call g:NERDTree.ForCurrentTab().render() | wincmd w
+
 
 " Vertically center document when entering insert mode
 autocmd InsertEnter * norm zz
@@ -85,7 +87,7 @@ autocmd FileType sh inoremap ,sw case<Space>""<Space>in<CR><++>)<Space><++><Spac
 autocmd FileType sh inoremap ,ca )<Space><++><Space>;;<CR><++><Esc>?)<CR>i
 
 " markdown
-autocmd FileType markdown noremap <leader>r i---<CR>title:<Space><++><CR>author:<Space>"Brodie Robertson"<CR>geometry:<CR>-<Space>top=30mm<CR>-<Space>left=20mm<CR>-<Space>right=20mm<CR>-<Space>bottom=30mm<CR>header-includes:<Space>\|<CR><Tab>\usepackage{float}<CR>\let\origfigure\figure<CR>\let\endorigfigure\endfigure<CR>\renewenvironment{figure}[1][2]<Space>{<CR><Tab>\expandafter\origfigure\expandafter[H]<CR><BS>}<Space>{<CR><Tab>\endorigfigure<CR><BS>}<CR><BS>---<CR><CR>
+" autocmd FileType markdown noremap <leader>r i---<CR>title:<Space><++><CR>author:<Space>"Brodie Robertson"<CR>geometry:<CR>-<Space>top=30mm<CR>-<Space>left=20mm<CR>-<Space>right=20mm<CR>-<Space>bottom=30mm<CR>header-includes:<Space>\|<CR><Tab>\usepackage{float}<CR>\let\origfigure\figure<CR>\let\endorigfigure\endfigure<CR>\renewenvironment{figure}[1][2]<Space>{<CR><Tab>\expandafter\origfigure\expandafter[H]<CR><BS>}<Space>{<CR><Tab>\endorigfigure<CR><BS>}<CR><BS>---<CR><CR>
 autocmd FileType markdown inoremap ,i ![](<++>){#fig:<++>}<Space><CR><CR><++><Esc>kkF]i
 autocmd FileType markdown inoremap ,a [](<++>)<Space><++><Esc>F]i
 autocmd FileType markdown inoremap ,1 #<Space><CR><CR><++><Esc>2k<S-a>
@@ -144,6 +146,56 @@ if !exists('g:vscode')
 	Plug 'HerringtonDarkholme/yats.vim'
 	Plug 'rust-lang/rust.vim'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
+
+	" Nerd tree
+	Plug 'scrooloose/nerdtree'
+	Plug 'scrooloose/nerdcommenter'
+	Plug 'Xuyuanp/nerdtree-git-plugin'
+	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+	" Vim devicons
+	Plug 'ryanoasis/vim-devicons'
+
+	" Nerd tree remap
+	nmap <A-f> :NERDTreeToggle<CR>
+	vmap ++ <plug>NERDCommenterToggle
+	nmap ++ <plug>NERDCommenterToggle
+
+	let g:NERDTreeGitStatusWithFlags = 1
+
+	"let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+	"let g:NERDTreeGitStatusNodeColorization = 1
+	"let g:NERDTreeColorMapCustom = {
+				"\ "Staged"    : "#0ee375",
+				"\ "Modified"  : "#d9bf91",
+				"\ "Renamed"   : "#51C9FC",
+				"\ "Untracked" : "#FCE77C",
+				"\ "Unmerged"  : "#FC51E6",
+				"\ "Dirty"     : "#FFBD61",
+				"\ "Clean"     : "#87939A",
+				"\ "Ignored"   : "#808080"
+				"\ }
+
+
+	let g:NERDTreeIgnore = ['^node_modules$']
+
+	" function! IsNERDTreeOpen()
+	" 	return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+	" endfunction
+
+	" " Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
+	" " file, and we're not in vimdiff
+	" function! SyncTree()
+	" 	if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+	" 		NERDTreeFind
+	" 		wincmd p
+	" 	endif
+	" endfunction
+
+	" Highlight currently open buffer in NERDTree
+	" autocmd BufEnter * call SyncTree()
+
+	nmap <Leader>R :NERDTreeFocus<cr>R<c-w><c-p>
 
 	" C - CPP MODERN
 	let c_no_curly_error = 1
@@ -305,7 +357,9 @@ if !exists('g:vscode')
 	" set background=dark "dark version - one
 	" set background=light "light version - one
 	" let g:dracula_colorterm = 0
-	" hi Normal guibg=NONE ctermbg=NONE " enable transparency for Dracula
+	" hi Visual guifg=#E6E6FA guibg=#000000 gui=none
+	syntax on
+	hi Visual term=reverse cterm=reverse guibg=Gray
 
 	" tab settings
 	set shiftwidth=2
@@ -348,6 +402,8 @@ if !exists('g:vscode')
 	let g:gitgutter_map_keys = 0
 	let g:gitgutter_highlight_linenrs = 1
 
+	nmap gsp <Plug>(GitGutterPreviewHunk)
+
 	" vim-airline
 	let g:airline#extensions#wordcount#enabled = 1
 	let g:airline#extensions#hunks#non_zero_only = 1
@@ -376,75 +432,75 @@ if !exists('g:vscode')
 	let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 	" Netrw
-	let g:netrw_banner = 0
-	let g:netrw_liststyle = 3
-	let g:netrw_browse_split = 4
-	let g:netrw_winsize = 20
+	" let g:netrw_banner = 0
+	" let g:netrw_liststyle = 3
+	" let g:netrw_browse_split = 4
+	" let g:netrw_winsize = 20
 
-	function! OpenToRight()
-		:normal v
-		let g:path=expand('%:p')
-		:q!
-		execute 'belowright vnew' g:path
-		:normal <C-w>l
-	endfunction
+	" function! OpenToRight()
+	" 	:normal v
+	" 	let g:path=expand('%:p')
+	" 	:q!
+	" 	execute 'belowright vnew' g:path
+	" 	:normal <C-w>l
+	" endfunction
 
-	function! OpenBelow()
-		:normal v
-		let g:path=expand('%:p')
-		:q!
-		execute 'belowright new' g:path
-		:normal <C-w>l
-	endfunction
+	" function! OpenBelow()
+	" 	:normal v
+	" 	let g:path=expand('%:p')
+	" 	:q!
+	" 	execute 'belowright new' g:path
+	" 	:normal <C-w>l
+	" endfunction
 
-	function! OpenTab()
-		:normal v
-		let g:path=expand('%:p')
-		:q!
-		execute 'tabedit' g:path
-		:normal <C-w>l
-	endfunction
+	" function! OpenTab()
+	" 	:normal v
+	" 	let g:path=expand('%:p')
+	" 	:q!
+	" 	execute 'tabedit' g:path
+	" 	:normal <C-w>l
+	" endfunction
 
 
-	function! NetrwMappings()
-		" Hack fix to make ctrl-l work properly
-		noremap <buffer> <A-l> <C-w>l
-		noremap <buffer> <C-l> <C-w>l
-		noremap <silent> <A-f> :call ToggleNetrw()<CR>
-		noremap <buffer> V :call OpenToRight()<cr>
-		noremap <buffer> H :call OpenBelow()<cr>
-		noremap <buffer> T :call OpenTab()<cr>
-	endfunction
+	" function! NetrwMappings()
+	" 	" Hack fix to make ctrl-l work properly
+	" 	noremap <buffer> <A-l> <C-w>l
+	" 	noremap <buffer> <C-l> <C-w>l
+	" 	" noremap <silent> <A-f> :call ToggleNetrw()<CR>
+	" 	noremap <buffer> V :call OpenToRight()<cr>
+	" 	noremap <buffer> H :call OpenBelow()<cr>
+	" 	noremap <buffer> T :call OpenTab()<cr>
+	" endfunction
 
-	augroup netrw_mappings
-		autocmd!
-		autocmd filetype netrw call NetrwMappings()
-	augroup END
+	" augroup netrw_mappings
+	" 	autocmd!
+	" 	autocmd filetype netrw call NetrwMappings()
+	" augroup END
 
 	" Allow for netrw to be toggled
-	function! ToggleNetrw()
-		if g:NetrwIsOpen
-			let i = bufnr("$")
-			while (i >= 1)
-				if (getbufvar(i, "&filetype") == "netrw")
-					silent exe "bwipeout " . i
-				endif
-				let i-=1
-			endwhile
-			let g:NetrwIsOpen=0
-		else
-			let g:NetrwIsOpen=1
-			silent Lexplore
-		endif
-	endfunction
+	" function! ToggleNetrw()
+	" 	if g:NetrwIsOpen
+	" 		let i = bufnr("$")
+	" 		while (i >= 1)
+	" 			if (getbufvar(i, "&filetype") == "netrw")
+	" 				silent exe "bwipeout " . i
+	" 			endif
+	" 			let i-=1
+	" 		endwhile
+	" 		let g:NetrwIsOpen=0
+	" 	else
+	" 		let g:NetrwIsOpen=1
+	" 		silent Lexplore
+	" 	endif
+	" endfunction
 
 	" Check before opening buffer on any file
-	function! NetrwOnBufferOpen()
-		if exists('b:noNetrw')
-			return
-		endif
-		call ToggleNetrw()
-	endfun
+	" function! NetrwOnBufferOpen()
+	" 	if exists('b:noNetrw')
+	" 		return
+	" 	endif
+	" 	call ToggleNetrw()
+	" endfun
 
 	" Close Netrw if it's the only buffer open
 	autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" || &buftype == 'quickfix' |q|endif
@@ -454,10 +510,10 @@ if !exists('g:vscode')
 		autocmd!
 		" Don't open Netrw
 		autocmd VimEnter ~/.config/joplin/tmp/*,/tmp/calcurse*,~/.calcurse/notes/*,~/vimwiki/*,*/.git/COMMIT_EDITMSG let b:noNetrw=1
-		autocmd VimEnter * :call NetrwOnBufferOpen()
+		" autocmd VimEnter * :call NetrwOnBufferOpen()
 	augroup END
 
-	let g:NetrwIsOpen=0
+	" let g:NetrwIsOpen=0
 
 	" ------Vim Auto Closetag------
 	" filenames like *.xml, *.html, *.xhtml, ...

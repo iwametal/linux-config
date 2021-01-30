@@ -1,4 +1,4 @@
-./coffeefetch
+~/coffeefetch
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -29,4 +29,6 @@ source /home/coffee/.config/broot/launcher/bash/br
 eval "$(starship init bash)"
 
 # Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+if [ -s "$HOME/.config/envman/load.sh" ] ; then
+	source "$HOME/.config/envman/load.sh"
+fi

@@ -4,7 +4,7 @@ snippet c_scope "C project scope" b
 
 int main(int argc, char *argv[])
 {
-	$1
+	${1:return 0;}
 }
 endsnippet
 
@@ -21,7 +21,7 @@ endsnippet
 snippet ch_scope "C implementation for a library" b
 #include <stdio.h>
 
-#include "$1"
+#include "${1:libname.h}"
 
 $2
 endsnippet
@@ -33,20 +33,28 @@ endsnippet
 
 # scanf scope
 snippet sf "scanf()" b
-scanf("$1");
+scanf("${1:%[type]}", ${2:varname});
 endsnippet
 
 # sprintf scope
 snippet spf "sprintf()" b
-sprintf($1);
+sprintf(${1:char *retritct __s}, ${2:const char *restrict __format}, ${3:...});
 endsnippet
 
 # sscanf scope
 snippet ssf "sscanf()" b
-sscanf($1);
+sscanf(${1:char *retritct __s}, ${2:const char *restrict __format}, ${3:...});
 endsnippet
 
 # fgets scope
 snippet fg "fgets()" b
-fgets($1);
+fgets(${1:char *restrict __s}, ${2:int __n}, ${3:FILE *restrict __stream});
+endsnippet
+
+# function snippet
+snippet func "C scope for a function" b
+${1:T} ${2:func_name}(${3:...})
+{
+	${4:return T;}
+}
 endsnippet

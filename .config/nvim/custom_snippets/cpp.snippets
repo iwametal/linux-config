@@ -1,52 +1,52 @@
 # simple c project scope
-snippet c_scope "C project scope" b
-#include <stdio.h>
+snippet cpp_scope "C project scope" b
+#include <iostream>
 
 int main(int argc, char *argv[])
 {
-	$1
+	${1:return 0;}
 }
 endsnippet
 
 # simple c library scope
 snippet h_scope "C library scope" b
-#ifndef $1
-#define $2
+#ifndef ${1:LIBNAME_H}
+#define ${2:LIBNAME_H}
 
 $3
 
 #endif
 endsnippet
 
-snippet ch_scope "C implementation for a library" b
-#include <stdio.h>
+snippet cpph_scope "Cpp implementation for a library" b
+#include <iostream>
 
-#include "$1"
+#include "${1:libname.h}"
 
 $2
 endsnippet
 
 # printf scope
-snippet pf "printf ()" b
-printf("$1");
+snippet co "std::cout" b
+std::cout << ${1:...};
 endsnippet
 
 # scanf scope
-snippet sf "scanf()" b
-scanf("$1");
+snippet ci "std::cin" b
+std::cin >> ${1:...};
 endsnippet
 
-# sprintf scope
-snippet spf "sprintf()" b
-sprintf($1);
+snippet func "Cpp function scope" b
+${1:T} ${2:func_name}(${3:...})
+{
+	${4:return T;}
+}
 endsnippet
 
-# sscanf scope
-snippet ssf "sscanf()" b
-sscanf($1);
-endsnippet
-
-# fgets scope
-snippet fg "fgets()" b
-fgets($1);
+snippet gfunc "Cpp general function scope" b
+template <class T>
+${1:T} ${2:func_name}(${3:T __var})
+{
+	${4:return T;}
+}
 endsnippet

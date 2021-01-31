@@ -1,5 +1,4 @@
 # DEFAULT
-
 '.' --> repeat the previous command
 '*' --> show the next instance of the word being showed
 't' + [character] --> goto the next appearence of this character (cursor stops one character behind the instance)
@@ -11,9 +10,10 @@
 ^ + 'v' --> visual block (select multiple lines, even not being the full line)
 
 # MINE
-
 'g' + 'd' --> opens the implementation of a function
 ^ + 'o' --> returns to the usability of the function implementation (command above)
 <leader> + 'r' + 'n' --> refactor.rename a function or variable (all the implementations in cache and in the file are also renamed)
 <leader> + 'R' --> refresh NerdTree
 gsp --> See all the hunks (diffs in a file)
+')' --> go to the next instance (hunk) of a diff (updated/replaced, deleted or added line) in a file present in a git repository
+'(' --> go to the previous instance (hunk) of a diff (updated/replaced, deleted or added line) in a file present in a git repository

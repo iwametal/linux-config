@@ -10,10 +10,6 @@ autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markd
 
 autocmd FileType tex,latex,markdown setlocal spell spelllang=en_au
 
-" NerdTree refreshing
-" autocmd CursorHold,CursorHoldI * call NERDTreeFocus() | call g:NERDTree.ForCurrentTab().getRoot().refresh() | call g:NERDTree.ForCurrentTab().render() | wincmd w
-
-
 " Vertically center document when entering insert mode
 autocmd InsertEnter * norm zz
 
@@ -157,7 +153,7 @@ if !exists('g:vscode')
 	Plug 'ryanoasis/vim-devicons'
 
 	" Nerd tree remap
-	nmap <A-f> :NERDTreeToggle<CR>
+	nmap <A-f> :NERDTreeToggle<CR><c-w><c-p>
 	vmap ++ <plug>NERDCommenterToggle
 	nmap ++ <plug>NERDCommenterToggle
 
@@ -176,7 +172,7 @@ if !exists('g:vscode')
 				"\ "Ignored"   : "#808080"
 				"\ }
 
-
+	autocmd VimEnter * NERDTree | wincmd p
 	let g:NERDTreeIgnore = ['^node_modules$']
 
 	" function! IsNERDTreeOpen()
@@ -192,8 +188,16 @@ if !exists('g:vscode')
 	" 	endif
 	" endfunction
 
-	" Highlight currently open buffer in NERDTree
+	" " Highlight currently open buffer in NERDTree
 	" autocmd BufEnter * call SyncTree()
+
+	" Exit Vim if NERDTree is the only window left.
+	autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+				\ quit | endif
+
+	" If another buffer tries to replace NERDTree, put in the other window, and bring back NERDTree.
+	autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+				\ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
 	nmap <Leader>R :NERDTreeFocus<cr>R<c-w><c-p>
 

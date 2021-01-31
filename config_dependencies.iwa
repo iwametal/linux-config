@@ -22,7 +22,10 @@ neovim
 networkmanager
 openvpn
 polybar
+procs
 python-lxml
+tldr
+tokei
 wireless_tools
 wpa_supplicant
 xclip
@@ -54,6 +57,7 @@ vscode
 # INTNG PCKGS
 alsa-utils
 audacious
+bat
 cava # yay
 discord
 dunst

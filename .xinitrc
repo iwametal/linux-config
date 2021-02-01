@@ -55,7 +55,11 @@ setxbmap ch &
 picom -f &
 
 # wallpaper
-feh --bg-fill ~/wallpaper/wall.png &
+if [ -f "$HOME/wallpaper/wall.png" ] ; then
+	feh --bg-fill ~/wallpaper/wall.png &
+elif [ -f "$HOME/wallpaper/wall.jpg" ] ; then
+	feh --bg-fill ~/wallpaper/wall.jpg &
+fi
 
 # setting some keuboard actions
 ./.scripts/dwm/keyboard_actions.sh
@@ -69,10 +73,13 @@ dwmstatus 2>&1 >/dev/null &
 #done
 
 # status bar
-./.scripts/dwm/dwm_statusbar.sh &
+./.scripts/dwmstatusbar/dwm_statusbar.sh &
 
 # start st
 ./.scripts/dwm/startst
+
+# start dunst
+systemctl start --user dunst
 
 # execute DWM
 exec dwm

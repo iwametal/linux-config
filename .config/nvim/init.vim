@@ -568,7 +568,7 @@ if !exists('g:vscode')
 				\ ]
 				" \ 'coc-eslint',
 
-	inoremap {<cr> {<cr>}<c-o>O<tab>
+	inoremap {<cr> {<cr>}<c-o>O
 
 	let g:UltiSnipsSnippetsDir = "~/.confg/nvim/custom_snippets"
 
@@ -618,7 +618,7 @@ if !exists('g:vscode')
 	nmap <silent> gr <Plug>(coc-references)
 
 	" Use D to show documentation in preview window
-	nnoremap <silent> D :call <SID>show_documentation()<CR>
+	" nnoremap <silent> D :call <SID>show_documentation()<CR>
 
 	function! s:show_documentation()
 		if (index(['vim','help'], &filetype) >= 0)

@@ -8,6 +8,8 @@
 '~' --> swap the case of a letter (upper to lower / lower to upper)
 'q' + [character] --> saves all the commands you do in the character you chose as a macro
 ^ + 'v' --> visual block (select multiple lines, even not being the full line)
+(<Ctrl> + w) + s --> split the screen in horizontal
+:vsplit --> split the screen in vertical
 
 # MINE
 'g' + 'd' --> opens the implementation of a function

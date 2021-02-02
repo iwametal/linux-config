@@ -48,21 +48,14 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# keyboard layout
-setxbmap ch &
-
 # compositor
 picom -f &
 
 # wallpaper
-if [ -f "$HOME/wallpaper/wall.png" ] ; then
-	feh --bg-fill ~/wallpaper/wall.png &
-elif [ -f "$HOME/wallpaper/wall.jpg" ] ; then
-	feh --bg-fill ~/wallpaper/wall.jpg &
-fi
+$HOME/.scripts/dwm/setwallpaper.sh
 
 # setting some keuboard actions
-./.scripts/dwm/keyboard_actions.sh
+$HOME/.scripts/dwm/keyboard_actions.sh
 
 # DWM status
 dwmstatus 2>&1 >/dev/null &
@@ -73,10 +66,10 @@ dwmstatus 2>&1 >/dev/null &
 #done
 
 # status bar
-./.scripts/dwmstatusbar/dwm_statusbar.sh &
+$HOME/.scripts/dwmstatusbar/dwm_statusbar.sh &
 
 # start st
-./.scripts/dwm/startst
+$HOME/.scripts/dwm/startst
 
 # start dunst
 systemctl start --user dunst

@@ -184,7 +184,7 @@
     sticky_history = yes
 
     # Maximum amount of notifications kept in history
-    history_length = 13
+    history_length = 21
 
     ### Misc/Advanced ###
 
@@ -292,18 +292,18 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#210931"
+    background = "#0f0d11"
     foreground = "#c396e0"
-    timeout = 13
+    timeout = 21
     # Icon for notifications with low urgency, uncomment to enable
-    #icon = /path/to/icon
+    icon = adwaita-icon-theme
 
 [urgency_normal]
-    background = "#090a15"
+    background = "#0f0d11"
     foreground = "#9959c1"
-    timeout = 13
+    timeout = 21
     # Icon for notifications with normal urgency, uncomment to enable
-    #icon = /path/to/icon
+    icon = adwaita-icon-theme
 
 [urgency_critical]
     background = "#900000"
@@ -311,7 +311,7 @@
     frame_color = "#ff0000"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
-    #icon = /path/to/icon
+    icon = adwaita-icon-theme
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.

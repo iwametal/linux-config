@@ -1,15 +1,76 @@
 # DEFAULT
 '.' --> repeat the previous command
 '*' --> show the next instance of the word being showed
+'#' --> similar to the previous one, but searching above
 't' + [character] --> goto the next appearence of this character (cursor stops one character behind the instance)
 'f' + [character] --> goto the next appearence of this character (cursor stops exactly in the instance)
 ';' --> complements the two commands above, repeating them
 '%' --> goto the end/beginning of the brackets ('()', '[]' or '{}')
 '~' --> swap the case of a letter (upper to lower / lower to upper)
 'q' + [character] --> saves all the commands you do in the character you chose as a macro
+'@' + '@' --> call the last used macro
+'g' + 'i' --> go to the line you were inserting last time
+<Ctrl> + 'o' --> back one step. Come back to a part of the code you've passed
+<Ctrl> + 'i' --> advance one step. Go to a part you've passed in code, ahead of the one you're in the moment.
+<Ctrl> + 'a' --> increment a number
+<Ctrl> + 'x' --> decrement a number
+(<Ctrl> + 'x') + (<Ctlr> + 'n') --> vim default autocomplete. Autocomplete a word
+(<Ctrl> + 'x') + (<Ctlr> + 'l') --> vim default autocomplete. Autocomplete a line
+(<Ctrl> + 'x') + (<Ctlr> + 'f') --> vim default autocomplete. Autocomplete a file system
+(<Ctrl> + 'x') + (<Ctlr> + 'f') --> vim default autocomplete. Autocomplete a file system
+:norm! @a --> execute macro @a in all selected lines
+:13,21norm! @a --> execute macro @a in lines from 13 to 21
+:ls --> list all the current buffers
+:b[buff number] --> goes to specified buffer
+:bn --> goes to the next buffer
+:bp --> goes to the previous buffer
+:bufdo [command] --> execute the specified command in all buff files
 ^ + 'v' --> visual block (select multiple lines, even not being the full line)
 (<Ctrl> + w) + s --> split the screen in horizontal
-:vsplit --> split the screen in vertical
+(<Ctrl> + w) + v --> split the screen in vertical
+(<Ctrl> + w) + h --> move the cursor to window/tag on left
+(<Ctrl> + w) + j --> move the cursor to window/tag below
+(<Ctrl> + w) + k --> move the cursor to window/tag above
+(<Ctrl> + w) + l --> move the cursor to window/tag on right
+(<Ctrl> + w) + q --> exit openned window/tag
+<Ctrl> + y (in insert mode) --> Copy the character from the line above which is in the same position (column) you are in at moment
+:tabnew --> opens a new tab
+:tabs --> lists all openned tabs
+:set foldmethod=indent --> set the fold method. Ocult some lines of the file.
+za --> toggle occulted line (opens if it's closed, close it if it's openned)
+zo --> opens an occulted line
+zc --> closes an occulted line
+zr (or zR) --> opens all occulted lines
+zm (or zM) --> closes all occulted lines
+'m' + [character] --> create a mark in the line you type it
+' + [character] --> goes to the specified mark
+
+# CONFIGS
+:set ignorecase --> ignore the word's case in search
+:set noignorecase --> do not ignore word's case in search
+:set hlsearch --> highlight searches
+:set nohlsearch --> do not highlight searches
+:set number --> number the lines
+:set nu --> same as above
+:set nonumber --> do not number the lines
+:set nonu --> same as above
+:set tabstop=[SIZE] --> defines the size of the tab # example :set tabstop 6, defines the tab as 6 spaces
+:set shiftwidth=[SIZE] --> similar to the previous one, but for other cases
+:set softtabstop=[SIZE] --> similar to the 2 previous commands, but for other specific cases
+:set expandtab --> consider tab as spaces
+:set noexpandtab --> consider tab as 1 single character
+:set novisualbell --> no visual errors
+:set noerrorbells --> no sound errors
+
+:e /path/to/file --> opens a file in vim
+:r /path/to/file --> loads the file passed in the current file
+
+:qa!, :wqa, :xa --> similar to commands :q!, :wq and :x, but with all tabs/splits oppened
+
+:! [shell command] --> execute a command in shell and show you the output
+!! [shell command] --> execute a command in shell and paste the output in the actual file oppened
+:.! [shell command] --> same as above
+:r! [shell command] --> same as above
 
 # MINE
 'g' + 'd' --> opens the implementation of a function

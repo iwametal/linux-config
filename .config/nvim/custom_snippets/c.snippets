@@ -59,3 +59,47 @@ ${1:T} ${2:func_name}(${3:...})
 	${4:return T;}
 }
 endsnippet
+
+# if scope
+snippet _if "if scope" b
+if (${1:...})
+{
+	$2
+}
+endsnippet
+
+# switch case scope
+snippet _switch "switch case scope" b
+switch (${1:...})
+{
+	case ${2:CONDITION}:
+		$3
+		break;
+	default:
+		$4
+}
+endsnippet
+
+# for scope
+snippet _for "for scope" b
+for (${1:INIT}; ${2:COND}; ${3:INC})
+{
+	$4
+}
+endsnippet
+
+# while scope
+snippet _while "while scope" b
+while (${1:COND})
+{
+	$2
+}
+endsnippet
+
+# do_while scope
+snippet _dwhile "do while scope" b
+do
+{
+	$2
+} while(${1:COND})
+endsnippet

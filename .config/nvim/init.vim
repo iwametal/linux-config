@@ -97,6 +97,7 @@ autocmd FileType markdown inoremap ,f +@fig:
 
 if !exists('g:vscode')
 	call plug#begin('~/local/share/nvim/plugged')
+	"
 	" Themes
 	Plug 'voldikss/vim-floaterm'
 	Plug 'vim-airline/vim-airline'
@@ -105,37 +106,51 @@ if !exists('g:vscode')
 	Plug 'dracula/vim'
 	Plug 'arcticicestudio/nord-vim'
 	Plug 'rakr/vim-one'
+	"
 	" Transparency
 	Plug 't9md/vim-macvim-transparency'
+	"
 	" Center text
 	Plug 'junegunn/goyo.vim'
+	"
 	" coc.nvim
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	"
 	" CPP
 	Plug 'bfrg/vim-cpp-modern'
+	"
 	" Easy Motion"
 	Plug 'easymotion/vim-easymotion'
+	"
 	" Fuzzy find files
 	Plug 'ctrlpvim/ctrlp.vim'
+	"
 	" This objectively makes vim better
 	Plug 'terryma/vim-multiple-cursors'
+	"
 	" Working with tags
 	Plug 'alvan/vim-closetag'
 	Plug 'tpope/vim-surround'
+	"
 	" Commenting
 	Plug 'tpope/vim-commentary'
+	"
 	" Motions
 	"Plug 'justinmk/vim-sneak'
+	"
 	" Misc
 	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 	Plug 'voldikss/vim-floaterm'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'vimwiki/vimwiki'
 	Plug 'tpope/vim-repeat'
+	Plug 'tpope/vim-fugitive'
 	Plug 'dhruvasagar/vim-table-mode'
 	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+	"
 	" Star Wars
 	Plug 'mattn/vim-starwars'
+	"
 	" Syntax highlighting
 	Plug 'yuezk/vim-js'
 	Plug 'maxmellon/vim-jsx-pretty'
@@ -148,7 +163,7 @@ if !exists('g:vscode')
 	Plug 'scrooloose/nerdcommenter'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
+	"
 	" Vim devicons
 	Plug 'ryanoasis/vim-devicons'
 
@@ -334,7 +349,7 @@ if !exists('g:vscode')
 	" basic settings
 	set mouse=a
 	syntax on
-	set ignorecase
+	set noignorecase
 	set smartcase
 	set encoding=utf-8
 	set number relativenumber

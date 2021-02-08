@@ -1,0 +1,5 @@
+# RECORD THE SCREEN
+ffmpeg -video_size 2560x1080 -framerate 30 -f x11grab -i :0.0 -c:v libx264 -qp 0 -preset ultrafast capture.mkv
+
+# OPTIMIZE A VIDEO SIZE
+ffmpeg -i input-video.mkv -vcodec libx265 -crf 28 capture-opt.mkv

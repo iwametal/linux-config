@@ -1,4 +1,4 @@
-~/coffeefetch
+$HOME/.scripts/shell/coffeefetch
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -32,3 +32,6 @@ eval "$(starship init bash)"
 if [ -s "$HOME/.config/envman/load.sh" ] ; then
 	source "$HOME/.config/envman/load.sh"
 fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

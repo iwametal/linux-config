@@ -1,17 +1,41 @@
+# #include snippet
+snippet h_i "#include snippet" b
+#include <${1:lib}.h>
+endsnippet
+
+# #include custom snippet
+snippet h_in "#include snippet custom" b
+#include "${1:lib}.h"
+endsnippet
+
+# #define snippet
+snippet h_d "#define snippet" b
+#define ${1:...}
+endsnippet
+
+# #if snippet
+snippet h_if "#if snippet" b
+#if ${1:...}
+$2
+#endif
+endsnippet
+
 # simple c project scope
-snippet c_scope "C project scope" b
+snippet c_s "C project scope" b
 #include <stdio.h>
 
 int main(int argc, char *argv[])
 {
+	$2
+
 	${1:return 0;}
 }
 endsnippet
 
 # simple c library scope
-snippet h_scope "C library scope" b
-#ifndef $1
-#define $2
+snippet h_ "C library scope" b
+#ifndef ${1:LIB}.H
+#define ${2:LIB}.H
 
 $3
 
@@ -19,49 +43,111 @@ $3
 endsnippet
 
 # simple c library implementation scope
-snippet ch_scope "C implementation for a library" b
+snippet ch_s "C implementation for a library" b
 #include <stdio.h>
 
-#include "${1:libname.h}"
+#include "${1:libname}.h"
 
 $2
 endsnippet
 
 # printf scope
-snippet pf "printf ()" b
+snippet c_p "printf ()" b
 printf("$1");
 endsnippet
 
 # scanf scope
-snippet sf "scanf()" b
+snippet c_sf "scanf()" b
 scanf("${1:%[type]}", ${2:varname});
 endsnippet
 
 # sprintf scope
-snippet spf "sprintf()" b
+snippet c_sp "sprintf()" b
 sprintf(${1:char *retritct __s}, ${2:const char *restrict __format}, ${3:...});
 endsnippet
 
 # sscanf scope
-snippet ssf "sscanf()" b
+snippet c_ss "sscanf()" b
 sscanf(${1:char *retritct __s}, ${2:const char *restrict __format}, ${3:...});
 endsnippet
 
 # fgets scope
-snippet fg "fgets()" b
+snippet c_fg "fgets()" b
 fgets(${1:char *restrict __s}, ${2:int __n}, ${3:FILE *restrict __stream});
 endsnippet
 
+# fgets scope
+snippet c_fg_ "fgets()" b
+fgets(${1:char *restrict __s}, ${2:int __n}, ${3:FILE *restrict __stream});
+${4:str}[strcspn(${5:str}, "\r\n")] = 0;
+endsnippet
+
+# fgets scope (non null)
+snippet c_fgnn "fgets(@NonNull)" b
+void fgets_non_null(char *restrict str, int MAX_SIZE)
+{
+	while (str[0] == '\0' ||
+				 str[0] == '\n' ||
+				 str[0] == '\r')
+	{
+		fgets(str, MAX_SIZE, stdin);
+	}
+	// strtok(str, "\r\n");
+	str[strcspn(str, "\r\n")] = 0;
+}
+endsnippet
+
 # function scope
-snippet func "C scope for a function" b
+snippet c_fn "C scope for a function" b
 ${1:T} ${2:func_name}(${3:...})
 {
 	${4:return T;}
 }
 endsnippet
 
+# method scope
+snippet c_me "C scope for a method" b
+void ${1:method_name}(${2:...})
+{
+	$3
+}
+endsnippet
+
+# struct scope
+snippet c_st "C scope for a strcut" b
+struct ${1:Struct_name}
+{
+	$2
+};
+endsnippet
+
+# inline struct scope
+snippet c_sti "C scope for an inline strcut" b
+struct ${1:Struct_name} { $2 };
+endsnippet
+
+# inline struct (typedef) scope
+snippet c_tst "C scope for a struct (typedef)" b
+typedef struct ${1:Struct_name}
+{
+	$3
+} ${2:St_name};
+endsnippet
+
+# inline struct (typedef) scope
+snippet c_tsti "C scope for an inline struct (typedef)" b
+typedef struct ${1:Struct_name} { $3 } ${2:St_name};
+endsnippet
+
+snippet c_ma "C macro scope" b
+${1:T} (${2:macro_name})(${3:...})
+{
+	$4
+}
+endsnippet
+
 # if scope
-snippet _if "if scope" b
+snippet c_if "if scope" b
 if (${1:...})
 {
 	$2
@@ -69,10 +155,10 @@ if (${1:...})
 endsnippet
 
 # switch case scope
-snippet _switch "switch case scope" b
+snippet c_sw "switch case scope" b
 switch (${1:...})
 {
-	case ${2:CONDITION}:
+	case ${2:...}:
 		$3
 		break;
 	default:
@@ -81,7 +167,7 @@ switch (${1:...})
 endsnippet
 
 # for scope
-snippet _for "for scope" b
+snippet c_f "for scope" b
 for (${1:INIT}; ${2:COND}; ${3:INC})
 {
 	$4
@@ -89,17 +175,17 @@ for (${1:INIT}; ${2:COND}; ${3:INC})
 endsnippet
 
 # while scope
-snippet _while "while scope" b
-while (${1:COND})
+snippet c_w "while scope" b
+while (${1:...})
 {
 	$2
 }
 endsnippet
 
 # do_while scope
-snippet _dwhile "do while scope" b
+snippet c_dw "do while scope" b
 do
 {
 	$2
-} while(${1:COND})
+} while(${1:...})
 endsnippet

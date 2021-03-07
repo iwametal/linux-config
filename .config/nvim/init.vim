@@ -3,6 +3,9 @@ let mapleader=" "
 " Use system clipboard
 "set clipboard+=unnamedplus
 
+" Occult methods by default
+set foldmethod=indent
+
 " -----Basic AutoCmd-----
 " Fix tex file type set
 autocmd BufRead,BufNewFile *.tex set filetype=tex

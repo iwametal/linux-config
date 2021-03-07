@@ -1,17 +1,41 @@
+# #include snippet
+snippet h_i "#include snippet" b
+#include <${1:library}>
+endsnippet
+
+# #include snippet custom
+snippet h_in "#include snippet custom" b
+#include "${1:library}.h"
+endsnippet
+
+# #if snippet
+snippet h_if "#if snippet" b
+#if ${1:...}
+$2
+#endif
+endsnippet
+
+# #define snippet
+snippet h_d "#define snippet" b
+#define ${1:...}
+endsnippet
+
 # simple c project scope
-snippet cpp_scope "C project scope" b
+snippet c_s "C project scope" b
 #include <iostream>
 
 int main(int argc, char *argv[])
 {
+	$2
+
 	${1:return 0;}
 }
 endsnippet
 
 # simple c library scope
-snippet h_scope "C library scope" b
-#ifndef ${1:LIBNAME_H}
-#define ${2:LIBNAME_H}
+snippet h_s "C library scope" b
+#ifndef ${1:LIBNAME}_H
+#define ${2:LIBNAME}_H
 
 $3
 
@@ -19,34 +43,70 @@ $3
 endsnippet
 
 # simple CPP library implementation scope
-snippet cpph_scope "Cpp implementation for a library" b
+snippet ch_s "Cpp implementation for a library" b
 #include <iostream>
 
-#include "${1:libname.h}"
+#include "${1:libname}.h"
 
 $2
 endsnippet
 
 # printf scope
-snippet co "std::cout" b
+snippet c_o "std::cout" b
 std::cout << ${1:...};
 endsnippet
 
 # scanf scope
-snippet ci "std::cin" b
+snippet c_i "std::cin" b
 std::cin >> ${1:...};
 endsnippet
 
 # general scope for function
-snippet func "Cpp function scope" b
+snippet c_fn "Cpp function scope" b
 ${1:T} ${2:func_name}(${3:...})
 {
 	${4:return T;}
 }
 endsnippet
 
+snippet c_me "Cpp method scope" b
+void ${1:method_name}(${2:...})
+{
+	${3}
+}
+endsnippet
+
+snippet c_st "Cpp struct scope" b
+struct ${1:Struct_name}
+{
+	$2
+};
+endsnippet
+
+snippet c_sti "Cpp inline struct scope" b
+struct ${1:Struct_name} { $2 };
+endsnippet
+
+snippet c_tst "Cpp structure (typedef) scope" b
+typedef struct ${1:Struct_name}
+{
+	$3
+} ${2:St_name};
+endsnippet
+
+snippet c_tsti "Cpp inline structure (typedef) scope" b
+typedef struct ${1:Struct_name} { $3 } ${2:St_name};
+endsnippet
+
+snippet c_ma "Cpp macro scope" b
+${1:T} (${2:macro_name})(${3:..})
+{
+	$4
+}
+endsnippet
+
 # simple scope for general function
-snippet gfunc "Cpp general function scope" b
+snippet c_gfn "Cpp general function scope" b
 template <class T>
 ${1:T} ${2:func_name}(${3:T __var})
 {
@@ -55,7 +115,7 @@ ${1:T} ${2:func_name}(${3:T __var})
 endsnippet
 
 # if scope
-snippet _if "if scope" b
+snippet c_if "if scope" b
 if (${1:...})
 {
 	$2
@@ -63,10 +123,10 @@ if (${1:...})
 endsnippet
 
 # switch case scope
-snippet _switch "switch case scope" b
+snippet c_sw "switch case scope" b
 switch (${1:...})
 {
-	case ${2:CONDITION}:
+	case ${2:...}:
 		$3
 		break;
 	default:
@@ -75,7 +135,7 @@ switch (${1:...})
 endsnippet
 
 # for scope
-snippet _for "for scope" b
+snippet c_f "for scope" b
 for (${1:INIT}; ${2:COND}; ${3:INC})
 {
 	$4
@@ -83,17 +143,17 @@ for (${1:INIT}; ${2:COND}; ${3:INC})
 endsnippet
 
 # while scope
-snippet _while "while scope" b
-while (${1:COND})
+snippet c_w "while scope" b
+while (${1:...})
 {
 	$2
 }
 endsnippet
 
 # do_while scope
-snippet _dwhile "do while scope" b
+snippet c_dw "do while scope" b
 do
 {
 	$2
-} while(${1:COND})
+} while(${1:...})
 endsnippet

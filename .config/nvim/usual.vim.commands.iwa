@@ -17,7 +17,6 @@
 (<Ctrl> + 'x') + (<Ctlr> + 'n') --> vim default autocomplete. Autocomplete a word
 (<Ctrl> + 'x') + (<Ctlr> + 'l') --> vim default autocomplete. Autocomplete a line
 (<Ctrl> + 'x') + (<Ctlr> + 'f') --> vim default autocomplete. Autocomplete a file system
-(<Ctrl> + 'x') + (<Ctlr> + 'f') --> vim default autocomplete. Autocomplete a file system
 :norm! @a --> execute macro @a in all selected lines
 :13,21norm! @a --> execute macro @a in lines from 13 to 21
 :ls --> list all the current buffers

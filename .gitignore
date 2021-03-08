@@ -54,6 +54,7 @@ xampp/
 .config/mpd/mpd.log
 .config/mpd/mpd.pid
 .config/nvim/.netrwhist
+.config/nvim/autoload/
 .config/pulse/*-device-volumes.tdb
 .config/ranger/ranger_icon_plugin
 .dmrc

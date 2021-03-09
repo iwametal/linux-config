@@ -21,10 +21,11 @@ autocmd BufWritePre * %s/\s\+$//e
 
 " ------Standard Bindings------
 " Basic file system commands
-nnoremap <A-o> :!touch<Space>
-nnoremap <A-e> :!crf<Space>
-nnoremap <A-d> :!mkdir<Space>
-nnoremap <A-m> :!mv<Space>%<Space>
+" nnoremap <A-o> :!touch<Space>
+" nnoremap <A-e> :!crf<Space>
+" nnoremap <A-d> :!mkdir<Space>
+
+nnoremap <A-b> :n **/*
 
 " Fix indenting visual block
 vmap < <gv
@@ -48,15 +49,17 @@ map <leader>p :!clear && shellcheck %<CR>
 map <leader>G :w! \| !comp <c-r>%<CR><CR>
 map <leader>o :!opout <c-r>%<CR><CR>
 
-" Shortcutting split navigation
-map <A-h> <C-w>h
-map <A-j> <C-w>j
-map <A-k> <C-w>k
-map <A-l> <C-w>l
+" C scripts call
+nnoremap <A-h> :!$HOME/.scripts/c/header-create.sh -e false -n<Space>
+nnoremap <A-i> :!$HOME/.scripts/c/header-impl.sh -e false -n<Space>
+
+" map <A-j> <C-w>j
+" map <A-k> <C-w>k
+" map <A-l> <C-w>l
 
 " Tab shortcuts
-nnoremap <A-p> :tabp<CR>
-nnoremap <A-n> :tabn<CR>
+" nnoremap <A-p> :tabp<CR>
+" nnoremap <A-n> :tabn<CR>
 
 " Alias replace all to
 nnoremap <A-s> :%s//gI<Left><Left><Left>

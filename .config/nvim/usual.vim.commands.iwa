@@ -83,5 +83,7 @@ gsp --> See all the hunks (diffs in a file)
 
 # GIT
 <leader>gs --> Open vim git stage menu
+# in vim git stage menu, in Unstaged files
+dv --> opens the original file of the branch, the file trying to merge (with conflict) and the union between both
 <leader>gh --> In merge conflicts, choose the current branch to keep
 <leader>gl --> In merge conflicts, chosse the comming branch to keep

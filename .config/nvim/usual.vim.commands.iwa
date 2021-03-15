@@ -5,6 +5,7 @@
 't' + [character] --> goto the next appearence of this character (cursor stops one character behind the instance)
 'f' + [character] --> goto the next appearence of this character (cursor stops exactly in the instance)
 ';' --> complements the two commands above, repeating them
+',' --> Do the turnback of ;
 '%' --> goto the end/beginning of the brackets ('()', '[]' or '{}')
 '~' --> swap the case of a letter (upper to lower / lower to upper)
 'q' + [character] --> saves all the commands you do in the character you chose as a macro

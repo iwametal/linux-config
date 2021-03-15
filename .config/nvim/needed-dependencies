@@ -7,3 +7,6 @@
 3. pip install --user neovim
 4. pip3 install neovim
 
+# VIM debugger (vimspector)
+Once in VIM, type:
+:VimspectorInstall

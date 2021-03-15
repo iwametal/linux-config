@@ -21,6 +21,7 @@ vim
 neovim
 networkmanager
 openvpn
+paru
 polybar
 procs
 python-lxml
@@ -58,28 +59,29 @@ vscode
 alsa-utils
 audacious
 bat
-cava # yay
+cava # AUR
 discord
 dunst
-eclipse-jee # yay
+eclipse-jee # AUR
 edex-ui
 figlet
 fzf
-gotop # yay
+gotop # AUR
 htop
 intellij-idea-community-edition
 jp2a
-lf # yay
+lf # AUR
 maven
 mpv
 nvtop
 packer
 pamixer
+patat-bin # AUR
 playerctl
 ranger
 screen
-slack-desktop # yay
-snap # yay
+slack-desktop # AUR
+snap # AUR
 steam
 sxiv
 texlive-most # after installation type $ packer -Ss beamer

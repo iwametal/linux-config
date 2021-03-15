@@ -144,6 +144,9 @@ if !exists('g:vscode')
 	" Motions
 	"Plug 'justinmk/vim-sneak'
 	"
+	" Maximizer
+	Plug 'szw/vim-maximizer'
+	"
 	" Misc
 	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 	Plug 'voldikss/vim-floaterm'
@@ -172,6 +175,58 @@ if !exists('g:vscode')
 	"
 	" Vim devicons
 	Plug 'ryanoasis/vim-devicons'
+
+	" debuger
+	Plug 'puremourning/vimspector'
+
+	" vimspector debuger
+	"
+	" init
+	let g:vimspector_enable_mappings = 'HUMAN'
+	"
+	" gadgets
+	let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'CodeLLDB' ]
+	"
+	" mappings
+	nnoremap <leader>m :MaximizerToggle!<CR>
+	nnoremap <leader>dd :call vimspector#Launch()<CR>
+	nnoremap <leader>dc :call GotoWindow(g:vimspector_session_windows.code)<CR>
+	nnoremap <leader>dt :call GotoWindow(g:vimspector_session_windows.tabpage)<CR>
+	nnoremap <leader>dv :call GotoWindow(g:vimspector_session_windows.variables)<CR>
+	nnoremap <leader>dw :call GotoWindow(g:vimspector_session_windows.watches)<CR>
+	nnoremap <leader>ds :call GotoWindow(g:vimspector_session_windows.stack_trace)<CR>
+	nnoremap <leader>do :call GotoWindow(g:vimspector_session_windows.output)<CR>
+	nnoremap <leader>dR :call vimspector#Reset()<CR>
+	nnoremap <leader>dp :call vimspector#Pause()<CR>
+	nnoremap <leader>dQ :call vimspector#Stop()<CR>
+	nnoremap <leader>de :call vimspector#Eval()<space>
+	nnoremap <leader>dW :call vimspector#Watch()<space>
+	nnoremap <leader>dO :call vimspector#ShowOutput()<space>
+
+	nmap <leader>dl <Plug>VimspectorSetInto
+	nmap <leader>dj <Plug>VimspectorSetOver
+	nmap <leader>dk <Plug>VimspectorSetOut
+	nmap <leader>d_ <Plug>VimspectorRestart
+	nnoremap <leader>d<space> :call vimspector#Continue()<CR>
+
+	nmap <leader>drc <Plug>VimspectorRunToCursor
+	nmap <leader>dbp <Plug>VimspectorToggleBreakpoint
+	nmap <leader>dbc <Plug>VimspectorToggleConditionalBreakpoint
+	"
+	" allows for the variable evaluation popup to be displayed
+	" for normal mode - the word under the cursor
+	nmap <Leader>di <Plug>VimspectorBalloonEval
+	" for visual mode, the visually selected text
+	xmap <Leader>di <Plug>VimspectorBalloonEval
+	"
+	"up/down the stack
+	nmap <LocalLeader><F11> <Plug>VimspectorUpFrame
+	nmap <LocalLeader><F12> <Plug>VimspectorDownFrame
+
+	" Fugitive
+	nmap <leader>gs :G<CR>
+	nmap <leader>gh :diffget //2<CR>
+	nmap <leader>gl :diffget //3<CR>
 
 	" Nerd tree remap
 	nmap <A-f> :NERDTreeToggle<CR><c-w><c-p>
@@ -246,6 +301,8 @@ if !exists('g:vscode')
 
 	" always show signcolumns
 	set signcolumn=yes
+
+	set scrolloff=7
 
 	" Use tab for trigger completion with characters ahead and navigate.
 	" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.

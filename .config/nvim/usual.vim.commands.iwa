@@ -80,3 +80,8 @@ zm (or zM) --> closes all occulted lines
 gsp --> See all the hunks (diffs in a file)
 ')' --> go to the next instance (hunk) of a diff (updated/replaced, deleted or added line) in a file present in a git repository
 '(' --> go to the previous instance (hunk) of a diff (updated/replaced, deleted or added line) in a file present in a git repository
+
+# GIT
+<leader>gs --> Open vim git stage menu
+<leader>gh --> In merge conflicts, choose the current branch to keep
+<leader>gl --> In merge conflicts, chosse the comming branch to keep

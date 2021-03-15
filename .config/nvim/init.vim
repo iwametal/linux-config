@@ -227,6 +227,9 @@ if !exists('g:vscode')
 	nmap <leader>gs :G<CR>
 	nmap <leader>gh :diffget //2<CR>
 	nmap <leader>gl :diffget //3<CR>
+	nmap <leader>ga :Git add .<CR>
+	nmap <leader>gc :Gcommit<CR>
+	nmap <leader>gp :Gpush<CR>
 
 	" Nerd tree remap
 	nmap <A-f> :NERDTreeToggle<CR><c-w><c-p>
@@ -468,7 +471,7 @@ if !exists('g:vscode')
 	let g:git_messenger_no_default_mappings = v:true
 
 	" goyo
-	noremap <leader>g :Goyo<CR>
+	noremap <leader>gg :Goyo<CR>
 
 	" float term
 	nnoremap <A-t> :FloatermNew<CR>

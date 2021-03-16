@@ -22,9 +22,20 @@ endsnippet
 
 # simple c project scope
 snippet c_s "C project scope" b
+int
+main(int argc, char *argv[])
+{
+	$2
+
+	${1:return 0;}
+}
+endsnippet
+
+snippet c_sc "C project scope" b
 #include <stdio.h>
 
-int main(int argc, char *argv[])
+int
+main(int argc, char *argv[])
 {
 	$2
 
@@ -84,14 +95,14 @@ endsnippet
 
 # fgets scope (non null)
 snippet c_fgnn "fgets(@NonNull)" b
-void fgets_non_null(char *restrict str, int MAX_SIZE)
+void
+fgets_non_null(char *restrict str, int MAX_SIZE)
 {
 	while (str[0] == '\0' ||
 				 str[0] == '\n' ||
 				 str[0] == '\r')
-	{
 		fgets(str, MAX_SIZE, stdin);
-	}
+
 	// strtok(str, "\r\n");
 	str[strcspn(str, "\r\n")] = 0;
 }
@@ -99,7 +110,8 @@ endsnippet
 
 # function scope
 snippet c_fn "C scope for a function" b
-${1:T} ${2:func_name}(${3:...})
+${1:T}
+${2:func_name}(${3:...})
 {
 	${4:return T;}
 }
@@ -107,7 +119,8 @@ endsnippet
 
 # method scope
 snippet c_me "C scope for a method" b
-void ${1:method_name}(${2:...})
+void
+${1:method_name}(${2:...})
 {
 	$3
 }

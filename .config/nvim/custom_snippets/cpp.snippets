@@ -24,7 +24,8 @@ endsnippet
 snippet c_s "C project scope" b
 #include <iostream>
 
-int main(int argc, char *argv[])
+int
+main(int argc, char *argv[])
 {
 	$2
 
@@ -35,7 +36,7 @@ endsnippet
 # simple c library scope
 snippet h_s "C library scope" b
 #ifndef ${1:LIBNAME}_H
-#define ${2:LIBNAME}_H
+#define ${2:$1}_H
 
 $3
 
@@ -63,14 +64,16 @@ endsnippet
 
 # general scope for function
 snippet c_fn "Cpp function scope" b
-${1:T} ${2:func_name}(${3:...})
+${1:T}
+${2:func_name}(${3:...})
 {
 	${4:return T;}
 }
 endsnippet
 
 snippet c_me "Cpp method scope" b
-void ${1:method_name}(${2:...})
+void
+${1:method_name}(${2:...})
 {
 	${3}
 }

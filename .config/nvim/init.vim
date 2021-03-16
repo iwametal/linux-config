@@ -5,6 +5,9 @@ let mapleader=" "
 
 set foldmethod=manual
 
+nnoremap <leader>FM :set foldmethod=manual<CR>
+nnoremap <leader>FI :set foldmethod=indent<CR>
+
 " -----Basic AutoCmd-----
 " Fix tex file type set
 autocmd BufRead,BufNewFile *.tex set filetype=tex
@@ -33,6 +36,7 @@ vmap > >gv
 " Enable and disable auto comment
 map <leader>c :setlocal formatoptions-=cro<CR>
 map <leader>C :setlocal formatoptions=cro<CR>
+nnoremap <leader>cr :CocRestart<CR>
 
 " Enable spell checking, s for spell check
 map <leader>s :setlocal spell! spelllang=en_au<CR>
@@ -110,6 +114,8 @@ if !exists('g:vscode')
 	Plug 'tomasiser/vim-code-dark'
 	Plug 'dracula/vim'
 	Plug 'arcticicestudio/nord-vim'
+	Plug 'morhetz/gruvbox'
+	Plug 'blueshirts/darcula'
 	Plug 'rakr/vim-one'
 	"
 	" Transparency

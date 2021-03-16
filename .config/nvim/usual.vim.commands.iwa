@@ -87,3 +87,32 @@ gsp --> See all the hunks (diffs in a file)
 dv --> opens the original file of the branch, the file trying to merge (with conflict) and the union between both
 <leader>gh --> In merge conflicts, choose the current branch to keep
 <leader>gl --> In merge conflicts, chosse the comming branch to keep
+# add, commit and push
+<leader>ga --> Git add .
+<leader>gc --> Gcommit
+<leader>gp --> Gpush
+
+# DEBUG (vimspector)
+<leader>m  --> Maximizer Toggle
+<leader>dd --> Launch vimspector
+<leader>dc --> Continue vimspector
+<leader>dr --> Restart vimspector
+<leader>d_ --> Reset vimspector
+<leader>dp --> Pause vimspector
+<leader>dq --> Stop vimspector
+<leader>de --> Eval vimspector
+<leader>dw --> vimspector Watch
+<leader>do --> vimspector Show Output
+
+<leader>dl --> vimspector StepInto
+<leader>dj --> vimspector StepOver
+<leader>dk --> vimspector StepOut
+
+<leader>drc --> Vimspector Run To Cursor
+<leader>dbp --> Vimspector Toggle Breakpoint
+<leader>dbc --> Vimspector Toggle Conditional Breakpoint
+
+<Leader>di --> Vimspector Balloon Eval
+
+<LocalLeader><F11> --> Vimspector up stack
+<LocalLeader><F12> --> Vimspector down stack

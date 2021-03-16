@@ -3,8 +3,7 @@ let mapleader=" "
 " Use system clipboard
 "set clipboard+=unnamedplus
 
-" Occult methods by default
-set foldmethod=indent
+set foldmethod=manual
 
 " -----Basic AutoCmd-----
 " Fix tex file type set
@@ -190,24 +189,25 @@ if !exists('g:vscode')
 	" mappings
 	nnoremap <leader>m :MaximizerToggle!<CR>
 	nnoremap <leader>dd :call vimspector#Launch()<CR>
-	nnoremap <leader>dc :call GotoWindow(g:vimspector_session_windows.code)<CR>
-	nnoremap <leader>dt :call GotoWindow(g:vimspector_session_windows.tabpage)<CR>
-	nnoremap <leader>dv :call GotoWindow(g:vimspector_session_windows.variables)<CR>
-	nnoremap <leader>dw :call GotoWindow(g:vimspector_session_windows.watches)<CR>
-	nnoremap <leader>ds :call GotoWindow(g:vimspector_session_windows.stack_trace)<CR>
-	nnoremap <leader>do :call GotoWindow(g:vimspector_session_windows.output)<CR>
-	nnoremap <leader>dR :call vimspector#Reset()<CR>
+	nnoremap <leader>dc :call vimspector#Continue()<CR>
+	" nnoremap <leader>dc :call GotoWindow(g:vimspector_session_windows.code)<CR>
+	" nnoremap <leader>dt :call GotoWindow(g:vimspector_session_windows.tabpage)<CR>
+	" nnoremap <leader>dv :call GotoWindow(g:vimspector_session_windows.variables)<CR>
+	" nnoremap <leader>dw :call GotoWindow(g:vimspector_session_windows.watches)<CR>
+	" nnoremap <leader>ds :call GotoWindow(g:vimspector_session_windows.stack_trace)<CR>
+	" nnoremap <leader>do :call GotoWindow(g:vimspector_session_windows.output)<CR>
+	nnoremap <leader>dr :call vimspector#Restart#<CR>
+	nnoremap <leader>d_ :call vimspector#Reset()<CR>
 	nnoremap <leader>dp :call vimspector#Pause()<CR>
-	nnoremap <leader>dQ :call vimspector#Stop()<CR>
-	nnoremap <leader>de :call vimspector#Eval()<space>
-	nnoremap <leader>dW :call vimspector#Watch()<space>
-	nnoremap <leader>dO :call vimspector#ShowOutput()<space>
+	nnoremap <leader>dq :call vimspector#Stop()<CR>
+	nmap <leader>de :vimspectorEval<space>
+	nmap <leader>dw :vimspectorWatch<space>
+	nmap <leader>do :vimspectorShowOutput<space>
 
-	nmap <leader>dl <Plug>VimspectorSetInto
-	nmap <leader>dj <Plug>VimspectorSetOver
-	nmap <leader>dk <Plug>VimspectorSetOut
-	nmap <leader>d_ <Plug>VimspectorRestart
-	nnoremap <leader>d<space> :call vimspector#Continue()<CR>
+	nnoremap <leader>dl :call vimspector#StepInto()<CR>
+	nnoremap <leader>dj :call vimspector#StepOver()<CR>
+	nnoremap <leader>dk :call vimspector#StepOut()<CR>
+	" nnoremap <leader>d<space> :call vimspector#Continue()<CR>
 
 	nmap <leader>drc <Plug>VimspectorRunToCursor
 	nmap <leader>dbp <Plug>VimspectorToggleBreakpoint

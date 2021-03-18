@@ -1,10 +1,14 @@
 # compile
 alias ccompile='gcc -o exe *.c'
+alias ccompile-lm='gcc -o exe *.c -lm'
+alias ccompile-lc='gcc -o exe *.c -lncurses'
+alias ccompile-lmc='gcc -o exe *.c -lm -lncurses'
+alias ccompile-lcm='gcc -o exe *.c -lncurses -lm'
 alias cppcompile='gcc -lstdc++ -o exe *.cpp'
 alias cppcompile-lm='gcc -lstdc++ -o exe *.cpp -lm'
 alias cppcompile-lc='gcc -lstdc++ -o exe *.cpp -lcurses -lncurses'
-alias cppcompile-lclm='gcc -lstdc++ -o exe *.cpp -lcurses -lncurses -lm'
-alias cppcompile-lmlc='gcc -lstdc++ -o exe *.cpp -lcurses -lncurses -lm'
+alias cppcompile-lmc='gcc -lstdc++ -o exe *.cpp -lcurses -lncurses -lm'
+alias cppcompile-lcm='gcc -lstdc++ -o exe *.cpp -lcurses -lncurses -lm'
 
 # header create
 alias ch-create='$HOME/.scripts/c/header-create.sh'

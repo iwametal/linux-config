@@ -67,6 +67,10 @@ snippet c_p "printf ()" b
 printf("$1");
 endsnippet
 
+snippet c_fp "fprintf () scope" b
+fprintf(${1:FILE *restrict __stream}, ${2:const char *restrict __format});
+endsnippet
+
 # scanf scope
 snippet c_sf "scanf()" b
 scanf("${1:%[type]}", ${2:varname});
@@ -90,7 +94,7 @@ endsnippet
 # fgets scope
 snippet c_fg_ "fgets()" b
 fgets(${1:char *restrict __s}, ${2:int __n}, ${3:FILE *restrict __stream});
-${4:str}[strcspn(${5:str}, "\r\n")] = 0;
+${4:$1}[strcspn(${5:$1}, "\r\n")] = 0;
 endsnippet
 
 # fgets scope (non null)
@@ -144,12 +148,12 @@ snippet c_tst "C scope for a struct (typedef)" b
 typedef struct ${1:Struct_name}
 {
 	$3
-} ${2:St_name};
+} ${2:St_alias};
 endsnippet
 
 # inline struct (typedef) scope
 snippet c_tsti "C scope for an inline struct (typedef)" b
-typedef struct ${1:Struct_name} { $3 } ${2:St_name};
+typedef struct ${1:Struct_name} { $3 } ${2:St_alias};
 endsnippet
 
 snippet c_ma "C macro scope" b

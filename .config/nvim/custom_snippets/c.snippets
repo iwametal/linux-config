@@ -71,6 +71,10 @@ snippet c_fp "fprintf () scope" b
 fprintf(${1:FILE *restrict __stream}, ${2:const char *restrict __format});
 endsnippet
 
+snippet c_fpo "fprintf(stdout, ...) scope" b
+fprintf(stdout, ${2:const char *restrict __format});
+endsnippet
+
 # scanf scope
 snippet c_sf "scanf()" b
 scanf("${1:%[type]}", ${2:varname});
@@ -110,6 +114,38 @@ fgets_non_null(char *restrict str, int MAX_SIZE)
 	// strtok(str, "\r\n");
 	str[strcspn(str, "\r\n")] = 0;
 }
+endsnippet
+
+snippet c_nc "ncurses init and end scope" b
+initscr();
+
+$1
+
+endwin();
+endsnippet
+
+snippet c_re "refresh ncurses scope" b
+refresh();
+endsnippet
+
+snippet c_wre "wrefresh ncurses scope" b
+wrefresh(${1:WINDOW *win});
+endsnippet
+
+snippet c_pw "printw scope" b
+printw(${1:const char *});
+endsnippet
+
+snippet c_wpw "wprintw scope" b
+wprintw(${1:WINDOW *win}, ${2:const char *});
+endsnippet
+
+snippet c_mvpw "mvprintw scope" b
+mvprintw(${1:int y} ,${2:int x} , ${3:const char *});
+endsnippet
+
+snippet c_mvwpw "mvwprintw scope" b
+mvwprintw(${1:WINDOW *win}, ${2:int y} ,${3:int x} , ${4:const char *});
 endsnippet
 
 # function scope

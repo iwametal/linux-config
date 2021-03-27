@@ -206,9 +206,9 @@ if !exists('g:vscode')
 	nnoremap <leader>d_ :call vimspector#Reset()<CR>
 	nnoremap <leader>dp :call vimspector#Pause()<CR>
 	nnoremap <leader>dq :call vimspector#Stop()<CR>
-	nmap <leader>de :vimspectorEval<space>
-	nmap <leader>dw :vimspectorWatch<space>
-	nmap <leader>do :vimspectorShowOutput<space>
+	nmap <leader>de :VimspectorEval<space>
+	nmap <leader>dw :VimspectorWatch<space>
+	nmap <leader>do :VimspectorShowOutput<space>
 
 	nnoremap <leader>dl :call vimspector#StepInto()<CR>
 	nnoremap <leader>dj :call vimspector#StepOver()<CR>

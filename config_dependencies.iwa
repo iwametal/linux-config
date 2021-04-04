@@ -73,6 +73,7 @@ jp2a
 lf # AUR
 maven
 mpv
+net-tools
 nvtop
 packer
 pamixer

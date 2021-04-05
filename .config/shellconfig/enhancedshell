@@ -1,5 +1,6 @@
 #alias l='lsd -hA --group-dirs first'
 alias clear='clear && $HOME/.scripts/shell/coffeefetch'
+alias reset='reset && $HOME/.scripts/shell/coffeefetch'
 alias cp='$HOME/.scripts/shell/cp.sh'
 alias mv='$HOME/.scripts/shell/mv.sh'
 alias fucking='sudo'

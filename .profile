@@ -5,12 +5,12 @@ export PATH="$PATH:$HOME/bin:$HOME/.local/share/gem/ruby/2.7.0/"
 export EDITOR="nvim"
 export READER="zathura"
 export VISUAL="nvim"
-export CODEEDITOR="vscodium"
+export CODEEDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="qutebrowser"
 export COLORTERM="truecolor"
 export PAGER="less"
-export WM="bspwm"
+export WM="dwm"
 #export RANGER_LOAD_DEFAULT_RC=FALSE
 
 export LESS_TERMCAP_mb=$'\e[1;32m'

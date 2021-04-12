@@ -87,6 +87,7 @@ snap # AUR
 steam
 sxiv
 texlive-most # after installation type $ packer -Ss beamer
+tigervnc
 ttf-font-awesome
 tmux
 vlc

@@ -60,6 +60,7 @@ alsa-utils
 audacious
 bat
 cava # AUR
+deskreen # AUR
 discord
 dunst
 eclipse-jee # AUR
@@ -89,6 +90,7 @@ texlive-most # after installation type $ packer -Ss beamer
 ttf-font-awesome
 tmux
 vlc
+x2vnc-no-xinerama # AUR
 zathura
 zathura-cb
 zathura-djvu

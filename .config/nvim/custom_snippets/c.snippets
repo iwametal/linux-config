@@ -151,19 +151,31 @@ endsnippet
 # function scope
 snippet c_fn "C scope for a function" b
 ${1:T}
-${2:func_name}(${3:...})
+${2:func_name} (${3:...})
 {
-	${4:return T;}
+	return ${4:T};
 }
+endsnippet
+
+# function scope only
+snippet c_fns "C scope only for a function" b
+${1:T}
+${2:func_name} (${3:...});
 endsnippet
 
 # method scope
 snippet c_me "C scope for a method" b
 void
-${1:method_name}(${2:...})
+${1:method_name} (${2:...})
 {
 	$3
 }
+endsnippet
+
+# method scope only
+snippet c_mes "C scope only for a method" b
+void
+${1:method_name} (${2:...});
 endsnippet
 
 # struct scope
@@ -192,11 +204,21 @@ snippet c_tsti "C scope for an inline struct (typedef)" b
 typedef struct ${1:Struct_name} { $3 } ${2:St_alias};
 endsnippet
 
+# macro implementation scope
 snippet c_ma "C macro scope" b
-${1:T} (${2:macro_name})(${3:...})
+${1:T}
+(${2:macro_name}) (${3:...})
 {
-	$4
+	$5
+
+	return ${4:T};
 }
+endsnippet
+
+# macro implementation scope only
+snippet c_mas "C macro scope only" b
+${1:T}
+(${2:macro_name}) (${3:...});
 endsnippet
 
 # if scope

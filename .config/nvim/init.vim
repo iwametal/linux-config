@@ -55,6 +55,7 @@ map <leader>o :!opout <c-r>%<CR><CR>
 " C scripts call
 nnoremap <A-h> :!$HOME/.scripts/c/header-create.sh -e false -n<Space>
 nnoremap <A-i> :!$HOME/.scripts/c/header-impl.sh -e false -n<Space>
+nnoremap <A-a> :.!$HOME/.scripts/c/include.sh -h<Space>
 
 " map <A-j> <C-w>j
 " map <A-k> <C-w>k

@@ -22,10 +22,20 @@ endsnippet
 
 # simple c project scope
 snippet c_s "C project scope" b
+int
+main (int argc, char *argv[])
+{
+	$2
+
+	${1:return 0;}
+}
+endsnippet
+
+snippet c_sc "C project scope complete" b
 #include <iostream>
 
 int
-main(int argc, char *argv[])
+main (int argc, char *argv[])
 {
 	$2
 
@@ -35,8 +45,8 @@ endsnippet
 
 # simple c library scope
 snippet h_s "C library scope" b
-#ifndef ${1:LIBNAME}_H
-#define ${2:$1}_H
+#ifndef _${1:LIBNAME}_H_
+#define _${2:$1}_H_
 
 $3
 
@@ -65,18 +75,31 @@ endsnippet
 # general scope for function
 snippet c_fn "Cpp function scope" b
 ${1:T}
-${2:func_name}(${3:...})
+${2:func_name} (${3:...})
 {
-	${4:return T;}
+	return ${4:T}:
 }
 endsnippet
 
+# general function scope only
+snippet c_fn "Cpp function scope only" b
+${1:T}
+${2:func_name} (${3:...});
+endsnippet
+
+# method scope
 snippet c_me "Cpp method scope" b
 void
-${1:method_name}(${2:...})
+${1:method_name} (${2:...})
 {
 	${3}
 }
+endsnippet
+
+# method scope only
+snippet c_mes "Cpp method scope only" b
+void
+${1:method_name} (${2:...});
 endsnippet
 
 snippet c_st "Cpp struct scope" b
@@ -101,19 +124,28 @@ snippet c_tsti "Cpp inline structure (typedef) scope" b
 typedef struct ${1:Struct_name} { $3 } ${2:St_name};
 endsnippet
 
+# macro scope
 snippet c_ma "Cpp macro scope" b
-${1:T} (${2:macro_name})(${3:..})
+${1:T}
+(${2:macro_name}) (${3:...})
 {
 	$4
 }
 endsnippet
 
+# macro scope only
+snippet c_mas "Cpp macro scope only" b
+${1:T}
+(${2:macro_name}) (${3:...});
+endsnippet
+
 # simple scope for general function
 snippet c_gfn "Cpp general function scope" b
 template <class T>
-${1:T} ${2:func_name}(${3:T __var})
+${1:T}
+${2:func_name} (${3:T __var})
 {
-	${4:return T;}
+	return ${4:T};
 }
 endsnippet
 
@@ -158,5 +190,5 @@ snippet c_dw "do while scope" b
 do
 {
 	$2
-} while(${1:...})
+} while(${1:...});
 endsnippet

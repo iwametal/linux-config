@@ -44,6 +44,9 @@ zr (or zR) --> opens all occulted lines
 zm (or zM) --> closes all occulted lines
 'm' + [character] --> create a mark in the line you type it
 ' + [character] --> goes to the specified mark
+'~' --> change the letter case
+gU [letter(s)] --> change the specified to captal case
+gu [letter(s)] --> change the specified to lower case
 
 # CONFIGS
 :set ignorecase --> ignore the word's case in search

@@ -2,7 +2,6 @@
 alacritty
 alsa
 bashtop
-bspwm
 ccls
 dmenu
 dragon
@@ -13,20 +12,17 @@ lib32-nvidia-utils
 maim
 ncmpcpp
 neofetch
-networ
-pulseaudio
-st
-sxhkd
-vim
 neovim
 networkmanager
 openvpn
 paru
 polybar
 procs
+pulseaudio
 python-lxml
 tldr
 tokei
+vim
 wireless_tools
 wpa_supplicant
 xclip
@@ -52,47 +48,36 @@ mpc
 mpd
 python
 python-pip
-starship
-vscode
+starship # AUR
+code
 
 # INTNG PCKGS
 alsa-utils
 audacious
 bat
-cava # AUR
-deskreen # AUR
 discord
 dunst
-eclipse-jee # AUR
-edex-ui
 figlet
 fzf
-gotop # AUR
 htop
 intellij-idea-community-edition
 jp2a
-lf # AUR
 maven
 mpv
 net-tools
-nvtop
-packer
+# nvtop
+# packer
 pamixer
-patat-bin # AUR
 pavucontrol
 playerctl
 ranger
 screen
-slack-desktop # AUR
-snap # AUR
-steam
 sxiv
-texlive-most # after installation type $ packer -Ss beamer
+# texlive-most # after installation type $ packer -Ss beamer
 tigervnc
 ttf-font-awesome
 tmux
 vlc
-x2vnc-no-xinerama # AUR
 x11vnc
 zathura
 zathura-cb
@@ -100,6 +85,17 @@ zathura-djvu
 zathura-pdf-mupdf
 zathura-pdf-poppler
 zathura-ps
+cava # AUR
+deskreen # AUR
+eclipse-jee # AUR
+edex-ui # AUR
+gotop # AUR
+lf # AUR
+patat-bin # AUR
+slack-desktop # AUR
+snap # AUR
+steam # AUR
+x2vnc-no-xinerama # AUR
 
 # PY DPNCS
 coc (in pip)

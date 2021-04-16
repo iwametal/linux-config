@@ -2,6 +2,7 @@
 alacritty
 alsa
 bashtop
+bc
 ccls
 dmenu
 dragon
@@ -62,6 +63,7 @@ fzf
 htop
 intellij-idea-community-edition
 jp2a
+lolcat
 maven
 mpv
 net-tools

@@ -4,7 +4,10 @@ alacritty
 alsa
 bashtop
 bc
+bluez
+bluez-utils
 ccls
+cron
 dmenu
 dragon
 exa

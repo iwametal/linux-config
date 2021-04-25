@@ -1,0 +1,42 @@
+# Warning: This config does not include keys that have an unset value
+add_newline = true
+
+[character]
+format = '$symbol '
+success_symbol = '[└───](bold green)[☕](bold cyan)[ ❯](bold green)'
+error_symbol = '[└───☕ ❯](bold red)'
+vicmd_symbol = '[└───☕ ❯](bold green)'
+disabled = false
+
+[directory]
+truncation_length = 4
+truncate_to_repo = true
+fish_style_pwd_dir_length = 0
+use_logical_path = true
+format = '[$path]($style)[$read_only]($read_only_style) '
+style = 'green bold'
+disabled = false
+read_only = '🔒'
+read_only_style = 'red'
+truncation_symbol = ''
+home_symbol = '~'
+
+[env_var]
+symbol = ''
+style = 'black bold dimmed'
+format = 'with [$env_value]($style) '
+disabled = false
+
+[hostname]
+ssh_only = false
+trim_at = '.'
+format = '[$hostname]($style) in '
+style = 'cyan dimmed bold'
+disabled = false
+
+[username]
+format = '[┌──|]($style)[$user](bold cyan)[«»]($style)'
+style_root = 'red bold'
+style_user = 'green bold'
+show_always = true
+disabled = false

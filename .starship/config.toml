@@ -3,9 +3,9 @@ add_newline = true
 
 [character]
 format = '$symbol '
-success_symbol = '[└───](bold green)[☕](bold cyan)[ ❯](bold green)'
-error_symbol = '[└───☕ ❯](bold red)'
-vicmd_symbol = '[└───☕ ❯](bold green)'
+success_symbol = '[└──](bold green)[☕](bold cyan)[ ❯](bold green)'
+error_symbol = '[└──☕ ❯](bold red)'
+vicmd_symbol = '[└──☕ ❯](bold green)'
 disabled = false
 
 [directory]
@@ -35,7 +35,8 @@ style = 'cyan dimmed bold'
 disabled = false
 
 [username]
-format = '[┌──|]($style)[$user](bold cyan)[«»]($style)'
+format = '[┌─❘]($style)[$user](bold cyan)[«»]($style)'
+# format = '[┌──|]($style)[$user](bold cyan)[«»]($style)'
 style_root = 'red bold'
 style_user = 'green bold'
 show_always = true

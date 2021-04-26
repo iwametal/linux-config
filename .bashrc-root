@@ -1,4 +1,6 @@
-$HOME/.scripts/shell/coffeefetch
+#
+# ~/.bashrc
+#
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -22,50 +24,10 @@ shopt -s checkwinsize
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
 
-# make less more friendly for non-text input files, see lesspipe(1)
-#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# ---Powerline Prompt--- #
-#function _update_ps1() {
-#    PS1=$(powerline-shell $?)
-#}
-
-#if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-#    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-#fi
-
-# ----------------------
-
-# PS1 Prompt
-# export PS1="\[\e[33m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]@\[\e[36m\]\h\[\e[m\]:\[\e[35m\]\w\[\e[m\]\[\e[33m\]]\[\e[m\] (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \$ "
-
-#export PROMPT_COMMAND="notify-send 'Important Notice' 'ARCH LINUX IS THE BEST DISTRO'"
-
+# set vi mode
 set -o vi
 
-# Source configs
 for f in ~/.config/shellconfig/*; do source "$f"; done
-source /home/coffee/.config/broot/launcher/bash/br
 
-# Starship Prompt
-export STARSHIP_CONFIG=~/.starship/config.toml
-eval "$(starship init bash)"
-
-# Generated for envman. Do not edit.
-# if [ -s "$HOME/.config/envman/load.sh" ] ; then
-# 	source "$HOME/.config/envman/load.sh"
-# fi
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /usr/share/bash-completion/bash_completion ]; then
-	. /usr/share/bash-completion/bash_completion
-elif [ -f /etc/bash_completion ]; then
-	. /etc/bash_completion
-fi
-
-# root bashrc === 💀
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+alias ls='ls --color=auto'
+PS1='┌──[\u💀\h]-(\W)\n└───# '

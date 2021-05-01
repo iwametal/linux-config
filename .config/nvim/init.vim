@@ -67,6 +67,8 @@ nnoremap <A-a> :.!$HOME/.scripts/c/include.sh -h<Space>
 
 " Alias replace all to
 nnoremap <A-s> :%s//gI<Left><Left><Left>
+" needs 'grep "word" . -R' first
+nnoremap <leader><A-s> :cfdo %s//gI<Space>\|<Space>update<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 
 " Alias write  nd quit to Q
 nnoremap <leader>q :wq<CR>
@@ -173,6 +175,10 @@ if !exists('g:vscode')
 	Plug 'rust-lang/rust.vim'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
 
+	" FZF
+	Plug 'junegunn/fzf.vim'
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 	" Nerd tree
 	Plug 'scrooloose/nerdtree'
 	Plug 'scrooloose/nerdcommenter'
@@ -237,6 +243,20 @@ if !exists('g:vscode')
 	nmap <leader>ga :Git add .<CR>
 	nmap <leader>gc :Gcommit<CR>
 	nmap <leader>gp :Gpush<CR>
+
+	" FZF configurations
+	" Search by file name
+	nmap <leader>PF :Files<CR>
+	" Search into files (including the file content)
+	nmap <leader>PR :Rg<CR>
+	" Search a line in the current file (buffer)
+	nmap <leader>PL :BLines<CR>
+	" Search a line in all buffers
+	nmap <leader>PB :Lines<CR>
+	" Search an opened buffer
+	nmap <leader>PP :Buffers<CR>
+	" Search a command into the command history
+	nmap <leader>PH :History:<CR>
 
 	" Nerd tree remap
 	nmap <A-f> :NERDTreeToggle<CR><c-w><c-p>
@@ -656,7 +676,14 @@ if !exists('g:vscode')
 				\ ]
 				" \ 'coc-eslint',
 
+	inoremap { {}<Esc>i
 	inoremap {<cr> {<cr>}<c-o>O
+	inoremap < <><Esc>i
+	inoremap ( ()<Esc>i
+	inoremap [ []<Esc>i
+	inoremap < <><Esc>i
+	inoremap ' ''<Esc>i
+	inoremap " ""<Esc>i
 
 	let g:UltiSnipsSnippetsDir = "~/.confg/nvim/custom_snippets"
 

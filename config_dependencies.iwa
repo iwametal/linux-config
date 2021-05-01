@@ -13,6 +13,7 @@ dragon
 exa
 feh
 flameshot
+fzf
 lib32-nvidia-utils
 maim
 ncmpcpp
@@ -25,6 +26,7 @@ polybar
 procs
 pulseaudio
 python-lxml
+ripgrep
 tldr
 tokei
 vim
@@ -64,7 +66,6 @@ bat
 discord
 dunst
 figlet
-fzf
 htop
 intellij-idea-community-edition
 irqtop

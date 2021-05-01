@@ -18,6 +18,7 @@
 (<Ctrl> + 'x') + (<Ctlr> + 'n') --> vim default autocomplete. Autocomplete a word
 (<Ctrl> + 'x') + (<Ctlr> + 'l') --> vim default autocomplete. Autocomplete a line
 (<Ctrl> + 'x') + (<Ctlr> + 'f') --> vim default autocomplete. Autocomplete a file system
+<Ctrl> + '^' --> change between the current and the last file in the buffer
 :norm! @a --> execute macro @a in all selected lines
 :13,21norm! @a --> execute macro @a in lines from 13 to 21
 :ls --> list all the current buffers
@@ -25,14 +26,23 @@
 :bn --> goes to the next buffer
 :bp --> goes to the previous buffer
 :bufdo [command] --> execute the specified command in all buff files
+:bufdo %s/pizza/donut/g | update --> changes all the ocurrencies of "pizza" for "donut" in all buffers
+:%bd | e# | bd# --> clear all the buffers
 ^ + 'v' --> visual block (select multiple lines, even not being the full line)
 (<Ctrl> + w) + s --> split the screen in horizontal
 (<Ctrl> + w) + v --> split the screen in vertical
 (<Ctrl> + w) + h --> move the cursor to window/tag on left
+(<Ctrl> + w) + H --> changes the split from vertical to horizontal
 (<Ctrl> + w) + j --> move the cursor to window/tag below
 (<Ctrl> + w) + k --> move the cursor to window/tag above
 (<Ctrl> + w) + l --> move the cursor to window/tag on right
+(<Ctrl> + w) + r --> rotate between current buffers
 (<Ctrl> + w) + q --> exit openned window/tag
+(<Ctrl> + w) + o --> closes every (splitted) window BUT the one you're focused in
+(<Ctrl> + w) + (<Ctrl> + <Shift> + o) --> Closes all your buffers
+:resize [NUMBER] --> resize the current window horrizontaly with the number specified
+:vertical resize [NUMBER] --> resize the current window verticaly with the number specified
+(<Ctrl> + w) + = --> returns every (splitted) windows to the default size
 <Ctrl> + y (in insert mode) --> Copy the character from the line above which is in the same position (column) you are in at moment
 :tabnew --> opens a new tab
 :tabs --> lists all openned tabs
@@ -94,6 +104,11 @@ dv --> opens the original file of the branch, the file trying to merge (with con
 <leader>ga --> Git add .
 <leader>gc --> Gcommit
 <leader>gp --> Gpush
+
+# GO TO NORMAL MODE
+[ESC]
+CTRL + 'C'
+CTRL + '{'
 
 # DEBUG (vimspector)
 <leader>m  --> Maximizer Toggle

@@ -18,6 +18,12 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# FZF -- make it uses ripgrep
+if type rg &> /dev/null; then
+	export FZF_DEFAULT_COMMAND='rg --files'
+	export FZF_DEFAULT_OPTS='-m --height 50% --border'
+fi
+
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
@@ -64,6 +70,9 @@ eval "$(starship init bash)"
 # elif [ -f /etc/bash_completion ]; then
 # 	. /etc/bash_completion
 # fi
+
+source /usr/share/fzf/completion.bash
+source /usr/share/fzf/key-bindings.bash
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"

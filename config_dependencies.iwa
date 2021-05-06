@@ -4,6 +4,7 @@ alacritty
 alsa
 bashtop
 bc
+bind
 bluez
 bluez-utils
 ccls
@@ -16,6 +17,7 @@ flameshot
 fzf
 lib32-nvidia-utils
 maim
+mtr
 ncmpcpp
 neofetch
 neovim
@@ -29,6 +31,7 @@ python-lxml
 ripgrep
 tldr
 tokei
+traceroute
 vim
 wireless_tools
 wpa_supplicant

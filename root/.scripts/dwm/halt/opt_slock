@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Define LOCKER in .xprofile to set to different LOCKER program
+LOCKER="${LOCKER:-slock}"
+${LOCKER}

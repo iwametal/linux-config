@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# use notify-send if run in dumb term
+OUTPUT="echo"
+[[ ${TERM} == 'dumb' ]] && OUTPUT="notify-send"
+
+yesno()
+{
+	# shellcheck disable=SC2005
+	echo "$(echo -e "No\nYes" | dmenu -i -p "${1}")"
+}
+
+if [[ $(yesno "Shutdown?") == "Yes" ]]; then
+	shutdown -h now
+else
+	${OUTPUT} "User chose not to shutdown." && exit 1
+fi

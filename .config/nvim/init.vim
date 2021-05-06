@@ -257,6 +257,8 @@ if !exists('g:vscode')
 	nmap <leader>PP :Buffers<CR>
 	" Search a command into the command history
 	nmap <leader>PH :History:<CR>
+	" Do not consider the file name, only the content of the file in "Rg" command
+	command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 	" Nerd tree remap
 	nmap <A-f> :NERDTreeToggle<CR><c-w><c-p>

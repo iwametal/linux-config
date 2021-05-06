@@ -1,9 +1,0 @@
-#! /bin/sh
-
-if [ -z "$(bsp query -N -n .focused.fullscreen -d focused)" ]; then
-	bsp node focused.tiled -t fullscreen
-	bsphide
-else
-	bspc node focused.fullscreen -t tiled
-	bspunhide
-fi

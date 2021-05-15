@@ -2,6 +2,7 @@
 apcid
 alacritty
 alsa
+android-tools
 bashtop
 bc
 bind
@@ -36,6 +37,7 @@ ripgrep
 tldr
 tokei
 traceroute
+vifm
 vim
 wine
 wine-gecko
@@ -71,6 +73,8 @@ code
 
 # INTNG PCKGS
 alsa-utils
+android-sdk
+android-studio
 audacious
 bat
 discord
@@ -83,6 +87,7 @@ jp2a
 lolcat
 maven
 mpv
+ncdu
 net-tools
 # nvtop
 # packer
@@ -112,10 +117,12 @@ eclipse-jee # AUR
 edex-ui # AUR
 gotop # AUR
 lf # AUR
+packettracer # AUR
 patat-bin # AUR
 slack-desktop # AUR
 snap # AUR
 steam # AUR
+subnetcalc # AUR
 x2vnc-no-xinerama # AUR
 
 # PY DPNCS

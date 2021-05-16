@@ -2,7 +2,6 @@
 apcid
 alacritty
 alsa
-android-tools
 bashtop
 bc
 bind
@@ -111,6 +110,12 @@ zathura-djvu
 zathura-pdf-mupdf
 zathura-pdf-poppler
 zathura-ps
+android-ndk
+android-studio # AUR
+android-sdk # AUR
+android-sdk-build-tools # AUR
+android-sdk-platform-tools # AUR
+android-platform # AUR
 cava # AUR
 deskreen # AUR
 eclipse-jee # AUR

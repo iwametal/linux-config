@@ -55,8 +55,15 @@ zm (or zM) --> closes all occulted lines
 'm' + [character] --> create a mark in the line you type it
 ' + [character] --> goes to the specified mark
 '~' --> change the letter case
-gU [letter(s)] --> change the specified to captal case
-gu [letter(s)] --> change the specified to lower case
+gU [letter(s)] --> change the specified to captal case -- it accepts combos
+gu [letter(s)] --> change the specified to lower case  -- it accepts combos
+gUU --> captalyze the whole line
+guu --> uncaptalyze the whole line
+gf --> opens the file
+gv --> jumps to the preview selected text and reselect it
+J --> join currently line with below line
+gJ --> join currently line with below line (do not put spaces)
+g& --> if a line substitution works, g& is capable of do that substitution for the whole document
 
 # CONFIGS
 :set ignorecase --> ignore the word's case in search

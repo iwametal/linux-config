@@ -67,7 +67,7 @@ dwmstatus 2>&1 >/dev/null &
 #done
 
 # status bar
-$HOME/.scripts/dwmstatusbar/dwm_statusbar.sh &
+$HOME/.scripts/dwmstatusbar/launch_dwm_statusbar.sh
 
 # start st
 $HOME/.scripts/dwm/startst

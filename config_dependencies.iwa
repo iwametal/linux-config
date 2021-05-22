@@ -80,6 +80,7 @@ discord
 dunst
 figlet
 htop
+inetutils
 intellij-idea-community-edition
 irqtop
 jp2a
@@ -105,6 +106,7 @@ tmux
 vimiv
 vlc
 x11vnc
+xinetd
 youtube-dl
 zathura
 zathura-cb

@@ -44,6 +44,7 @@ wine-mono
 wireless_tools
 wpa_supplicant
 xclip
+xf86-video-vesa
 xorg-server
 xorg-xinit
 xorg-xprop

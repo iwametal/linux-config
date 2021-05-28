@@ -1,0 +1,263 @@
+01:13:32 AM.529: CPU Name: Intel(R) Xeon(R) CPU E5-2620 v3 @ 2.40GHz
+01:13:32 AM.529: CPU Speed: 1200.000MHz
+01:13:32 AM.529: Physical Cores: 6, Logical Cores: 12
+01:13:32 AM.529: Physical Memory: 15919MB Total, 8504MB Free
+01:13:32 AM.529: Kernel Version: Linux 5.12.6-arch1-1
+01:13:32 AM.529: Distribution: "Arch Linux" Unknown
+01:13:32 AM.529: Session Type: tty
+01:13:32 AM.530: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.20.11
+01:13:32 AM.531: Portable mode: false
+01:13:32 AM.628: OBS 26.1.2-2 (linux)
+01:13:32 AM.628: ---------------------------------
+01:13:32 AM.629: ---------------------------------
+01:13:32 AM.629: audio settings reset:
+01:13:32 AM.629: 	samples per sec: 48000
+01:13:32 AM.629: 	speakers:        2
+01:13:32 AM.631: ---------------------------------
+01:13:32 AM.631: Initializing OpenGL...
+01:13:32 AM.780: Loading up OpenGL on adapter NVIDIA Corporation NVIDIA GeForce GTX 1650/PCIe/SSE2
+01:13:32 AM.780: OpenGL loaded successfully, version 3.3.0 NVIDIA 465.31, shading language 3.30 NVIDIA via Cg compiler
+01:13:32 AM.798: ---------------------------------
+01:13:32 AM.798: video settings reset:
+01:13:32 AM.798: 	base resolution:   1920x1080
+01:13:32 AM.798: 	output resolution: 1920x1080
+01:13:32 AM.798: 	downscale filter:  Bicubic
+01:13:32 AM.798: 	fps:               60/1
+01:13:32 AM.798: 	format:            NV12
+01:13:32 AM.798: 	YUV mode:          709/Partial
+01:13:32 AM.799: NV12 texture support not available
+01:13:32 AM.799: Audio monitoring device:
+01:13:32 AM.799: 	name: Default
+01:13:32 AM.799: 	id: default
+01:13:32 AM.799: ---------------------------------
+01:13:32 AM.804: Failed to load 'en-US' text for module: 'decklink-captions.so'
+01:13:32 AM.806: Failed to load 'en-US' text for module: 'decklink-ouput-ui.so'
+01:13:32 AM.927: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+01:13:32 AM.928: No blackmagic support
+01:13:32 AM.937: v4l2loopback not installed, virtual camera disabled
+01:13:32 AM.944: NVENC supported
+01:13:32 AM.944: FFMPEG VAAPI supported
+01:13:32 AM.956: VLC found, VLC video source enabled
+01:13:32 AM.956: ---------------------------------
+01:13:32 AM.956:   Loaded Modules:
+01:13:32 AM.956:     vlc-video.so
+01:13:32 AM.956:     text-freetype2.so
+01:13:32 AM.956:     rtmp-services.so
+01:13:32 AM.956:     obs-x264.so
+01:13:32 AM.956:     obs-transitions.so
+01:13:32 AM.956:     obs-outputs.so
+01:13:32 AM.956:     obs-libfdk.so
+01:13:32 AM.956:     obs-filters.so
+01:13:32 AM.956:     obs-ffmpeg.so
+01:13:32 AM.956:     linux-v4l2.so
+01:13:32 AM.956:     linux-pulseaudio.so
+01:13:32 AM.956:     linux-jack.so
+01:13:32 AM.956:     linux-decklink.so
+01:13:32 AM.956:     linux-capture.so
+01:13:32 AM.956:     linux-alsa.so
+01:13:32 AM.956:     image-source.so
+01:13:32 AM.956:     frontend-tools.so
+01:13:32 AM.956:     droidcam-obs.so
+01:13:32 AM.956:     decklink-ouput-ui.so
+01:13:32 AM.956:     decklink-captions.so
+01:13:32 AM.956: ---------------------------------
+01:13:32 AM.957: ==== Startup complete ===============================================
+01:13:32 AM.960: Switched to Preview/Program mode
+01:13:32 AM.960: ------------------------------------------------
+01:13:32 AM.962: All scene data cleared
+01:13:32 AM.962: ------------------------------------------------
+01:13:32 AM.971: pulse-input: Server name: 'pulseaudio 14.2'
+01:13:32 AM.972: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+01:13:32 AM.972: pulse-input: Started recording from 'alsa_output.usb-Kingston_HyperX_Cloud_Revolver_S_000000000000-00.analog-stereo.monitor'
+01:13:32 AM.972: [Loaded global audio device]: 'Desktop Audio'
+01:13:32 AM.973: pulse-input: Server name: 'pulseaudio 14.2'
+01:13:32 AM.973: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+01:13:32 AM.973: pulse-input: Started recording from 'alsa_output.usb-Kingston_HyperX_Cloud_Revolver_S_000000000000-00.analog-stereo.monitor'
+01:13:32 AM.973: [Loaded global audio device]: 'Desktop Audio 2'
+01:13:32 AM.974: pulse-input: Server name: 'pulseaudio 14.2'
+01:13:32 AM.974: pulse-input: Audio format: s16le, 44100 Hz, 1 channels
+01:13:32 AM.974: pulse-input: Started recording from 'alsa_input.usb-Kingston_HyperX_Cloud_Revolver_S_000000000000-00.mono-fallback'
+01:13:32 AM.974: [Loaded global audio device]: 'Mic/Aux'
+01:13:32 AM.974: pulse-input: Server name: 'pulseaudio 14.2'
+01:13:32 AM.974: pulse-input: Audio format: s16le, 44100 Hz, 1 channels
+01:13:32 AM.974: pulse-input: Started recording from 'alsa_input.usb-Kingston_HyperX_Cloud_Revolver_S_000000000000-00.mono-fallback'
+01:13:32 AM.974: [Loaded global audio device]: 'Mic/Aux 2'
+01:13:32 AM.975: pulse-input: Server name: 'pulseaudio 14.2'
+01:13:32 AM.975: pulse-input: Audio format: s16le, 44100 Hz, 1 channels
+01:13:32 AM.975: pulse-input: Started recording from 'alsa_input.usb-Kingston_HyperX_Cloud_Revolver_S_000000000000-00.mono-fallback'
+01:13:32 AM.975: [Loaded global audio device]: 'Mic/Aux 3'
+01:13:33 AM.143: v4l2-input: Start capture from /dev/video0
+01:13:33 AM.144: v4l2-input: Input: 0
+01:13:33 AM.144: v4l2-input: Resolution: 640x480
+01:13:33 AM.144: v4l2-input: Pixelformat: YV12
+01:13:33 AM.144: v4l2-input: Linesize: 640 Bytes
+01:13:33 AM.144: v4l2-input: Framerate: 30.00 fps
+01:13:33 AM.145: xshm-input: Geometry 2560x1080 @ 0,0
+01:13:33 AM.146: Switched to scene 'screen'
+01:13:33 AM.174: ------------------------------------------------
+01:13:33 AM.174: Loaded scenes:
+01:13:33 AM.174: - scene 'intro':
+01:13:33 AM.174:     - source: 'image_intro' (image_source)
+01:13:33 AM.174: - scene 'screen':
+01:13:33 AM.174:     - source: 'dwm_capture_screen' (xshm_input)
+01:13:33 AM.174:     - source: 'webcam' (v4l2_input)
+01:13:33 AM.174: ------------------------------------------------
+01:13:33 AM.409: A sprite cannot be drawn without a width/height
+01:13:33 AM.527: A sprite cannot be drawn without a width/height
+01:13:33 AM.531: adding 64 milliseconds of audio buffering, total audio buffering is now 64 milliseconds (source: Mic/Aux)
+01:13:33 AM.531: 
+01:13:33 AM.533: A sprite cannot be drawn without a width/height
+01:13:33 AM.538: A sprite cannot be drawn without a width/height
+01:13:33 AM.556: A sprite cannot be drawn without a width/height
+01:13:33 AM.572: A sprite cannot be drawn without a width/height
+01:13:33 AM.588: A sprite cannot be drawn without a width/height
+01:13:33 AM.605: A sprite cannot be drawn without a width/height
+01:13:33 AM.620: A sprite cannot be drawn without a width/height
+01:13:33 AM.639: A sprite cannot be drawn without a width/height
+01:13:33 AM.656: A sprite cannot be drawn without a width/height
+01:13:33 AM.671: A sprite cannot be drawn without a width/height
+01:13:33 AM.689: A sprite cannot be drawn without a width/height
+01:13:33 AM.704: A sprite cannot be drawn without a width/height
+01:13:33 AM.721: A sprite cannot be drawn without a width/height
+01:13:33 AM.737: A sprite cannot be drawn without a width/height
+01:13:33 AM.754: A sprite cannot be drawn without a width/height
+01:13:33 AM.772: A sprite cannot be drawn without a width/height
+01:13:33 AM.789: A sprite cannot be drawn without a width/height
+01:13:33 AM.805: A sprite cannot be drawn without a width/height
+01:13:33 AM.821: A sprite cannot be drawn without a width/height
+01:13:33 AM.839: A sprite cannot be drawn without a width/height
+01:13:33 AM.856: A sprite cannot be drawn without a width/height
+01:13:33 AM.873: A sprite cannot be drawn without a width/height
+01:13:33 AM.891: A sprite cannot be drawn without a width/height
+01:13:33 AM.904: A sprite cannot be drawn without a width/height
+01:13:33 AM.922: A sprite cannot be drawn without a width/height
+01:13:33 AM.944: A sprite cannot be drawn without a width/height
+01:13:33 AM.955: A sprite cannot be drawn without a width/height
+01:13:33 AM.975: A sprite cannot be drawn without a width/height
+01:13:33 AM.989: A sprite cannot be drawn without a width/height
+01:13:34 AM.005: A sprite cannot be drawn without a width/height
+01:13:34 AM.021: A sprite cannot be drawn without a width/height
+01:14:29 AM.101: Last log entry repeated for 3294 more lines
+01:14:29 AM.101: Settings changed (general)
+01:14:29 AM.101: ------------------------------------------------
+01:14:29 AM.104: A sprite cannot be drawn without a width/height
+01:14:29 AM.121: A sprite cannot be drawn without a width/height
+01:14:29 AM.137: A sprite cannot be drawn without a width/height
+01:14:29 AM.167: A sprite cannot be drawn without a width/height
+01:14:29 AM.172: A sprite cannot be drawn without a width/height
+01:14:29 AM.187: A sprite cannot be drawn without a width/height
+01:14:29 AM.204: A sprite cannot be drawn without a width/height
+01:14:29 AM.221: A sprite cannot be drawn without a width/height
+01:14:29 AM.237: A sprite cannot be drawn without a width/height
+01:14:29 AM.254: A sprite cannot be drawn without a width/height
+01:14:29 AM.272: A sprite cannot be drawn without a width/height
+01:14:29 AM.289: A sprite cannot be drawn without a width/height
+01:14:29 AM.305: A sprite cannot be drawn without a width/height
+01:14:29 AM.321: A sprite cannot be drawn without a width/height
+01:14:29 AM.336: A sprite cannot be drawn without a width/height
+01:14:29 AM.354: A sprite cannot be drawn without a width/height
+01:14:29 AM.371: A sprite cannot be drawn without a width/height
+01:14:29 AM.387: A sprite cannot be drawn without a width/height
+01:14:29 AM.403: A sprite cannot be drawn without a width/height
+01:14:29 AM.420: A sprite cannot be drawn without a width/height
+01:14:29 AM.439: A sprite cannot be drawn without a width/height
+01:14:29 AM.455: A sprite cannot be drawn without a width/height
+01:14:29 AM.471: A sprite cannot be drawn without a width/height
+01:14:29 AM.502: A sprite cannot be drawn without a width/height
+01:14:29 AM.510: A sprite cannot be drawn without a width/height
+01:14:29 AM.522: A sprite cannot be drawn without a width/height
+01:14:29 AM.537: A sprite cannot be drawn without a width/height
+01:14:29 AM.554: A sprite cannot be drawn without a width/height
+01:14:29 AM.570: A sprite cannot be drawn without a width/height
+01:14:29 AM.587: A sprite cannot be drawn without a width/height
+01:14:29 AM.604: A sprite cannot be drawn without a width/height
+01:20:39 AM.463: Last log entry repeated for 32441 more lines
+01:20:39 AM.463: ==== Shutting down ==================================================
+01:20:39 AM.471: A sprite cannot be drawn without a width/height
+01:20:39 AM.506: v4l2-input: Stopped capture after 1 frames
+01:20:39 AM.507: pulse-input: Stopped recording from 'alsa_output.usb-Kingston_HyperX_Cloud_Revolver_S_000000000000-00.analog-stereo.monitor'
+01:20:39 AM.507: pulse-input: Got 64356 packets with 18795906 frames
+01:20:39 AM.508: pulse-input: Stopped recording from 'alsa_output.usb-Kingston_HyperX_Cloud_Revolver_S_000000000000-00.analog-stereo.monitor'
+01:20:39 AM.508: pulse-input: Got 53958 packets with 18795906 frames
+01:20:39 AM.508: pulse-input: Stopped recording from 'alsa_input.usb-Kingston_HyperX_Cloud_Revolver_S_000000000000-00.mono-fallback'
+01:20:39 AM.508: pulse-input: Got 21494 packets with 18788938 frames
+01:20:39 AM.508: pulse-input: Stopped recording from 'alsa_input.usb-Kingston_HyperX_Cloud_Revolver_S_000000000000-00.mono-fallback'
+01:20:39 AM.508: pulse-input: Got 21494 packets with 18788938 frames
+01:20:39 AM.508: pulse-input: Stopped recording from 'alsa_input.usb-Kingston_HyperX_Cloud_Revolver_S_000000000000-00.mono-fallback'
+01:20:39 AM.508: pulse-input: Got 21494 packets with 18788938 frames
+01:20:39 AM.508: All scene data cleared
+01:20:39 AM.508: ------------------------------------------------
+01:20:39 AM.541: X Error: GLXBadDrawable, Major opcode: 151, Minor opcode: 26, Serial: 638950
+01:20:39 AM.541: Failed to make context current.
+01:20:39 AM.541: X Error: GLXBadDrawable, Major opcode: 151, Minor opcode: 26, Serial: 638952
+01:20:39 AM.541: Failed to make context current.
+01:20:39 AM.541: X Error: GLXBadDrawable, Major opcode: 151, Minor opcode: 26, Serial: 638954
+01:20:39 AM.541: Failed to make context current.
+01:20:39 AM.542: X Error: GLXBadDrawable, Major opcode: 151, Minor opcode: 26, Serial: 638956
+01:20:39 AM.542: Failed to make context current.
+01:20:39 AM.542: X Error: GLXBadDrawable, Major opcode: 151, Minor opcode: 26, Serial: 638958
+01:20:39 AM.542: Failed to make context current.
+01:20:39 AM.542: Failed to fetch parent window geometry!
+01:20:39 AM.542: X Error: BadDrawable (invalid Pixmap or Window parameter), Major opcode: 151, Minor opcode: BadLength (poly request too large or internal Xlib length error), Serial: 638960
+01:20:39 AM.542: X Error: GLXBadDrawable, Major opcode: 151, Minor opcode: BadAlloc (insufficient resources for operation), Serial: 638961
+01:20:39 AM.542: X Error: GLXBadDrawable, Major opcode: 151, Minor opcode: 26, Serial: 638963
+01:20:39 AM.542: Failed to make context current.
+01:20:39 AM.542: X Error: GLXBadDrawable, Major opcode: 151, Minor opcode: 26, Serial: 638965
+01:20:39 AM.542: Failed to make context current.
+01:20:39 AM.601: [Scripting] Total detached callbacks: 0
+01:20:39 AM.622: Freeing OBS context data
+01:20:39 AM.651: == Profiler Results =============================
+01:20:39 AM.651: run_program_init: 831.853 ms
+01:20:39 AM.651:  ┣OBSApp::AppInit: 3.042 ms
+01:20:39 AM.651:  ┃ ┗OBSApp::InitLocale: 0.936 ms
+01:20:39 AM.651:  ┗OBSApp::OBSInit: 778.56 ms
+01:20:39 AM.651:    ┣obs_startup: 15.513 ms
+01:20:39 AM.651:    ┗OBSBasic::OBSInit: 664.927 ms
+01:20:39 AM.651:      ┣OBSBasic::InitBasicConfig: 0.116 ms
+01:20:39 AM.651:      ┣OBSBasic::ResetAudio: 0.139 ms
+01:20:39 AM.651:      ┣OBSBasic::ResetVideo: 170.298 ms
+01:20:39 AM.651:      ┣OBSBasic::InitOBSCallbacks: 0.005 ms
+01:20:39 AM.651:      ┣OBSBasic::InitHotkeys: 0.066 ms
+01:20:39 AM.651:      ┣obs_load_all_modules: 156.801 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(decklink-captions.so): 0.028 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(decklink-ouput-ui.so): 1.207 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(droidcam-obs.so): 0.005 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(frontend-tools.so): 109.358 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(image-source.so): 0.008 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(linux-alsa.so): 0.001 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(linux-capture.so): 0.265 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(linux-decklink.so): 0.119 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(linux-jack.so): 0.001 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(linux-pulseaudio.so): 0.001 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(linux-v4l2.so): 5.11 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(obs-ffmpeg.so): 0.697 ms
+01:20:39 AM.651:      ┃ ┃ ┗nvenc_check: 0.627 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(obs-filters.so): 0.016 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(obs-libfdk.so): 0.001 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(obs-outputs.so): 0.001 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(obs-transitions.so): 0.006 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(obs-x264.so): 0.001 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(rtmp-services.so): 0.562 ms
+01:20:39 AM.651:      ┃ ┣obs_init_module(text-freetype2.so): 0.009 ms
+01:20:39 AM.651:      ┃ ┗obs_init_module(vlc-video.so): 1.239 ms
+01:20:39 AM.652:      ┣OBSBasic::ResetOutputs: 0.233 ms
+01:20:39 AM.652:      ┣OBSBasic::CreateHotkeys: 0.048 ms
+01:20:39 AM.652:      ┣OBSBasic::InitService: 1.65 ms
+01:20:39 AM.652:      ┣OBSBasic::InitPrimitives: 0.219 ms
+01:20:39 AM.652:      ┗OBSBasic::Load: 219.142 ms
+01:20:39 AM.652: obs_hotkey_thread(25 ms): min=0.062 ms, median=0.102 ms, max=29.241 ms, 99th percentile=3.6 ms, 99.9703% below 25 ms
+01:20:39 AM.652: audio_thread(Audio): min=0 ms, median=0.112 ms, max=8.505 ms, 99th percentile=0.314 ms
+01:20:39 AM.652: obs_graphics_thread(16.6667 ms): min=0.307 ms, median=5.852 ms, max=163.76 ms, 99th percentile=13.179 ms, 99.5072% below 16.667 ms
+01:20:39 AM.652:  ┣tick_sources: min=0.001 ms, median=4.007 ms, max=162.925 ms, 99th percentile=7.235 ms
+01:20:39 AM.652:  ┣output_frame: min=0.125 ms, median=0.375 ms, max=20.54 ms, 99th percentile=1.211 ms
+01:20:39 AM.652:  ┃ ┗gs_context(video->graphics): min=0.124 ms, median=0.374 ms, max=20.539 ms, 99th percentile=1.21 ms
+01:20:39 AM.652:  ┃   ┣render_video: min=0.006 ms, median=0.201 ms, max=18.007 ms, 99th percentile=0.628 ms
+01:20:39 AM.652:  ┃   ┃ ┗render_main_texture: min=0.004 ms, median=0.177 ms, max=17.944 ms, 99th percentile=0.601 ms
+01:20:39 AM.652:  ┃   ┗gs_flush: min=0 ms, median=0.01 ms, max=15.659 ms, 99th percentile=0.049 ms
+01:20:39 AM.652:  ┗render_displays: min=0.068 ms, median=1.091 ms, max=99.941 ms, 99th percentile=5.206 ms
+01:20:39 AM.652: =================================================
+01:20:39 AM.652: == Profiler Time Between Calls ==================
+01:20:39 AM.652: obs_hotkey_thread(25 ms): min=25.094 ms, median=25.171 ms, max=54.307 ms, 91.739% within ±2% of 25 ms (0% lower, 8.26097% higher)
+01:20:39 AM.652: obs_graphics_thread(16.6667 ms): min=4.536 ms, median=16.667 ms, max=163.765 ms, 98.2945% within ±2% of 16.667 ms (0.973988% lower, 0.731469% higher)
+01:20:39 AM.652: =================================================
+01:20:39 AM.690: Number of memory leaks: 0

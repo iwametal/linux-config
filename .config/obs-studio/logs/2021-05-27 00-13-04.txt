@@ -1,0 +1,293 @@
+12:13:04 AM.352: CPU Name: Intel(R) Xeon(R) CPU E5-2620 v3 @ 2.40GHz
+12:13:04 AM.352: CPU Speed: 1200.000MHz
+12:13:04 AM.353: Physical Cores: 6, Logical Cores: 12
+12:13:04 AM.353: Physical Memory: 15919MB Total, 13298MB Free
+12:13:04 AM.353: Kernel Version: Linux 5.12.6-arch1-1
+12:13:04 AM.353: Distribution: "Arch Linux" Unknown
+12:13:04 AM.353: Session Type: tty
+12:13:04 AM.354: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.20.11
+12:13:04 AM.355: Portable mode: false
+12:13:04 AM.442: OBS 26.1.2-2 (linux)
+12:13:04 AM.442: ---------------------------------
+12:13:04 AM.442: ---------------------------------
+12:13:04 AM.442: audio settings reset:
+12:13:04 AM.442: 	samples per sec: 48000
+12:13:04 AM.442: 	speakers:        2
+12:13:04 AM.446: ---------------------------------
+12:13:04 AM.446: Initializing OpenGL...
+12:13:04 AM.608: Loading up OpenGL on adapter NVIDIA Corporation NVIDIA GeForce GTX 1650/PCIe/SSE2
+12:13:04 AM.608: OpenGL loaded successfully, version 3.3.0 NVIDIA 465.31, shading language 3.30 NVIDIA via Cg compiler
+12:13:04 AM.718: ---------------------------------
+12:13:04 AM.718: video settings reset:
+12:13:04 AM.718: 	base resolution:   2560x1080
+12:13:04 AM.718: 	output resolution: 2048x864
+12:13:04 AM.718: 	downscale filter:  Bicubic
+12:13:04 AM.718: 	fps:               60/1
+12:13:04 AM.718: 	format:            NV12
+12:13:04 AM.718: 	YUV mode:          709/Partial
+12:13:04 AM.718: NV12 texture support not available
+12:13:04 AM.789: Audio monitoring device:
+12:13:04 AM.789: 	name: Default
+12:13:04 AM.789: 	id: default
+12:13:04 AM.789: ---------------------------------
+12:13:04 AM.794: Failed to load 'en-US' text for module: 'decklink-captions.so'
+12:13:04 AM.797: Failed to load 'en-US' text for module: 'decklink-ouput-ui.so'
+12:13:04 AM.974: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+12:13:04 AM.974: No blackmagic support
+12:13:04 AM.988: v4l2loopback not installed, virtual camera disabled
+12:13:05 AM.015: NVENC supported
+12:13:05 AM.015: FFMPEG VAAPI supported
+12:13:05 AM.057: VLC found, VLC video source enabled
+12:13:05 AM.057: ---------------------------------
+12:13:05 AM.057:   Loaded Modules:
+12:13:05 AM.057:     vlc-video.so
+12:13:05 AM.057:     text-freetype2.so
+12:13:05 AM.057:     rtmp-services.so
+12:13:05 AM.057:     obs-x264.so
+12:13:05 AM.057:     obs-transitions.so
+12:13:05 AM.057:     obs-outputs.so
+12:13:05 AM.057:     obs-libfdk.so
+12:13:05 AM.057:     obs-filters.so
+12:13:05 AM.057:     obs-ffmpeg.so
+12:13:05 AM.057:     linux-v4l2.so
+12:13:05 AM.057:     linux-pulseaudio.so
+12:13:05 AM.057:     linux-jack.so
+12:13:05 AM.057:     linux-decklink.so
+12:13:05 AM.057:     linux-capture.so
+12:13:05 AM.057:     linux-alsa.so
+12:13:05 AM.057:     image-source.so
+12:13:05 AM.057:     frontend-tools.so
+12:13:05 AM.057:     droidcam-obs.so
+12:13:05 AM.057:     decklink-ouput-ui.so
+12:13:05 AM.057:     decklink-captions.so
+12:13:05 AM.057: ---------------------------------
+12:13:05 AM.058: ==== Startup complete ===============================================
+12:13:05 AM.088: All scene data cleared
+12:13:05 AM.088: ------------------------------------------------
+12:13:05 AM.100: pulse-input: Server name: 'pulseaudio 14.2'
+12:13:05 AM.100: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+12:13:05 AM.100: pulse-input: Started recording from 'alsa_output.usb-Kingston_HyperX_Cloud_Revolver_S_000000000000-00.analog-stereo.monitor'
+12:13:05 AM.100: [Loaded global audio device]: 'Desktop Audio'
+12:13:05 AM.112: pulse-input: Server name: 'pulseaudio 14.2'
+12:13:05 AM.112: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+12:13:05 AM.112: pulse-input: Started recording from 'alsa_output.usb-Kingston_HyperX_Cloud_Revolver_S_000000000000-00.analog-stereo.monitor'
+12:13:05 AM.112: [Loaded global audio device]: 'Desktop Audio 2'
+12:13:05 AM.112: pulse-input: Server name: 'pulseaudio 14.2'
+12:13:05 AM.113: pulse-input: Audio format: s16le, 44100 Hz, 1 channels
+12:13:05 AM.113: pulse-input: Started recording from 'alsa_input.usb-Kingston_HyperX_Cloud_Revolver_S_000000000000-00.mono-fallback'
+12:13:05 AM.113: [Loaded global audio device]: 'Mic/Aux'
+12:13:05 AM.166: pulse-input: Server name: 'pulseaudio 14.2'
+12:13:05 AM.166: pulse-input: Audio format: s16le, 44100 Hz, 1 channels
+12:13:05 AM.166: pulse-input: Started recording from 'alsa_input.usb-Kingston_HyperX_Cloud_Revolver_S_000000000000-00.mono-fallback'
+12:13:05 AM.166: [Loaded global audio device]: 'Mic/Aux 2'
+12:13:05 AM.167: pulse-input: Server name: 'pulseaudio 14.2'
+12:13:05 AM.167: pulse-input: Audio format: s16le, 44100 Hz, 1 channels
+12:13:05 AM.167: pulse-input: Started recording from 'alsa_input.usb-Kingston_HyperX_Cloud_Revolver_S_000000000000-00.mono-fallback'
+12:13:05 AM.167: [Loaded global audio device]: 'Mic/Aux 3'
+12:13:05 AM.168: xshm-input: Geometry 2560x1080 @ 0,0
+12:13:05 AM.169: Switched to scene 'Scene'
+12:13:05 AM.169: ------------------------------------------------
+12:13:05 AM.169: Loaded scenes:
+12:13:05 AM.169: - scene 'Scene':
+12:13:05 AM.219:     - source: 'Screen Capture (XSHM)' (xshm_input)
+12:13:05 AM.219: ------------------------------------------------
+12:13:05 AM.705: adding 42 milliseconds of audio buffering, total audio buffering is now 42 milliseconds (source: Desktop Audio 2)
+12:13:05 AM.705: 
+12:14:05 AM.874: v4l2-input: Start capture from 
+12:14:05 AM.874: v4l2-input: Unable to open device
+12:14:05 AM.874: v4l2-input: Initialization failed
+12:14:05 AM.878: User added source 'Video Capture Device (V4L2)' (v4l2_input) to scene 'Scene'
+12:14:05 AM.945: v4l2-input: Found device 'Droidcam' at /dev/video0
+12:14:05 AM.945: v4l2-input: Found input 'loopback' (Index 0)
+12:14:05 AM.946: v4l2-input: Pixelformat: Planar YUV 4:2:0 (available)
+12:14:05 AM.946: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+12:14:05 AM.946: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+12:14:05 AM.946: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+12:14:05 AM.946: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+12:14:05 AM.948: v4l2-input: Pixelformat: Planar YUV 4:2:0 (available)
+12:14:05 AM.948: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+12:14:05 AM.948: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+12:14:05 AM.948: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+12:14:05 AM.948: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+12:14:05 AM.950: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+12:14:05 AM.952: v4l2-input: Start capture from /dev/video0
+12:14:05 AM.952: v4l2-input: Input: 0
+12:14:05 AM.952: v4l2-input: Resolution: 640x480
+12:14:05 AM.952: v4l2-input: Pixelformat: YU12
+12:14:05 AM.952: v4l2-input: Linesize: 640 Bytes
+12:14:05 AM.952: v4l2-input: Framerate: 30.00 fps
+12:27:20 AM.505: User added filter 'Apply LUT' (clut_filter) to source 'Video Capture Device (V4L2)'
+12:27:42 AM.597: User removed filter 'Apply LUT' (clut_filter) from source 'Video Capture Device (V4L2)'
+12:31:08 AM.012: v4l2-input: Start capture from 
+12:31:08 AM.012: v4l2-input: Unable to open device
+12:31:08 AM.012: v4l2-input: Initialization failed
+12:31:08 AM.014: User added source 'Video Capture Device (V4L2) 2' (v4l2_input) to scene 'Scene'
+12:31:08 AM.040: v4l2-input: Found device 'Droidcam' at /dev/video0
+12:31:08 AM.040: v4l2-input: Found input 'loopback' (Index 0)
+12:31:08 AM.041: v4l2-input: Pixelformat: Planar YUV 4:2:0 (available)
+12:31:08 AM.041: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+12:31:08 AM.041: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+12:31:08 AM.041: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+12:31:08 AM.042: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+12:31:08 AM.045: v4l2-input: Pixelformat: Planar YUV 4:2:0 (available)
+12:31:08 AM.045: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+12:31:08 AM.045: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+12:31:08 AM.045: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+12:31:08 AM.046: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+12:31:08 AM.049: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+12:31:08 AM.052: v4l2-input: Start capture from /dev/video0
+12:31:08 AM.052: v4l2-input: Input: 0
+12:31:08 AM.052: v4l2-input: Resolution: 640x480
+12:31:08 AM.052: v4l2-input: Pixelformat: YU12
+12:31:08 AM.052: v4l2-input: Linesize: 640 Bytes
+12:31:08 AM.052: v4l2-input: Framerate: 30.00 fps
+12:32:45 AM.007: v4l2-input: Stopped capture after 1653 frames
+12:32:45 AM.007: v4l2-input: Start capture from 
+12:32:45 AM.007: v4l2-input: Unable to open device
+12:32:45 AM.007: v4l2-input: Initialization failed
+12:33:11 AM.652: User Removed source 'Video Capture Device (V4L2) 2' (v4l2_input) from scene 'Scene'
+01:54:19 AM.412: v4l2-input: Stopped capture after 93104 frames
+02:05:49 AM.147: v4l2-input: Found device 'Droidcam' at /dev/video0
+02:05:49 AM.148: v4l2-input: Found input 'loopback' (Index 0)
+02:05:49 AM.148: v4l2-input: Pixelformat: Planar YUV 4:2:0 (available)
+02:05:49 AM.148: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+02:05:49 AM.148: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+02:05:49 AM.148: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+02:05:49 AM.149: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+02:05:49 AM.150: v4l2-input: Pixelformat: Planar YUV 4:2:0 (available)
+02:05:49 AM.150: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+02:05:49 AM.150: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+02:05:49 AM.150: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+02:05:49 AM.150: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+02:05:49 AM.151: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+02:05:49 AM.151: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+02:06:32 AM.219: User Removed source 'Video Capture Device (V4L2)' (v4l2_input) from scene 'Scene'
+02:06:47 AM.482: v4l2-input: Start capture from 
+02:06:47 AM.482: v4l2-input: Unable to open device
+02:06:47 AM.482: v4l2-input: Initialization failed
+02:06:47 AM.484: User added source 'Video Capture Device (V4L2)' (v4l2_input) to scene 'Scene'
+02:06:47 AM.511: v4l2-input: Found device 'Droidcam' at /dev/video0
+02:06:47 AM.511: v4l2-input: Found input 'loopback' (Index 0)
+02:06:47 AM.511: v4l2-input: Pixelformat: Planar YUV 4:2:0 (available)
+02:06:47 AM.511: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+02:06:47 AM.511: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+02:06:47 AM.511: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+02:06:47 AM.512: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+02:06:47 AM.513: v4l2-input: Pixelformat: Planar YUV 4:2:0 (available)
+02:06:47 AM.513: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+02:06:47 AM.513: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+02:06:47 AM.513: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+02:06:47 AM.514: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+02:06:47 AM.515: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+02:06:47 AM.526: v4l2-input: Start capture from /dev/video0
+02:06:47 AM.527: v4l2-input: Input: 0
+02:06:47 AM.527: v4l2-input: Resolution: 640x480
+02:06:47 AM.527: v4l2-input: Pixelformat: YU12
+02:06:47 AM.527: v4l2-input: Linesize: 640 Bytes
+02:06:47 AM.527: v4l2-input: Framerate: 30.00 fps
+02:07:29 AM.165: Switched to Preview/Program mode
+02:07:29 AM.166: ------------------------------------------------
+02:07:41 AM.342: ---------------------------------
+02:07:41 AM.342: [x264 encoder: 'simple_h264_stream'] preset: veryfast
+02:07:41 AM.343: [x264 encoder: 'simple_h264_stream'] settings:
+02:07:41 AM.343: 	rate_control: CBR
+02:07:41 AM.343: 	bitrate:      6000
+02:07:41 AM.343: 	buffer size:  6000
+02:07:41 AM.343: 	crf:          0
+02:07:41 AM.343: 	fps_num:      60
+02:07:41 AM.343: 	fps_den:      1
+02:07:41 AM.343: 	width:        2048
+02:07:41 AM.343: 	height:       864
+02:07:41 AM.343: 	keyint:       120
+02:07:41 AM.343: 
+02:07:41 AM.343: [x264 encoder: 'simple_h264_stream'] custom settings: 
+02:07:41 AM.343: 	scenecut = 0
+02:07:41 AM.357: libfdk_aac encoder created
+02:07:41 AM.357: libfdk_aac bitrate: 192, channels: 2
+02:07:41 AM.357: [rtmp stream: 'simple_stream'] Connecting to RTMP URL rtmp://sao.contribute.live-video.net/app...
+02:07:43 AM.797: [rtmp stream: 'simple_stream'] Connection to rtmp://sao.contribute.live-video.net/app successful
+02:07:43 AM.797: ==== Streaming Start ===============================================
+02:07:45 AM.325: [rtmp stream: 'simple_stream'] User stopped the stream
+02:07:45 AM.325: Output 'simple_stream': stopping
+02:07:45 AM.325: Output 'simple_stream': Total frames output: 59
+02:07:45 AM.325: Output 'simple_stream': Total drawn frames: 236 (238 attempted)
+02:07:45 AM.325: Output 'simple_stream': Number of lagged frames due to rendering lag/stalls: 2 (0.8%)
+02:07:45 AM.325: ==== Streaming Stop ================================================
+02:07:45 AM.343: libfdk_aac encoder destroyed
+02:07:55 AM.395: Switched to scene 'Scene'
+02:07:55 AM.397: Switched to regular Preview mode
+02:07:55 AM.397: ------------------------------------------------
+02:07:57 AM.861: Switched to Preview/Program mode
+02:07:57 AM.861: ------------------------------------------------
+02:07:58 AM.790: Switched to scene 'Scene'
+02:07:58 AM.792: Switched to regular Preview mode
+02:07:58 AM.792: ------------------------------------------------
+02:09:00 AM.452: Switched to Preview/Program mode
+02:09:00 AM.452: ------------------------------------------------
+02:09:03 AM.133: Switched to scene 'Scene'
+02:09:03 AM.134: Switched to regular Preview mode
+02:09:03 AM.134: ------------------------------------------------
+02:09:54 AM.260: Switched to Preview/Program mode
+02:09:54 AM.260: ------------------------------------------------
+02:11:15 AM.021: Settings changed (general)
+02:11:15 AM.021: ------------------------------------------------
+02:11:17 AM.827: Switched to scene 'Scene'
+02:11:17 AM.829: Switched to regular Preview mode
+02:11:17 AM.829: ------------------------------------------------
+02:11:18 AM.679: Switched to Preview/Program mode
+02:11:18 AM.680: ------------------------------------------------
+02:11:50 AM.390: Settings changed (general)
+02:11:50 AM.390: ------------------------------------------------
+02:15:06 AM.696: Settings changed (general)
+02:15:06 AM.696: ------------------------------------------------
+02:17:55 AM.847: Settings changed (outputs)
+02:17:55 AM.847: ------------------------------------------------
+02:18:11 AM.810: Settings changed (outputs)
+02:18:11 AM.810: ------------------------------------------------
+02:18:16 AM.075: ---------------------------------
+02:18:16 AM.076: [NVENC encoder: 'simple_h264_recording'] settings:
+02:18:16 AM.076: 	rate_control: CQP
+02:18:16 AM.076: 	bitrate:      0
+02:18:16 AM.076: 	cqp:          23
+02:18:16 AM.076: 	keyint:       250
+02:18:16 AM.076: 	preset:       hq
+02:18:16 AM.076: 	profile:      high
+02:18:16 AM.076: 	width:        2048
+02:18:16 AM.076: 	height:       864
+02:18:16 AM.076: 	2-pass:       false
+02:18:16 AM.076: 	b-frames:     2
+02:18:16 AM.076: 	GPU:          0
+02:18:16 AM.076: 
+02:18:16 AM.567: libfdk_aac encoder created
+02:18:16 AM.567: libfdk_aac bitrate: 192, channels: 2
+02:18:16 AM.568: ==== Recording Start ===============================================
+02:18:16 AM.568: [ffmpeg muxer: 'simple_file_output'] Writing file '/home/coffee/Videos/unaerp/padroes-de-projeto/2021-05-27 02-18-16.mkv'...
+02:19:33 AM.856: [ffmpeg muxer: 'simple_file_output'] Output of file '/home/coffee/Videos/unaerp/padroes-de-projeto/2021-05-27 02-18-16.mkv' stopped
+02:19:33 AM.856: Output 'simple_file_output': stopping
+02:19:33 AM.856: Output 'simple_file_output': Total frames output: 4598
+02:19:33 AM.856: Output 'simple_file_output': Total drawn frames: 4635 (4638 attempted)
+02:19:33 AM.856: Output 'simple_file_output': Number of lagged frames due to rendering lag/stalls: 3 (0.1%)
+02:19:33 AM.856: ==== Recording Stop ================================================
+02:19:34 AM.062: libfdk_aac encoder destroyed
+02:27:19 AM.455: Settings changed (outputs)
+02:27:19 AM.455: ------------------------------------------------
+02:27:49 AM.861: Switched to scene 'Scene'
+02:27:49 AM.863: Switched to regular Preview mode
+02:27:49 AM.863: ------------------------------------------------
+02:35:04 AM.607: Settings changed (outputs)
+02:35:04 AM.607: ------------------------------------------------
+02:36:06 AM.265: Settings changed (outputs)
+02:36:06 AM.265: ------------------------------------------------
+02:40:19 AM.586: ---------------------------------
+02:40:19 AM.586: video settings reset:
+02:40:19 AM.586: 	base resolution:   1920x1080
+02:40:19 AM.586: 	output resolution: 1920x1080
+02:40:19 AM.586: 	downscale filter:  Bicubic
+02:40:19 AM.586: 	fps:               60/1
+02:40:19 AM.586: 	format:            NV12
+02:40:19 AM.586: 	YUV mode:          709/Partial
+02:40:19 AM.587: NV12 texture support not available
+02:40:19 AM.588: Settings changed (outputs, video)
+02:40:19 AM.588: ------------------------------------------------
+02:43:47 AM.387: Settings changed (general)
+02:43:47 AM.387: ------------------------------------------------

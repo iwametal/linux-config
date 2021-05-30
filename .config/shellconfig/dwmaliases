@@ -1,1 +1,2 @@
 alias togdwmsb='$HOME/.scripts/dwmstatusbar/toggle_dwm_status_bar.sh'
+alias kdwms='$HOME/.scripts/dwmstatusbar/kill_dwm_statusbar.sh'

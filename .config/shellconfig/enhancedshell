@@ -1,4 +1,6 @@
 #alias l='lsd -hA --group-dirs first'
+
+# clear
 alias cb="clear && echo -en '\0033\0143' && $HOME/.scripts/shell/title.sh \"INICIO DO LOG\" && echo && echo && fg >/dev/null"
 alias c0='clear && $HOME/.scripts/shell/coffeefetch0'
 alias c1='clear && $HOME/.scripts/shell/coffeefetch1'
@@ -9,15 +11,25 @@ alias c5='clear && $HOME/.scripts/shell/coffeefetch5'
 alias c6='clear && $HOME/.scripts/shell/coffeefetch6'
 alias c7='clear && $HOME/.scripts/shell/coffeefetch7'
 alias c='clear && $HOME/.scripts/shell/coffeefetch'
+
+# reset
 alias reset='reset && $HOME/.scripts/shell/coffeefetch'
+
+# copy
 alias cp_='cp'
 alias cp='$HOME/.scripts/shell/cp.sh'
+
+# move
 alias mv_='mv'
 alias mv='$HOME/.scripts/shell/mv.sh'
+
+# sudo
 alias fucking='sudo'
 alias fckng='sudo'
 alias please='sudo'
 alias pls='sudo'
+
+# list
 alias ls='ls --color'
 alias lse='$HOME/.scripts/shell/lse.sh'
 alias lsea='$HOME/.scripts/shell/lse.sh -a'
@@ -29,15 +41,31 @@ alias clsea='clear ; echo "" ; lsea'
 alias clsel='clear ; echo "" ; lsel'
 alias clseal='clear ; echo "" ; lseal'
 alias clsela='clear ; echo "" ; lsela'
+
+# pwd
 alias p-wd='$HOME/.scripts/shell/pwd.sh'
+
+# spt
 alias spt='launchspt'
+
+# wallpaper
 alias setw='$HOME/.scripts/dwm/setwallpaper.sh'
+
+# grep
 alias grep='grep --color=auto'
+
+# coffeefetch
 alias change-default-coffeefetch='$HOME/.scripts/shell/change-default-coffeefetch'
 alias list-coffeefetches='$HOME/.scripts/shell/list-coffeefetches'
+
+# cache
 alias drop_cache_soft='sudo $HOME/.scripts/cache/drop_cache_soft'
 alias drop_cache_hard='sudo $HOME/.scripts/cache/drop_cache_hard'
 alias drop_cache_full='sudo $HOME/.scripts/cache/drop_cache_full'
+
+# swap
 alias drop_swap='sudo $HOME/.scripts/swap/drop_swap.sh'
+
+# external devices
 alias mount_ed='sudo $HOME/.scripts/mount/external-devices/mount-ed.sh'
 alias umount_ed='sudo $HOME/.scripts/umount/external-devices/umount-ed.sh'

@@ -10,6 +10,6 @@ alias cppcompile-lc='gcc -lstdc++ -o exe *.cpp -lcurses -lncurses'
 alias cppcompile-lmc='gcc -lstdc++ -o exe *.cpp -lcurses -lncurses -lm'
 alias cppcompile-lcm='gcc -lstdc++ -o exe *.cpp -lcurses -lncurses -lm'
 
-# header create
+# header
 alias ch-create='$HOME/.scripts/c/header-create.sh'
 alias ch-impl='$HOME/.scripts/c/header-impl.sh'

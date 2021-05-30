@@ -1,0 +1,11 @@
+# docker
+alias d='docker'
+alias dcon='docker container'
+alias dimg='docker image'
+alias dvol='docker volume'
+alias dstatus='systemctl status docker'
+alias dstart='systemctl start docker'
+alias dstop='systemctl stop docker'
+
+# docker compose
+alias dcom='docker-compose'

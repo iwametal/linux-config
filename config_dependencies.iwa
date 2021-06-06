@@ -14,6 +14,7 @@ dragon
 exa
 feh
 flameshot
+ftp
 fzf
 gnutls
 lib32-gnutls
@@ -24,6 +25,7 @@ ncmpcpp
 neofetch
 neovim
 networkmanager
+nftables
 nvidia
 nvidia-utils
 openvpn
@@ -89,6 +91,7 @@ links
 lolcat
 maven
 mpv
+mypaint
 ncdu
 net-tools
 # nvtop
@@ -123,11 +126,13 @@ android-sdk-platform-tools # AUR
 android-platform # AUR
 cava # AUR
 deskreen # AUR
+drawpile # AUR
 eclipse-jee # AUR
 edex-ui # AUR
 gotop # AUR
 gromit-mpx # AUR
 lf # AUR
+onlyoffice-bin # AUR
 packettracer # AUR
 patat-bin # AUR
 postman-bin # AUR

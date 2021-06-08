@@ -83,7 +83,7 @@ v4l-utils
 vifm
 vim
 vulkan-icd-loader
-wine
+wine-staging
 wine-gecko
 wine-mono
 wireless_tools

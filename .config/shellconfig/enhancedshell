@@ -48,6 +48,9 @@ alias p-wd='$HOME/.scripts/shell/pwd.sh'
 # spt
 alias spt='launchspt'
 
+# utils
+alias gs="$HOME/.scripts/shell/gs.sh"
+
 # wallpaper
 alias setw='$HOME/.scripts/dwm/setwallpaper.sh'
 

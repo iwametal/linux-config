@@ -1,0 +1,1 @@
+alias ciscovpn-unimed='[[ `ciscovpn state|tail -n5|head -n1` = *"Disconnected"* ]] && ciscovpn -s <$HOME/git/github/ciaware/anyconnect/anyconnect-linux64-4.9.00086/vpn/unimed.connection || (echo && echo "Cisco VPN is already connected")'

@@ -12,6 +12,8 @@ bluez-utils
 ccls
 cron
 dmenu
+dotnet-runtime
+dotnet-sdk
 dragon
 exa
 feh

@@ -1,1 +1,23 @@
-alias youtube-dl-full='youtube-dl -f best'
+# download video and audio
+alias ydl-all='$HOME/.scripts/youtube-dl/youtube-dl-max-res.sh'
+
+# download only audio
+alias ydl-ao='$HOME/.scripts/youtube-dl/youtube-dl-audio-only-max-res.sh'
+
+# get the audio only url for download
+alias ydl-ao-url='$HOME/.scripts/youtube-dl/youtube-dl-audio-only-get-url.sh'
+
+# download only video
+alias ydl-vo='$HOME/.scripts/youtube-dl/youtube-dl-video-only-mas-res.sh'
+
+# get the video only url for download
+alias ydl-vo-url='$HOME/.scripts/youtube-dl/youtube-dl-video-only-get-url.sh'
+
+# get the video url for download
+alias ydl-url='$HOME/.scripts/youtube-dl/youtube-dl-get-url.sh'
+
+# download part of a video
+alias ydl-part='$HOME/.scripts/youtube-dl/youtube-dl-part.sh'
+
+# download part of a video - safe
+alias ydl-part-safe='$HOME/.scripts/youtube-dl/youtube-dl-part-safe.sh'

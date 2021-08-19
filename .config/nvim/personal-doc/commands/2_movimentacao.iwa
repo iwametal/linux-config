@@ -1,0 +1,200 @@
+-------- ---- ------------ -- ---
+COMANDOS PARA MOVIMENTAÇÃO NO VIM
+-------- ---- ------------ -- ---
+
+=========
+h
+=========
+	Anda um caractere para o lado esquerdo
+
+=========
+j
+=========
+	Anda uma linha para baixo
+
+=========
+k
+=========
+	Anda uma linha para cima
+
+=========
+l
+=========
+	Anda um caractere para o lado direito
+
+=========
+w
+=========
+	Anda uma palavra para frente
+
+=========
+W
+=========
+	Pula todos os caracteres a frente até encontrar o próximo espaço em branco
+
+=========
+b
+=========
+	Similar ao w, porém com a movimentação para trás
+
+=========
+B
+=========
+	Similar ao W, porém com a movimentação para trás
+
+=========
+t;
+=========
+	Vai para a próxima aparição do ; na linha (o cursor para um caractere antes de chegar no ;)
+	; pode ser trocado por qualquer outro caractere
+
+=========
+T;
+=========
+	Vai para a aparição anterior do ; na linha (o cursor para um caractere antes de chegar no ;)
+	; pode ser trocado por qualquer outro caractere
+
+=========
+f;
+=========
+	Vai para a próxima aparição do ; na linha (o cursor para em cima do ;)
+	; pode ser trocado por qualquer outro caractere
+
+=========
+F;
+=========
+	Vai para a aparição anterior do ; na linha (o cursor para em cima do ;)
+	; pode ser trocado por qualquer outro caractere
+
+=========
+;
+=========
+	Repete quarquer um dos 4 comandos acima
+
+=========
+$
+=========
+	Vai para o final da linha
+
+=========
+^
+=========
+	Vai para o início da linha (não conta espaços em branco)
+
+=========
+0
+=========
+	Vai para o início da linha (conta espaços em branco)
+
+=========
+H
+=========
+	Direciona para o início da página (visualmente)
+
+=========
+L
+=========
+	Direciona para o final da página (visualmente)
+
+=========
+gg
+=========
+	Vai para o início do arquivo
+
+=========
+G
+=========
+	Vai para o final do arquivo
+
+=========
+gi
+=========
+	Vai para a linha onde esteve em modo de inserção pela última vez
+
+=========
+[número de 0 a 100]%
+=========
+	Vai para a porcentagem passada do arquivo. Ex (50% vai para a metade do arquivo)
+
+=========
+)
+=========
+	Vai para a próxima frase
+
+=========
+(
+=========
+	Vai para a frase anterior
+
+=========
+%
+=========
+	Alterna entre o início e fim de bloco: (entre parênteses), [entre colchetes] ou {entre chaves}
+
+=========
+[m
+=========
+	Vai para o pŕoximo método
+
+=========
+]m
+=========
+	Volta para o método anterior
+
+=========
+}
+=========
+	Vai para o próximo bloco (próxima linha vazia)
+
+=========
+{
+=========
+	Volta para o bloco anterior (linha vazia anterior)
+
+=========
+[CONTROL] + o
+=========
+	Volta para o salto anterior
+
+=========
+[CONTROL] + i
+=========
+	Avança para o próximo salto
+
+=========
+``
+=========
+	Alterna entre o salto atual e o anterior
+
+=========
+m + [qualquer caractere]
+=========
+	Cria uma marca naquela parte do arquivo com o caractere especificado
+
+=========
+` + [qualquer caractere especificado na criação de uma marca]
+=========
+	Vai para a marca especificada com o caractere digitado
+
+=========
+[CONTROL] + u
+=========
+	Movimenta-se meia página para cima (page up)
+
+=========
+[CONTROL] + d
+=========
+	Movimenta-se meia página para baixo (page down)
+
+=========
+[CONTROL] + f
+=========
+	Movimenta-se uma página inteira para baixo (full)
+
+=========
+[CONTROL] + b
+=========
+	Movimenta-se uma página inteira para cima (back)
+
+...
+E por ai vai

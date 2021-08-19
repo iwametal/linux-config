@@ -1,0 +1,45 @@
+-------- -- ------ - --- -- ---
+COMANDOS DE BUFFER E ARG NO VIM
+-------- -- ------ - --- -- ---
+
+=========
+:ls
+=========
+	Lista todos os arquivos em buffer no VIM (abertos)
+
+=========
+:b + [NÚMERO DO BUFFER]
+=========
+	Vai para o buffer de número especificado
+
+=========
+:bn
+=========
+	Vai para o pŕoximo arquivo em buffer da lista (next)
+
+=========
+:bp
+=========
+	Vai para o arquivo anterior em buffer da lista (previous)
+
+=========
+bufdo + [COMANDO VIM]
+=========
+	Executa algum comando do VIM para todos os arquivos abertos em buffer
+
+=========
+argdo + [COMANDO VIM]
+=========
+	Semelhante ao bufdo, porém pode-se especificar quais tipos de arquivos sofrerão alterações
+	Veja melhor no comando abaixo
+
+=========
+arg *.c
+=========
+	Especifica-se o argumento como "*.c", ou seja todos os arquivos com extesão .c
+	Dessa forma, o comando acima faria alterações APENAS nos arquivos com extensão .c
+	Este comando deve ser executado antes do argdo
+	*.c poderia ser trocado por qualquer outro padrão
+
+...
+E por ai vai

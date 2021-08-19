@@ -1,0 +1,214 @@
+-------- ----- -- ---
+COMANDOS UTEIS DO VIM
+-------- ----- -- ---
+
+=========
+~
+=========
+	Muda o case de uma letra (de maiúsculo para minúsculo ou vice-versa)
+
+=========
+[CONTROL] + s
+=========
+	Divide a tela na horizontal
+
+=========
+[CONTROL] + v
+=========
+	Divide a tela na vertical
+
+=========
+([CONTROL] + w) h
+=========
+	Vai para a tela ao lado esquerdo
+
+=========
+([CONTROL] + w) j
+=========
+	Vai para a tela abaixo
+
+=========
+([CONTROL] + w) k
+=========
+	Vai para a tela acima
+
+=========
+([CONTROL] + w) q
+=========
+	Fecha uma janela/tag aberta
+
+=========
+([CONTROL] + w) + l
+=========
+	Vai para a tela ao lado direito
+
+=========
+[CONRTOL] + a
+=========
+	Incrementa um número
+
+=========
+[CONTROL] + x
+=========
+	Decrementa um número
+
+=========
+([CONTROL] + x) + ([CONTROL] + n) --> No modo de inserção
+=========
+	Autocompleta uma palavra (baseada em outra palavra do arquivo)
+
+=========
+([CONTROL] + x) + ([CONTROL] + l) --> No modo de inserção
+=========
+	Autocompleta uma linha (baseada em outra linha do arquivo)
+
+=========
+([CONTROL] + x) + ([CONTROL] + f) --> No modo de inserção
+=========
+	Autocompleta um sistema de arquivo
+
+=========
+:tabnew
+=========
+	Cria uma nova tab
+
+=========
+:tabs
+=========
+	Lista todas as tabs abertas
+
+=========
+gt
+=========
+	Vai para a próxima tab
+
+=========
+gT
+=========
+	Vai para a tab anterior
+
+=========
+:set foldmethod=indent
+=========
+	Atribui o foldmethod. Oculta algumas linhas do arquivo
+
+=========
+za
+=========
+	Oculta linhas/métodos sendo mostrados ou mostra linas/métodos sendo ocultados
+
+=========
+zo
+=========
+	Mostra uma linha/método que está oculto
+
+=========
+zc
+=========
+	Fecha uma linha/método que está a mostra
+
+=========
+zr [ou] zR
+=========
+	Abre todas as linhas/métodos ocultos.
+
+=========
+zm [ou] zM
+=========
+	Fecha todas as linhas/métodos a mostra
+
+=========
+:set ignorecase
+=========
+	Ignora o case das letras na busca
+
+=========
+:set noignorecase
+=========
+	Não ignora o case das letras na busca
+
+=========
+:set hlsearch
+=========
+	Mostra um "highlight" nas palavras buscadas
+
+=========
+:set nohlsearch
+=========
+	Não mostra um "highlight" nas palavras buscadas
+
+=========
+:set number
+=========
+	Mostra o número das linhas no canto esquerdo da tela
+
+=========
+:set nu
+=========
+	Mesma coisa do comando acima
+
+=========
+:set nonumber
+=========
+	Oculta o número das linhas no canto esquerdo da tela
+
+=========
+:set nonu
+=========
+	Mesma coisa do comando acima
+
+=========
+:set tabstop=[TAMANHO]
+:set shiftwidth=[TAMANHO]
+:set softtabstop=[TAMANHO]
+=========
+	Os três comandos acima trocam o tamanho do tab, porém para situações diferentes
+	Por esse motivo é interessante executar os três comandos para trocar definitivamente o tamanho do espaçamento para o tab
+
+=========
+:set expandtab
+=========
+	Considera o tab como espaços
+
+=========
+:set noexpandtab
+=========
+	Considera o tab como um único caractere
+
+=========
+:retab
+=========
+	Troca o tab de espaços para um único caractere e vice-versa
+
+=========
+:set visualbell
+=========
+	Mostra erros visuais na tela (a tela pisca conforme o VIM encontra algum erro)
+
+=========
+:set novisualbell
+=========
+	Desabilita erros visuais na tela
+
+=========
+:set errorbells
+=========
+	Habilita erros sonoros (é feito um som conforme o VIM encontra algum erro)
+
+=========
+:set noerrorbells
+=========
+	Desabilita erros sonoros
+
+=========
+:e /path/para/um/arquivo.ext
+=========
+	Abre um arquivo em um novo buffer
+
+=========
+:r /path/para/um/arquivo.ext
+=========
+	Redireciona o conteúdo do arquivo especificado para o arquivo já aberto no VIM
+
+...
+E por aí vai

@@ -1,0 +1,78 @@
+---- ---- -- ---
+COMO SAIR DO VIM
+---- ---- -- ---
+
+=========
+:w
+=========
+	Salva o arquivo sem sair
+
+=========
+:q
+=========
+	Sai do arquivo sem salvar
+
+=========
+:q!
+=========
+	Força a saída do arquivo sem salvar
+
+=========
+:wq
+=========
+	Salva o arquivo e sai (apenas :w somente salvaria o arquivo)
+
+=========
+:wq!
+=========
+	Força o salvamento e a saída do arquivo
+
+=========
+:x
+=========
+	Igual ao :wq
+
+=========
+:x!
+=========
+	Igual ao :wq!
+
+=========
+ZQ
+=========
+	Sai do arquivo sem salvar
+
+=========
+ZZ
+=========
+	"Zalva" e "Zai"
+
+=========
+:qa
+=========
+	Semelhante ao :q, porém é feito em todos os arquivos do buffer
+
+=========
+:qa!
+=========
+	Igual ao comando acima, porém forçando a saída
+
+=========
+:wqa
+=========
+	Semelhante ao :wq, porém é feito em todos os arquivos do buffer
+
+=========
+:wqa!
+=========
+	Igual ao comando acima, porém forçando a saída
+
+=========
+:xa
+=========
+	Igual ao comando :wqa
+
+=========
+:xa!
+=========
+	Igual ao comando :wqa!

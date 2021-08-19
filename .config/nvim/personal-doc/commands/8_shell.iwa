@@ -1,0 +1,23 @@
+-------- ---- -------- - ----- -- ---
+COMANDOS PARA UTILIZAR O SHELL NO VIM
+-------- ---- -------- - ----- -- ---
+
+=========
+:![COMANDO SHELL]
+=========
+	Executa um comando no shell e mostra o resultado
+
+=========
+!![COMANDO SHELL]
+=========
+	Executa um comando shell e redireciona a saída do comando para o arquivo aberto (não se cria uma nova linha)
+
+=========
+:.![COMANDO SHELL]
+=========
+	Mesma coisa do comando acima
+
+=========
+:r![COMANDO SHELL]
+=========
+	Parecido com os dois comandos acima, porém cria uma nova linha no redirecionamento

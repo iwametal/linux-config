@@ -1,0 +1,30 @@
+------ -- ---
+MACROS EM VIM
+------ -- ---
+
+=========
+q + [qualquer caractere alpha numérico]
+=========
+	Cria uma macro no caractere especificado
+	Uma macro nada mais é do que um aglomerado de comandos/ações feitas no VIM
+	Não há (em teoria) um limite para quantos comandos/ações possam ser salvos em uma macro
+	Para encerrar a gravação de uma macro, basta pressionar q
+
+=========
+@ + [qualquer caractere que possua uma macro gravada]
+=========
+	Executa a macro gravada no caractere especificado
+
+=========
+:norm! @[qualquer caractere que possua uma macro gravada]
+=========
+	Igual ao comando acima, porém com a vantagem de realizar alguns combos, especificações ou até generalizações através do modo de comando
+	Por exemplo, executar a macro em diversos arquivos em buffer, em diversas linhas, em args e por aí vai
+
+=========
+@@
+=========
+	Repete a última macro executada
+
+...
+E por aí vai

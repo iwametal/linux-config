@@ -1,0 +1,18 @@
+-------- ---- -------
+COMANDOS PARA DELECAO
+-------- ---- -------
+
+=========
+x
+=========
+	deleta o caractere na posição do cursor
+
+=========
+D
+=========
+	Tem o mesmo funcionamento da tecla C, com diferença de que no final você continua em modo de inserção e não se entra em modo normal.
+
+=========
+d + [COMBO]
+=========
+	Tem o mesmo funcionamento da tecla c. Todos os combos utilizados em uma tecla, podem ser utilizados na outra. Com a única diferença de que, assim como a tecla D, no final você continua em modo normal, não se entra em modo de inserção.

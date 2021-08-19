@@ -78,6 +78,7 @@ procs
 pulseaudio
 python-lxml
 ripgrep
+rustup
 sqlite
 tldr
 tokei

@@ -1,0 +1,159 @@
+-------- ---- ------ -- ---- -- --------
+COMANDOS PARA ENTRAR NO MODO DE INSERÇÃO
+-------- ---- ------ -- ---- -- --------
+
+==========
+i
+==========
+	Entra no modo de inserção um caractere atrás da posição do cursor
+
+==========
+I
+==========
+	Entra no modo de inserção no início da linha (não conta caracteres vazios, inicia na posição do primeiro caractere da linha)
+
+==========
+a
+==========
+	Entra no modo de inserção um caractere a frente da posição do cursor
+
+==========
+A
+==========
+	Entra no modo de inserção no final da linha
+
+==========
+o
+==========
+	Cria uma linha abaixo da atual e entra em modo de inserção
+
+==========
+O
+==========
+	Cria uma linha acima da atual e entra em modo de inserção
+
+==========
+s
+==========
+	Exclui o caractere na posição do cursor e entra em modo de inserção
+
+==========
+S
+==========
+	Exclui a linha inteira e entra em modo de inserção
+
+==========
+C
+==========
+	Exclui da onde se encontra o cursor até o final da linha e entra em modo de inserção
+
+==========
+cw
+==========
+	Exclui da onde se encontra o cursor até o final da palavra (o final de uma palavra é dito por qualquer caractere especial, como '.', ',' '$' e etc. com exceção do '_' ou um espaço em branco) e entra em modo de inserção
+
+==========
+cW
+==========
+	Exclui da onde se encontra o cursor até o próximo espaço em branco e entra em modo de inserção
+
+==========
+cb
+==========
+	Similar a "cw", porém a deleção é feita para traz
+
+==========
+cB
+==========
+	Similar a "cW", porém a deleção é feita para traz
+
+==========
+ciw
+==========
+	Exclui a palavra inteira onde o cursor se encontra (não exclui espaçoes vazios ao redor dela, caso existam) e entra em modo de inserção.
+	Este combo, também pode ser usado para blocos e tags:
+	ci( --> exclui tudo dentro do parênteses onde o cursor se encontra e entra em modo de inserção
+	ci{ --> similar ao anterior, porém feito com chaves
+	cit --> exclui tudo dentro de uma tag (<div>Este conteúdo seria excluído</div>)
+	... E por aí vai (ci", ci', ci[ e etc.)
+
+==========
+caw
+==========
+	Similar ao comando acima, porém exclui os espaços em branco ao redor da palavra, caso existam
+	Da mesma forma que o comando anterior, também funciona com blocos e tags.
+
+==========
+ct;
+==========
+	Exclui de onde o cursor se encontra até o próximo ; (o ; em si não será excluído) da linha e entra em modo de inserção
+	O ; pode ser trocado por qualquer outro caractere
+
+==========
+cT;
+==========
+	Similar ao comando anterior porém a busca é feita para trás
+
+==========
+cf;
+==========
+	Similar , mas o caractere passado (no caso acima o ;) também será excluído
+
+==========
+cgg
+==========
+	Exclui de onde o cursor se encontra até o início do código e entra em modo de inserção
+
+==========
+cG
+==========
+	Exclui de onde o cursor se encontra até o final do código e entra em modo de inserção
+
+==========
+cc
+==========
+	Similar ao comando `S`
+
+==========
+cl
+==========
+	Exclui o caractere onde o cursor se encontra e o caractere ao seu lado direito e entra em modo de inserção
+
+==========
+ch
+==========
+	Similar ao comando anterior, porém exclui o caractere a esquerda
+
+==========
+cL
+==========
+	Exclui da linha onde o cursor se encontra até o final página (até onde se é possível ver) e entra em modo de inserção
+
+==========
+cH
+==========
+	Similar ao comando anterior mas a exclusão é até o início da página
+
+==========
+cn
+==========
+	Exclui da onde o cursor se encontra até a última string buscada no vim (buscando de cima para baixo)
+
+==========
+cN
+==========
+	Similar ao comando anterior porém a busca é de baixo para cima
+
+==========
+cj
+==========
+	Exclui a linha atual e a de baixo e entra em modo de inserção
+
+==========
+ck
+==========
+	Exclui a linha atual e a de cima e entra em modo de inserção
+
+...
+
+E por ai vai

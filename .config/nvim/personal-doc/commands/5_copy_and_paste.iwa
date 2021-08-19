@@ -1,0 +1,55 @@
+-------- ---- ------ - -----
+COMANDOS PARA COPIAR E COLAR
+-------- ---- ------ - -----
+
+=========
+Y
+=========
+	Copia a linha inteira e salva no clipboard interno do vim
+
+=========
+y + combo
+=========
+	Copia o que for especificado e salva no clipboard interno do vim
+
+=========
+p
+=========
+	Cola o conteúdo do clipboard interno do VIM a frente do cursor
+
+=========
+P
+=========
+	Cola o conteúdo do clipboard interno do VIM atrás do cursor
+
+-- A tecla y ou Y utilizada no modo visual do VIM (texto selecionado), copiará tudo o que estiver selecionado
+
+-- A tecla p ou P utilizada no modo visual do VIM (texto selecionado), substituirá o texto selecionado pelo conteúdo do clipboard interno.
+
+=========
+"+y [ou] "+Y (em um texto selecionado)
+=========
+	Copiará o texto selecionado para o clipboard do sistema
+
+=========
+"+p
+=========
+	Colará o texto do clipboard do sistema no VIM (a frente do cursor)
+
+=========
+"+P
+=========
+	Colará o texto do clipboard do sistema no VIM (atrás do cursor)
+
+==========
+[CONTROL] + r " (no modo de inserção)
+==========
+	Colará o texto do clipboard interno do VIM
+
+==========
+[CONTROL] + r + (no modo de inserção)
+==========
+	Colará o texto do clipboard do sistema no VIM
+
+...
+E por ai vai

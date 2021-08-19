@@ -1,0 +1,24 @@
+-------- ---- ------ -- ---- ------ -- ---
+COMANDOS PARA ENTRAR EM MODO VISUAL NO VIM
+-------- ---- ------ -- ---- ------ -- ---
+
+=========
+V
+=========
+	Seleciona a linha inteira
+
+=========
+v
+=========
+	Seleciona caractere por caractere.
+	Porém, combos também funcionam
+	viw --> seleciona uma palavra
+	vi( --> seleciona tudo dentro de um parênteses
+	...
+	E por ai vai
+	Em geral, os combos feitos com as letras c e d costumam também funcionar com a letra v
+
+=========
+[CONTROL] + v
+=========
+	Entra no Visual Block, onde é possível selecioar textos verticalmente

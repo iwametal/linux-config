@@ -20,8 +20,6 @@ colorscheme nord
 " let g:dracula_colorterm = 0
 " hi Visual guifg=#E6E6FA guibg=#000000 gui=none
 syntax on
-" hi Visual term=reverse cterm=reverse guibg=Gray
-hi Visual cterm=bold ctermbg=54 ctermfg=White guibg=Gray
 
 :highlight CursorLine ctermbg=Black
 :highlight CursorColumn ctermbg=Black

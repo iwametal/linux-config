@@ -152,6 +152,11 @@ set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
 
+"-- VISUAL --"
+"
+" hi Visual term=reverse cterm=reverse guibg=Gray
+hi Visual cterm=bold ctermbg=54 ctermfg=White guibg=Gray
+
 "--            --"
 "-- DEPRECATED --"
 "--            --"

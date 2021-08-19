@@ -14,37 +14,31 @@ noremap <leader>gg :Goyo<CR>
 "-- COMMENTS --"
 "--          --"
 "
-Plug 'tpope/vim-commentary'
 
 "--        --"
 "-- CURSOR --"
 "--        --"
 "
-Plug 'terryma/vim-multiple-cursors'
 
 "--       --"
 "-- ICONS --"
 "--       --"
 "
-Plug 'ryanoasis/vim-devicons'
 
 "--          --"
 "-- MOVEMENT --"
 "--          --"
 "
-Plug 'easymotion/vim-easymotion'
 
 "--        --"
 "-- REPEAT --"
 "--        --"
 "
-Plug 'tpope/vim-repeat'
 
 "--            --"
 "-- SERVER NVR --"
 "--            --"
 "
-Plug 'mhinz/neovim-remote' " Solving exec vim \"problems\"
 
 "--          --"
 "-- TERMINAL --"
@@ -64,7 +58,6 @@ nnoremap <leader>m :MaximizerToggle!<CR>
 "-- WIKI --"
 "--      --"
 "
-Plug 'vimwiki/vimwiki'
 
 "--            --"
 "-- DEPRECATED --"

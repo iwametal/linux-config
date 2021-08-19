@@ -2,9 +2,9 @@
 "-- GENERAL GUIDE NAVIGATION --"
 "--                          --"
 "
-noremap <leader><Tab> <Esc>\/\*IWA\*\/<Enter>"_c7l
-inoremap <leader><Tab> <Esc>\/\*IWA\*\/<Enter>"_c7l
-vnoremap <leader><Tab> <Esc>\/\*IWA\*\/<Enter>"_c7l
+noremap <leader><Tab> <Esc>/\/\*IWA\*\/<Enter>"_c7l
+inoremap <leader><Tab> <Esc>/\/\*IWA\*\/<Enter>"_c7l
+vnoremap <leader><Tab> <Esc>/\/\*IWA\*\/<Enter>"_c7l
 
 "--                         --"
 "-- GENERAL INSERT COMMANDS --"

@@ -1,9 +1,3 @@
-"--            --"
-"-- LEADER KEY --"
-"--            --"
-"
-let mapleader = " "
-
 "--         --"
 "-- AUTOCMD --"
 "--         --"

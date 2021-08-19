@@ -1,3 +1,5 @@
+let mapleader = " "
+
 let s:plugin_path = expand('<sfile>:p:h')
 let s:config_path = expand('<sfile>:p:h')
 let s:source_plugin_list = [

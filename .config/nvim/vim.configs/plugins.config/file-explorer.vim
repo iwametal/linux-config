@@ -73,4 +73,3 @@ augroup END
 
 " " Highlight currently open buffer in NERDTree
 " autocmd BufEnter * call SyncTree()
-

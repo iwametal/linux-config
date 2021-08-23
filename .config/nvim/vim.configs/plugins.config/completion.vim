@@ -19,16 +19,18 @@ augroup mygroup
 	autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+
 "-- COMMAND --"
 "
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
 
 " Use `:Fold` to fold current buffer
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+command! -nargs=? Fold :call CocAction('fold', <f-args>)
 
 " use `:OR` for organize import of current buffer
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+command! -nargs=0 OR :silent call CocAction('runCommand', 'editor.action.organizeImport')
 
 " ------COC SETTINGS------
 " prettier command for coc
@@ -56,8 +58,10 @@ let g:coc_global_extensions = [
 function! s:show_documentation()
 	if (index(['vim','help'], &filetype) >= 0)
 		execute 'h '.expand('<cword>')
+	elseif (coc#rpc#ready())
+		call CocActionAsync('doHover')
 	else
-		call CocAction('doHover')
+		execute '!' . &keywordprg . " " . expand('<cword>')
 	endif
 endfunction
 
@@ -108,7 +112,6 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Use <tab> for select selections ranges, needs server support, like: coc-tsserver, coc-python
 nmap <silent> <TAB> <Plug>(coc-range-select)
-xmap <silent> <TAB> <Plug>(coc-range-select)
 xmap <silent> <S-TAB> <Plug>(coc-range-select-backword)
 
 " Using CocList

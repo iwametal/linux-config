@@ -77,17 +77,17 @@ augroup END
 "
 "
 augroup flutter_commands
-	autocmd filetype dart nmap <leader>fcm :coccommand<space>flutter.
-	autocmd filetype dart nmap <leader>fat :coccommand<space>flutter.attach<cr>
-	autocmd filetype dart nmap <leader>fcr :coccommand<space>flutter.create<cr>
-	autocmd filetype dart nmap <leader>fdd :coccommand<space>flutter.dev.detach<cr>
-	autocmd filetype dart nmap <leader>fhr :coccommand<space>flutter.dev.hotreload<cr>
-	autocmd filetype dart nmap <leader>fhr :coccommand<space>flutter.dev.hotrestart<cr>
-	autocmd filetype dart nmap <leader>fdq :coccommand<space>flutter.dev.quit<cr>
-	autocmd filetype dart nmap <leader>fds :coccommand<space>flutter.dev.screenshot<cr>
-	autocmd filetype dart nmap <leader>fdv :coccommand<space>flutter.devices<cr>
-	autocmd filetype dart nmap <leader>fr :coccommand<space>flutter.run<cr>
-	autocmd filetype dart nmap <leader>fup :coccommand<space>flutter.upgrade<cr>
+	autocmd filetype dart nmap <leader>fcm :CocCommand<space>flutter.
+	autocmd filetype dart nmap <leader>fat :CocCommand<space>flutter.attach<cr>
+	autocmd filetype dart nmap <leader>fcr :CocCommand<space>flutter.create<cr>
+	autocmd filetype dart nmap <leader>fdd :CocCommand<space>flutter.dev.detach<cr>
+	autocmd filetype dart nmap <leader>fhr :CocCommand<space>flutter.dev.hotReload<cr>
+	autocmd filetype dart nmap <leader>fhR :CocCommand<space>flutter.dev.hotRestart<cr>
+	autocmd filetype dart nmap <leader>fdq :CocCommand<space>flutter.dev.quit<cr>
+	autocmd filetype dart nmap <leader>fds :CocCommand<space>flutter.dev.screenshot<cr>
+	autocmd filetype dart nmap <leader>fdv :CocCommand<space>flutter.devices<cr>
+	autocmd filetype dart nmap <leader>fr :CocCommand<space>flutter.run<cr>
+	autocmd filetype dart nmap <leader>fup :CocCommand<space>flutter.upgrade<cr>
 
 	let g:lsc_server_commands = {'dart': 'dart_language_server'}
 	let g:lsc_auto_map = v:true
@@ -136,8 +136,8 @@ nmap <leader>gs :G<CR>
 nmap <leader>gh :diffget //2<CR>
 nmap <leader>gl :diffget //3<CR>
 nmap <leader>ga :Git add .<CR>
-nmap <leader>gc :Gcommit<CR>
-nmap <leader>gp :Gpush<CR>
+nmap <leader>gc :Git commit<CR>
+nmap <leader>gp :Git push<CR>
 
 " git messenger
 noremap <C-g> :GitMessenger<CR>

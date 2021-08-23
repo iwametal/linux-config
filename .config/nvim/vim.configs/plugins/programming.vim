@@ -56,7 +56,6 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 "--      --"
 "
 Plug 'rust-lang/rust.vim'
-Plug 'vadimcn/vscode-lldb'
 
 "--        --"
 "-- SYNTAX --"

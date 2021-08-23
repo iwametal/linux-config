@@ -223,16 +223,14 @@ endsnippet
 
 # if scope
 snippet c_if "if scope" b
-if (${1:...})
-{
+if (${1:...}) {
 	$2
 }
 endsnippet
 
 # switch case scope
 snippet c_sw "switch case scope" b
-switch (${1:...})
-{
+switch (${1:...}) {
 	case ${2:...}:
 		$3
 		break;
@@ -243,24 +241,21 @@ endsnippet
 
 # for scope
 snippet c_f "for scope" b
-for (${1:INIT}; ${2:COND}; ${3:INC})
-{
+for (${1:INIT}; ${2:COND}; ${3:INC}) {
 	$4
 }
 endsnippet
 
 # while scope
 snippet c_w "while scope" b
-while (${1:...})
-{
+while (${1:...}) {
 	$2
 }
 endsnippet
 
 # do_while scope
 snippet c_dw "do while scope" b
-do
-{
+do {
 	$2
 } while(${1:...})
 endsnippet

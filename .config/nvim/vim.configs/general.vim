@@ -14,12 +14,6 @@ autocmd InsertEnter * norm zz
 " remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
-"--              --"
-"-- FOLD CONFIGS --"
-"--              --"
-"
-set foldmethod=manual
-
 nnoremap <leader>FM :set foldmethod=manual<CR>
 nnoremap <leader>FI :set foldmethod=indent<CR>
 
@@ -83,10 +77,9 @@ nnoremap <leader>n :noh<CR>
 
 inoremap { {}<Esc>i
 inoremap {<cr> {<cr>}<c-o>O
-inoremap < <><Esc>i
+" inoremap < <><Esc>i
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
-inoremap < <><Esc>i
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 
@@ -94,6 +87,7 @@ inoremap " ""<Esc>i
 "-- SET --"
 "--     --"
 "
+set foldmethod=manual
 " basic settings
 set mouse=a
 syntax on
@@ -101,7 +95,6 @@ set noignorecase
 set smartcase
 set encoding=utf-8
 set number relativenumber
-" set termguicolors
 
 " if hidden is not set, TextEdit might fail.
 set hidden
@@ -119,9 +112,6 @@ set updatetime=300
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
 
-" always show signcolumns
-set signcolumn=yes
-
 set scrolloff=7
 
 " tab settings
@@ -138,25 +128,21 @@ set splitbelow splitright
 " Cursor line
 set cursorline
 set cursorcolumn
-
-" From Coc Readme
-set updatetime=300
+:highlight CursorLine guibg=#474270
+" :highlight CursorLine guibg=#45416B
 
 " Some servers have issues with backup files, see #649
 set nobackup
 set nowritebackup
 
-" don't give |ins-completion-menu| messages.
-set shortmess+=c
-
 " always show signcolumns
 set signcolumn=yes
 
+"--        --"
 "-- VISUAL --"
 "
 " hi Visual term=reverse cterm=reverse guibg=Gray
-hi Visual cterm=bold ctermbg=54 ctermfg=White guibg=Gray
-
+" hi Visual guifg=White guibg=MediumPurple
 "--            --"
 "-- DEPRECATED --"
 "--            --"

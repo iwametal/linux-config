@@ -14,15 +14,19 @@
 "-- VISUAL THEMES --"
 "--               --"
 "
+syntax on
+set termguicolors
 colorscheme nord
 " set background=dark "dark version - one
 " set background=light "light version - one
+" highlight Normal guibg=#0A0613
 " let g:dracula_colorterm = 0
-" hi Visual guifg=#E6E6FA guibg=#000000 gui=none
-syntax on
 
-:highlight CursorLine ctermbg=Black
-:highlight CursorColumn ctermbg=Black
+" :highlight CursorLine ctermbg=Black
+" :highlight CursorColumn ctermbg=Black
+
+" hi Visual term=reverse cterm=reverse guibg=Gray
+hi Visual cterm=bold guifg=White guibg=DarkViolet
 
 " vim-airline
 let g:airline#extensions#wordcount#enabled = 1
@@ -46,3 +50,5 @@ let g:Hexokinase_highlighters = ['backgroundfull']
 
 " Reenable hexokinase on enter
 autocmd VimEnter * HexokinaseTurnOn
+
+nnoremap <leader>HT :HexokinaseToggle<CR>

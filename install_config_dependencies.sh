@@ -81,7 +81,7 @@ echo "Installing interesting packages"
 echo "---------- ----------- --------"
 echo
 
-sudo pacman -S alsa-utils audacious bat discord dunst figlet htop inetutils intellij-idea-community-edition jp2a links lolcat maven mpv mypaint ncdu net-tools obs-studio pamixer pavucontrol playerctl ranger screen sxiv tigervnc ttf-font-awesome tmux vimiv vlc x11vnc xinetd youtube-dl zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps --noconfirm
+sudo pacman -S alsa-utils audacious bat discord dunst figlet htop inetutils intellij-idea-community-edition jp2a lazygit links lolcat maven mpv mypaint ncdu net-tools obs-studio pamixer pavucontrol playerctl ranger screen sxiv tigervnc ttf-font-awesome tmux vimiv vlc x11vnc xinetd youtube-dl zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps --noconfirm
 
 # nvtop
 # packer

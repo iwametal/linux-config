@@ -1,0 +1,20 @@
+snippet main "main function" b
+void main() => runApp();
+endsnippet
+
+snippet stl "stateless function" b
+class ${1:function_name} extends StatelessWidget {
+	const ${1:function_name}({ Key? key }) : super(key: key);
+
+	@override
+	Widget build(BuildContext context) {
+		return Container(
+			${2}
+		);
+	}
+}
+endsnippet
+
+# snippet stf "statefull function" b
+
+# endsnippet

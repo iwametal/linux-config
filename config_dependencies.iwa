@@ -102,6 +102,8 @@ yay
 
 # NESRY AUR PCKGS
 dragon-drag-and-drop
+libxft-bgra-git
+nvim-packer-git
 protonvpn
 soapui
 ueberzug

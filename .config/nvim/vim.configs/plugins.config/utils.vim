@@ -25,6 +25,23 @@ noremap <leader>gg :Goyo<CR>
 "--       --"
 "
 
+"--             --"
+"-- INDENTATION --"
+"--             --"
+"
+" lua << EOF
+" require("indent_blankline").setup {
+" 	space_char_blankline = " ",
+" 	show_current_context = true,
+" }
+" EOF
+
+"--       --"
+"-- MATCH --"
+"--       --"
+"
+let g:loaded_matchit = 1
+
 "--          --"
 "-- MOVEMENT --"
 "--          --"

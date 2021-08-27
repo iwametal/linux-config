@@ -26,6 +26,18 @@ Plug 'terryma/vim-multiple-cursors'
 "
 Plug 'ryanoasis/vim-devicons'
 
+"--             --"
+"-- INDENTATION --"
+"--             --"
+"
+Plug 'lukas-reineke/indent-blankline.nvim'
+
+"--       --"
+"-- MATCH --"
+"--       --"
+"
+Plug 'andymass/vim-matchup'
+
 "--          --"
 "-- MOVEMENT --"
 "--          --"

@@ -3,9 +3,9 @@ add_newline = true
 
 [character]
 format = '$symbol '
-success_symbol = '[└──](bold green)[☕](bold cyan)[ ❯](bold green)'
-error_symbol = '[└──☕ ❯](bold red)'
-vicmd_symbol = '[└──☕ ❯](bold green)'
+success_symbol = '[└──](bold green)[ ](bold cyan)[ ❯](bold green)'
+error_symbol = '[└──  ❯](bold red)'
+vicmd_symbol = '[└──  ❯](bold green)'
 disabled = false
 
 [directory]
@@ -16,7 +16,7 @@ use_logical_path = true
 format = '[$path]($style)[$read_only]($read_only_style) '
 style = 'green bold'
 disabled = false
-read_only = '🔒'
+read_only = '🔐'
 read_only_style = 'red'
 truncation_symbol = ''
 home_symbol = '~'

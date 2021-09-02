@@ -20,6 +20,7 @@ feh
 flameshot
 ftp
 fzf
+gdb
 giflib
 gnutls
 gst-plugins-base-libs
@@ -80,6 +81,7 @@ python-lxml
 ripgrep
 rustup
 sqlite
+strace
 tldr
 tokei
 traceroute

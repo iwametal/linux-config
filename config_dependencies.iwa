@@ -11,6 +11,7 @@ bluez
 bluez-utils
 ccls
 cron
+cups
 dmenu
 dotnet-runtime
 dotnet-sdk

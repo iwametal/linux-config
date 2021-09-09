@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "500x24-42+21"
+    geometry = "500x24-7+34"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -41,7 +41,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 21
+    transparency = 13
 
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
@@ -54,14 +54,14 @@
     separator_height = 1
 
     # Padding between text and separator.
-    padding = 13
+    padding = 21
 
     # Horizontal padding.
-    horizontal_padding = 13
+    horizontal_padding = 21
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 2
+    frame_width = 1
 
     # Defines color of the frame around the notification window.
     frame_color = "#C675F5"
@@ -86,7 +86,7 @@
 
     ### Text ###
 
-    font = Monospace 9
+    font = Monospace 11
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -156,7 +156,7 @@
     stack_duplicates = true
 
     # Hide the count of stacked notifications with the same content
-    hide_duplicate_count = false
+    hide_duplicate_count = true
 
     # Display indicators for URLs (U) and actions (A).
     show_indicators = yes
@@ -169,7 +169,7 @@
     # Scale small icons up to this size, set to 0 to disable. Helpful
     # for e.g. small files or high-dpi screens. In case of conflict,
     # max_icon_size takes precedence over this.
-    min_icon_size = 4
+    min_icon_size = 7
 
     # Scale larger icons down to this size, set to 0 to disable
     max_icon_size = 42
@@ -294,14 +294,14 @@
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#0f0d11"
     foreground = "#c396e0"
-    timeout = 21
+    timeout = 13
     # Icon for notifications with low urgency, uncomment to enable
     icon = adwaita-icon-theme
 
 [urgency_normal]
     background = "#0f0d11"
     foreground = "#9959c1"
-    timeout = 21
+    timeout = 13
     # Icon for notifications with normal urgency, uncomment to enable
     icon = adwaita-icon-theme
 
@@ -429,3 +429,7 @@
 #    set_stack_tag = "volume"
 #
 # vim: ft=cfg
+
+[play_sound]
+	summary = "*"
+	script = "/home/coffee/.scripts/notification/audio/play"

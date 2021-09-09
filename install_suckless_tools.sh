@@ -16,7 +16,6 @@ if [ $? -ne 0 ] ; then
 	echo "Installing git"
 	echo "---------- ---"
 	echo
-
 	sudo pacman -S git --noconfirm
 fi
 
@@ -41,8 +40,14 @@ echo
 
 git $github/dwm
 cd dwm
-sudo make clean install
-cd ..
+cp -R .dwm ~
+chmod -R 755 ~/.dwm/*.sh
+sudo ln -s ~/.dwm/layoutmenu.sh /usr/bin/layoutmenu.sh # might need sudo
+mkdir -p ~/.local/share/fonts
+cp fonts/* ~/.local/share/fonts
+cd inteface
+sudo make clean install # might need sudo
+cd ../..
 
 echo "---------- --"
 echo "Installing st"

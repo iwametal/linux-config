@@ -74,6 +74,7 @@ nvidia-utils
 openal
 opencl-icd-loader
 openvpn
+pacman-contrib
 paru
 polybar
 procs

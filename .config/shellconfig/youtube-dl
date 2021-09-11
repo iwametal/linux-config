@@ -8,7 +8,7 @@ alias ydl-ao='$HOME/.scripts/youtube-dl/youtube-dl-audio-only-max-res.sh'
 alias ydl-ao-url='$HOME/.scripts/youtube-dl/youtube-dl-audio-only-get-url.sh'
 
 # download only video
-alias ydl-vo='$HOME/.scripts/youtube-dl/youtube-dl-video-only-mas-res.sh'
+alias ydl-vo='$HOME/.scripts/youtube-dl/youtube-dl-video-only-max-res.sh'
 
 # get the video only url for download
 alias ydl-vo-url='$HOME/.scripts/youtube-dl/youtube-dl-video-only-get-url.sh'

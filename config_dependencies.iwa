@@ -82,6 +82,7 @@ pulseaudio
 python-lxml
 ripgrep
 rustup
+spotifyd
 sqlite
 strace
 tldr
@@ -111,6 +112,8 @@ libxft-bgra-git
 nvim-packer-git
 protonvpn
 soapui
+spotify
+spotify-tui
 ueberzug
 vim-plug
 wal

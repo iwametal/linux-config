@@ -53,7 +53,7 @@ echo "Installing necessary AUR packages"
 echo "---------- --------- --- --------"
 echo
 
-paru -S dragon-drag-and-drop libxft-bgra-git nvim-packer-git protonvpn soapui spotify spotify-tui ueberzug vim-plug wal --noconfirm
+paru -S dragon-drag-and-drop libxft-bgra-git nvim-packer-git protonvpn soapui spotify spotify-tui python-ueberzug-git vim-plug wal --noconfirm
 
 [ $? -eq 0 ] && notify-send "AUR install" "Packages successffully installed!" || notify-send "Error" "An error occurred while trying to install the packages"
 

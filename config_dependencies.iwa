@@ -14,6 +14,9 @@ ccls
 cron
 cups
 dmenu
+docker
+docker-compose
+docker-machine
 dotnet-runtime
 dotnet-sdk
 dragon

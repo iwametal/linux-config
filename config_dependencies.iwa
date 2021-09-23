@@ -13,6 +13,7 @@ bluez-utils
 ccls
 cron
 cups
+dash
 dmenu
 docker
 docker-compose

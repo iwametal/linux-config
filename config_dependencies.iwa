@@ -169,6 +169,7 @@ screen
 sxiv
 # texlive-most # after installation type $ packer -Ss beamer
 tigervnc
+tree
 ttf-font-awesome
 tmux
 vimiv

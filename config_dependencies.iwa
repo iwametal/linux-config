@@ -90,6 +90,7 @@ rustup
 spotifyd
 sqlite
 strace
+stress
 tldr
 tokei
 traceroute

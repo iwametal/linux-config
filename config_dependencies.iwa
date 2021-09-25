@@ -31,6 +31,7 @@ giflib
 gnutls
 gst-plugins-base-libs
 gtk3
+iotop
 jq
 lib32-alsa-lib
 lib32-alsa-plugins

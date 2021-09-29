@@ -32,6 +32,7 @@ gnutls
 gst-plugins-base-libs
 gtk3
 iotop
+iperf
 jq
 lib32-alsa-lib
 lib32-alsa-plugins

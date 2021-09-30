@@ -89,6 +89,7 @@ pulseaudio
 python-lxml
 ripgrep
 rustup
+smem
 spotifyd
 sqlite
 strace

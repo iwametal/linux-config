@@ -94,6 +94,7 @@ spotifyd
 sqlite
 strace
 stress
+sysstat
 tldr
 tokei
 traceroute
@@ -119,6 +120,7 @@ yay
 # NESRY AUR PCKGS
 dragon-drag-and-drop
 libxft-bgra-git
+mrtg
 nvim-packer-git
 protonvpn
 soapui

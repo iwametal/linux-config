@@ -21,6 +21,7 @@ docker-machine
 dotnet-runtime
 dotnet-sdk
 dragon
+emacs
 exa
 feh
 flameshot

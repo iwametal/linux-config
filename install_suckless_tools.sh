@@ -33,13 +33,13 @@ fi
 mkdir -p git/github/Suckless
 cd git/github/Suckless
 
-echo "---------- ---"
-echo "Installing dwm"
-echo "---------- ---"
+echo "---------- ------ ---"
+echo "Installing coffee dwm"
+echo "---------- ------ ---"
 echo
 
-git $github/dwm
-cd dwm
+git $github/coffee-dwm
+cd coffee-dwm
 cp -R .dwm ~
 chmod -R 755 ~/.dwm/*.sh
 sudo ln -s ~/.dwm/layoutmenu.sh /usr/bin/layoutmenu.sh # might need sudo

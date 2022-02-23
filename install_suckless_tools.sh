@@ -7,6 +7,8 @@ echo "Updating system"
 echo "-------- ------"
 echo
 
+cd ~
+
 sudo pacman -Syyu
 
 git --help >/dev/null 2>/dev/null
@@ -38,11 +40,11 @@ echo "Installing coffee dwm"
 echo "---------- ------ ---"
 echo
 
-git $github/coffee-dwm
+git clone $github/coffee-dwm
 cd coffee-dwm
 cp -R .dwm ~
 chmod -R 755 ~/.dwm/*.sh
-sudo ln -s ~/.dwm/layoutmenu.sh /usr/bin/layoutmenu.sh # might need sudo
+# sudo ln -s ~/.dwm/layoutmenu.sh /usr/bin/layoutmenu.sh # might need sudo
 mkdir -p ~/.local/share/fonts
 cp fonts/* ~/.local/share/fonts
 cd inteface
@@ -54,7 +56,7 @@ echo "Installing st"
 echo "---------- --"
 echo
 
-git $github/st
+git clone $github/st
 cd st
 sudo make clean install
 cd ..
@@ -64,7 +66,7 @@ echo "Installing dmenu"
 echo "---------- -----"
 echo
 
-git $github/dmenu
+git clone $github/dmenu
 cd dmenu
 sudo make clean install
 cd ..
@@ -74,7 +76,7 @@ echo "Installing slock"
 echo "---------- -----"
 echo
 
-git $github/slock
+git clone $github/slock
 cd slock
 sudo make clean install
 cd ..

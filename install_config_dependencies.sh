@@ -111,5 +111,3 @@ pip install jedi
 # jedi (in pip3)
 
 [ $? -eq 0 ] && notify-send "Pacman Install" "Packages successffully installed!" || notify-send "Error" "An error occurred while trying to install some packages"
-
-

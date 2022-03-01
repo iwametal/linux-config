@@ -1,0 +1,31 @@
+Alienware fan control in Linux notes
+
+Helpful links
+
+https://wiki.archlinux.org/index.php/Fan_Speed_Control#Dell_laptops
+https://bbs.archlinux.org/viewtopic.php?id=248106
+https://www.reddit.com/r/Dell/comments/9pdgid/configuring_the_xps_to_play_nice_with_linux
+
+You can use the following commands to “initilize” the fans so the fancontrol can read them.
+
+$ sudo modprobe dell-smm-hwmon ignore_dmi=1
+
+$ sudo sensors-detect
+
+After that is done you should be able to setup a fancontrol config with
+
+$ sudo pwmconfig
+
+After it is set up you can launch fancontrol to control the fans
+
+$ sudo fancontrol
+
+If you want to tweak the setting, modify the fancontrol config under
+
+/etc/fancontrol
+
+or run $(pwmconfig) again and replace config.
+
+Sounds like you should be able to add the following to “etc/modprobe.d/dell.conf” to get it to run on boot.
+
+options dell-smm-hwmon ignore_dmi=1

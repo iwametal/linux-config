@@ -1,2 +1,6 @@
-alias togdwmsb='$HOME/.scripts/dwmstatusbar/toggle_dwm_status_bar.sh'
+# bar
 alias kdwms='$HOME/.scripts/dwmstatusbar/kill_dwm_statusbar.sh'
+alias togdwmsb='$HOME/.scripts/dwmstatusbar/toggle_dwm_status_bar.sh'
+
+# brightness
+alias bright='$HOME/.scripts/dwm/backlight/brightness.sh'

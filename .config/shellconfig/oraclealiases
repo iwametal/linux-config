@@ -1,0 +1,3 @@
+# sql developer
+alias sql-developer='$HOME/.scripts/oracle/sqldeveloper/sql-developer.sh'
+alias sqld='$HOME/.scripts/oracle/sqldeveloper/sql-developer.sh'

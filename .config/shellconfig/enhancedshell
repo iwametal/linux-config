@@ -16,12 +16,14 @@ alias c='clear && $HOME/.scripts/shell/coffeefetch'
 alias reset='reset && $HOME/.scripts/shell/coffeefetch'
 
 # copy
-alias cp_='cp'
-alias cp='$HOME/.scripts/shell/cp.sh'
+alias cp-all='cp -g'
+alias cp='cp -g -i'
+#alias cp='$HOME/.scripts/shell/cp.sh'
 
 # move
-alias mv_='mv'
-alias mv='$HOME/.scripts/shell/mv.sh'
+alias mv-all='mv -g'
+alias mv='mv -g -i'
+#alias mv='$HOME/.scripts/shell/mv.sh'
 
 # sudo
 alias fucking='sudo'

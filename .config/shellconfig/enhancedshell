@@ -16,12 +16,12 @@ alias c='clear && $HOME/.scripts/shell/coffeefetch'
 alias reset='reset && $HOME/.scripts/shell/coffeefetch'
 
 # copy
-alias cp-all='cp -g'
+alias cp-all='$HOME/.scripts/shell/cp-all.sh'
 alias cp='cp -g -i'
 #alias cp='$HOME/.scripts/shell/cp.sh'
 
 # move
-alias mv-all='mv -g'
+alias mv-all='$HOME/.scripts/shell/mv-all.sh'
 alias mv='mv -g -i'
 #alias mv='$HOME/.scripts/shell/mv.sh'
 

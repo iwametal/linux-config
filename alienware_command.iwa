@@ -1,0 +1,1 @@
+modprobe dell-smm-hwmon ignore_dmi=1

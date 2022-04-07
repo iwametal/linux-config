@@ -71,8 +71,12 @@ eval "$(starship init bash)"
 # 	. /etc/bash_completion
 # fi
 
-source /usr/share/fzf/completion.bash
-source /usr/share/fzf/key-bindings.bash
+# source /usr/share/fzf/completion.bash
+# source /usr/share/fzf/key-bindings.bash
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+# END_KITTY_SHELL_INTEGRATION

@@ -49,14 +49,6 @@ fi
 
 set -o vi
 
-# Source configs
-for f in ~/.config/shellconfig/*; do source "$f"; done
-source /home/coffee/.config/broot/launcher/bash/br
-
-# Starship Prompt
-export STARSHIP_CONFIG=~/.starship/config.toml
-eval "$(starship init bash)"
-
 # Generated for envman. Do not edit.
 # if [ -s "$HOME/.config/envman/load.sh" ] ; then
 # 	source "$HOME/.config/envman/load.sh"
@@ -74,9 +66,19 @@ eval "$(starship init bash)"
 # source /usr/share/fzf/completion.bash
 # source /usr/share/fzf/key-bindings.bash
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
+
+# SSH AGENT
+#if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+#    ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
+#fi
+#if [[ ! "$SSH_AUTH_SOCK" ]]; then
+#    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+#fi
+
+# Source configs
+for f in ~/.config/shellconfig/aliases/*; do source "$f"; done
+for f in ~/.config/shellconfig/exports/*; do source "$f"; done
+source /home/coffee/.config/broot/launcher/bash/br

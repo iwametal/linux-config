@@ -1,0 +1,193 @@
+{
+  'ID_USER': '3115',
+  'CD_LEVEL': 'ADM',
+  'CD_MAYORISTA': 'Terra_Teste',
+  'CD_LINHA_NEGOCIO': 'TERRA',
+  'confs': [
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'OBRIG_DOC',
+      'de_valor': 'S'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'OBRIG_EMAIL',
+      'de_valor': 'S'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'OBRIG_TELEFONE',
+      'de_valor': 'S'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CD_CONVENIO',
+      'de_valor': 'CVTR00001836'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'LINGUAGEM',
+      'de_valor': 'PT'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CD_INTERFACE',
+      'de_valor': 'REVENDA'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CD_PERFIL_COMERCIAL',
+      'de_valor': 'EMP,ISP'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CD_PERFIL_SERVICO',
+      'de_valor': 'PORTAL'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CD_TIPO_VENDA',
+      'de_valor': 'ATIVA'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'PAIS',
+      'de_valor': 'BR'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'UF',
+      'de_valor': 'RS'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CD_CIDADE_GERENCIAL',
+      'de_valor': 'POA'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CONTRATO_ADM',
+      'de_valor': 'CRTR33759688'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'PHONE_MASK',
+      'de_valor': '(99) 9999-99?999'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'PIN',
+      'de_valor': 'N'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CD_TIPO_DOCUMENTO',
+      'de_valor': 'CPF'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'INTERFACE_NEGOCIO',
+      'de_valor': 'REVENDAS_BR'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'VISUALIZAR_DADOS_BRASIL',
+      'de_valor': 'S'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'VISUALIZAR_DADOS_LATAM',
+      'de_valor': 'N'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'VISUALIZAR_DADOS_COBRANCA',
+      'de_valor': 'S'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CANCELA_PACOTE_CONTA',
+      'de_valor': 'S'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CANCELA_PACOTE_SERVICO_EXCECAO',
+      'de_valor': 'TFF'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CONSULTA_CONTA_USERNAME',
+      'de_valor': 'S'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CONSULTA_CONTA_NOME',
+      'de_valor': 'N'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CONSULTA_CONTA_IDPERM',
+      'de_valor': 'N'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CONSULTA_CONTA_CONTRATO',
+      'de_valor': 'S'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'MENU_CRIAR_CONTA',
+      'de_valor': 'N'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CD_MODALIDADE_COBRANCA',
+      'de_valor': 'BBS'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'PACOTE_DEFAULT_MAYORISTA',
+      'de_valor': 'PCTR00056645'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'VENDE_PREPAGO',
+      'de_valor': 'S'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'MENU_CADASTRAR_ASSINANTE',
+      'de_valor': 'S'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'PERM_MIGRAR_CONTA',
+      'de_valor': 'S'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CONFIRMAR_DADOS_LOGIN',
+      'de_valor': 'S'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'VENDA_DOMINIO_INDISPONIVEL',
+      'de_valor': 'S'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'ALTERAR_MODALIDADE_COBRANCA',
+      'de_valor': 'N'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CONSULTA_CONTA_CPF_CNPJ',
+      'de_valor': 'S'
+    },
+    {
+      'nm_mayorista': 'Terra Teste',
+      'de_configuracao': 'CONFIRMAR_PACOTE_CONTA',
+      'de_valor': 'S'
+    }
+  ]
+}

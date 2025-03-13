@@ -1,7 +1,15 @@
 $HOME/.scripts/shell/coffeefetch
 
+export GTK_IM_MODULE='fcitx'
+export QT_IM_MODULE='fcitx'
+export SDL_IM_MODULE='fcitx'
+export XMODIFIERS='@im=fcitx'
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
+# Pyenv
+eval "$(pyenv init -)"
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options

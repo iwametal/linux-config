@@ -90,3 +90,6 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 for f in ~/.config/shellconfig/aliases/*; do source "$f"; done
 for f in ~/.config/shellconfig/exports/*; do source "$f"; done
 source /home/coffee/.config/broot/launcher/bash/br
+
+# Created by `pipx` on 2025-03-14 00:25:31
+export PATH="$PATH:/home/coffee/.local/bin"

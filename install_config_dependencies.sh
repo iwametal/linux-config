@@ -66,7 +66,7 @@ echo "Installing necessary dependencies"
 echo "---------- --------- ------------"
 echo
 
-sudo pacman -S calcurse ffmpegthumbnailer git mpc mpd python python-pip broot # needs to run "broot --install"
+sudo pacman -S calcurse ffmpegthumbnailer git mpc mpd python python-pip pyenv broot # needs to run "broot --install"
 
 [ $? -eq 0 ] && notify-send "Pacman install" "Packages successffully installed!" || notify-send "Error" "An error occurred while trying to install the packages"
 
